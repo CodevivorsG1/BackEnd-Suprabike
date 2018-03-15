@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< Updated upstream
   name_store: MyString
   address_store: MyString
   email_store: MyString
@@ -17,3 +18,25 @@ two:
   score_store: 1
   password_store: MyString
   phonenum_store: 1
+=======
+  id_store: 1
+  name_store: MyString
+  address_store: MyString
+  email_store: MyString
+  dateregis_store: MyString
+  score_store: 1
+  password_store: MyString
+  phonenum_store: 1
+  celphone_store: 1
+
+two:
+  id_store: 1
+  name_store: MyString
+  address_store: MyString
+  email_store: MyString
+  dateregis_store: MyString
+  score_store: 1
+  password_store: MyString
+  phonenum_store: 1
+  celphone_store: 1
+>>>>>>> Stashed changes
