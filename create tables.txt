@@ -1,0 +1,11 @@
+rails g scaffold Technician name:string surname:string typeWork:string email:string constHour:float phoneNum:string
+rails g scaffold Transaction date:datetime type:string total:float
+rails g scaffold User name:string surname:string gender:string email:string phoneNum:string cellphone:string
+rails g scaffold Store name:string address:string email:string dateRegis:datetime score:integer cellpohne:string phoneNum:string
+rails g scaffold City name:string
+rails g scaffold Comment description:text
+rails g scaffold Forum topic:text
+rails g scaffold Component type:string price:float description:text brand:string sizes:string material:string
+rails g scaffold Bycicle brand:string material:string components:string price:float use_type:string description:text	
+rails g scaffold Image size:integer description:text
+

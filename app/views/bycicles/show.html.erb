@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @bycicle.brand %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @bycicle.material %>
+</p>
+
+<p>
+  <strong>Components:</strong>
+  <%= @bycicle.components %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @bycicle.price %>
+</p>
+
+<p>
+  <strong>Use type:</strong>
+  <%= @bycicle.use_type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bycicle.description %>
+</p>
+
+<%= link_to 'Edit', edit_bycicle_path(@bycicle) %> |
+<%= link_to 'Back', bycicles_path %>
