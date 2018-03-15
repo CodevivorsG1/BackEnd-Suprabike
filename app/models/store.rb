@@ -7,5 +7,9 @@ class Store < ApplicationRecord
     validates :phonenum_store, presence: true, numericality: { only_integer: true }
     validates :celphone_store, presence: true, numericality: { only_integer: true }
 
-
+    has_many :transactions
+    belongs_to :city
+    has_many :components
+    has_many :images
+    has_many :bycicles
 end

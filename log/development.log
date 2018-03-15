@@ -5143,3 +5143,66 @@ Processing by UsersController#index as */*
 Completed 200 OK in 68ms (Views: 3.7ms | ActiveRecord: 63.6ms)
 
 
+Started GET "/bicycles" for 127.0.0.1 at 2018-03-15 16:26:52 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BicyclesController#index as */*
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cities" for 127.0.0.1 at 2018-03-15 16:31:06 -0500
+Processing by CitiesController#index as */*
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+Completed 200 OK in 69ms (Views: 58.1ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/cities" for 127.0.0.1 at 2018-03-15 16:36:27 -0500
+Processing by CitiesController#create as */*
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: city):
+  
+app/controllers/cities_controller.rb:49:in `city_params'
+app/controllers/cities_controller.rb:18:in `create'
+Started POST "/transactions" for 127.0.0.1 at 2018-03-15 16:37:22 -0500
+Processing by TransactionsController#create as */*
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: transaction):
+  
+app/controllers/transactions_controller.rb:49:in `transaction_params'
+app/controllers/transactions_controller.rb:18:in `create'
+Started GET "/transactions" for 127.0.0.1 at 2018-03-15 16:37:25 -0500
+Processing by TransactionsController#index as */*
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2018-03-15 16:38:19 -0500
+Processing by TransactionsController#index as */*
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-03-15 16:38:38 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 47ms (Views: 31.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/technicians" for 127.0.0.1 at 2018-03-15 16:39:04 -0500
+Processing by TechniciansController#index as */*
+  [1m[36mTechnician Load (0.7ms)[0m  [1m[34mSELECT "technicians".* FROM "technicians"[0m
+Completed 200 OK in 52ms (Views: 40.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/components" for 127.0.0.1 at 2018-03-15 16:39:29 -0500
+Processing by ComponentsController#index as */*
+  [1m[36mComponent Load (0.6ms)[0m  [1m[34mSELECT "components".* FROM "components"[0m
+Completed 200 OK in 49ms (Views: 37.1ms | ActiveRecord: 1.6ms)
+
+

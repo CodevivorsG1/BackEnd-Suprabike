@@ -7,5 +7,8 @@ class Bicycle < ApplicationRecord
     validates :id_bicy,  length: { maximum: 50 }
     validates :brand_bicy,:material_bicy ,:components_bicy ,length: { maximum: 20 }
     validates :description_bicy, length: { maximum: 100 }
+
+    belongs_to :store
+    has_many :images
    
 end
