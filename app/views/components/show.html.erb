@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @component.type %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @component.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @component.description %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @component.brand %>
+</p>
+
+<p>
+  <strong>Sizes:</strong>
+  <%= @component.sizes %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @component.material %>
+</p>
+
+<%= link_to 'Edit', edit_component_path(@component) %> |
+<%= link_to 'Back', components_path %>

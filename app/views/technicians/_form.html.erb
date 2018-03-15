@@ -1,0 +1,47 @@
+<%= form_with(model: technician, local: true) do |form| %>
+  <% if technician.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(technician.errors.count, "error") %> prohibited this technician from being saved:</h2>
+
+      <ul>
+      <% technician.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :technician_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :surname %>
+    <%= form.text_field :surname, id: :technician_surname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :typework %>
+    <%= form.text_field :typework, id: :technician_typework %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :technician_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :costhour %>
+    <%= form.text_field :costhour, id: :technician_costhour %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phoneNum %>
+    <%= form.text_field :phoneNum, id: :technician_phoneNum %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

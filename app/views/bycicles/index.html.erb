@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bycicles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Material</th>
+      <th>Components</th>
+      <th>Price</th>
+      <th>Use type</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bycicles.each do |bycicle| %>
+      <tr>
+        <td><%= bycicle.brand %></td>
+        <td><%= bycicle.material %></td>
+        <td><%= bycicle.components %></td>
+        <td><%= bycicle.price %></td>
+        <td><%= bycicle.use_type %></td>
+        <td><%= bycicle.description %></td>
+        <td><%= link_to 'Show', bycicle %></td>
+        <td><%= link_to 'Edit', edit_bycicle_path(bycicle) %></td>
+        <td><%= link_to 'Destroy', bycicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bycicle', new_bycicle_path %>
