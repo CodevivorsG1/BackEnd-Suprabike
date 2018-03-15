@@ -5,7 +5,5 @@ class Component < ApplicationRecord
     validates :brand_component, presence: true,length: { maximum: 20 }
     validates :sizes_component, presence: true, numericality: true,length: { maximum: 20 }
     validates :material_component, presence: true,length: { maximum: 20 }
-    #relations
-    belongs_to :store
-    has_many :images
+
 end
