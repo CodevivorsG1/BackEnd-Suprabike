@@ -9,6 +9,7 @@ class CreateTechnicians < ActiveRecord::Migration[5.1]
       t.float :costhourtec
       t.string :passwordtec
       t.integer :phonenumtec
+      
 
       t.timestamps
     end

@@ -7,4 +7,10 @@ class Technician < ApplicationRecord
     validates :costhourtec, presence: true, numericality: true
     validates :phonenumtec, presence: true,length: { maximum: 20 }
     validates :passwordtec, presence: true,length: { maximum: 20 }
+
+    #relations
+    has_many :transactions
+    belongs_to :image
+ 
+
 end

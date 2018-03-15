@@ -73,13 +73,6 @@ Migrating to CreateUsers (20180315041436)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Started POST "/comments" for 127.0.0.1 at 2018-03-15 04:32:23 -0500
-Processing by CommentsController#create as */*
-  Parameters: {"description"=>"bueno", "comment"=>{"description"=>"bueno"}}
-  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (212.2ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["description", "bueno"], ["created_at", "2018-03-15 09:32:46.935031"], ["updated_at", "2018-03-15 09:32:46.935031"]]
-  [1m[35m (161.3ms)[0m  [1m[36mcommit transaction[0m
-Completed 201 Created in 1824ms (Views: 13.4ms | ActiveRecord: 402.3ms)
 
 
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

@@ -5,4 +5,11 @@ class User < ApplicationRecord
     validates :email, presence: true,length: { maximum: 20 }
     validates :password, presence: true,length: { maximum: 50 }
     validates :iduser, presence: true, numericality: { only_integer: true },length: { maximum: 50 }
+    #relations
+    has_many :transactions
+    belongs_to :city
+    has_many :comments
+    has_many :forums
+    belongs_to :image
+
 end
