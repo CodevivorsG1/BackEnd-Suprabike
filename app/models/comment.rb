@@ -1,6 +1,5 @@
 class Comment < ApplicationRecord
-<<<<<<< Updated upstream
-=======
-    validates :description , presence: true
->>>>>>> Stashed changes
+    belongs_to :user
+    belongs_to :forum
+   
 end

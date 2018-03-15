@@ -10,5 +10,7 @@ class Technician < ApplicationRecord
 
     #relations
     has_many :transactions
+    belongs_to :image
+ 
 
 end
