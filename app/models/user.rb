@@ -4,4 +4,5 @@ class User < ApplicationRecord
     belongs_to :city
     has_many :forums
     belongs_to :image
+    has_many :comments
 end
