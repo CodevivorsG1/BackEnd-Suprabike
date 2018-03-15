@@ -1,10 +1,10 @@
 class User < ApplicationRecord
-    validates :name, presence: true,length: { maximum: 20 }
-    validates :surname, presence: true,length: { maximum: 20 }
-    validates :gender, presence: true,length: { maximum: 20 }
-    validates :email, presence: true,length: { maximum: 20 }
-    validates :password, presence: true,length: { maximum: 50 }
-    validates :iduser, presence: true, numericality: { only_integer: true },length: { maximum: 50 }
+    validates :nameUser, presence: true,length: { maximum: 20 }
+    validates :surnameUser, presence: true,length: { maximum: 20 }
+    validates :genderUser, presence: true,length: { maximum: 20 }
+    validates :emailUser, presence: true,length: { maximum: 20 }
+    validates :passwordUser, presence: true,length: { maximum: 50 }
+    validates :idUser, presence: true, numericality: { only_integer: true },length: { maximum: 50 }
     #relations
     has_many :transactions
     belongs_to :city

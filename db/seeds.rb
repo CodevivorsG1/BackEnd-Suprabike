@@ -9,64 +9,90 @@ require 'faker'
 
 puts 'started loading  data'
 100.times do |row|
-    Bicycle.create(id_bicy: Faker::Number.number(6),
-    brand_bicy: Faker::Vehicle.manufacture,
-    material_bicy: Faker::Beer.hop,
-    components_bicy: Faker::Cat.name,
-    price_bicy: Faker::Number.decimal(2),
-    usetype_bicy: Faker::Friends.character,
-    description_bicy: Faker::Friends.quote)
+    
 
-    City.create(id_city:Faker::Number.number(3),name_city: Faker::Address.city)
+    city=City.new
+    city.idcity= Faker::Number.number(3)
+    city.name_city= Faker::Address.city
+    city.save
 
-    Comment.create(description: Faker::Book.genre)
+    store=Store.new
+    store.id_store= Faker::Number.number(6)
+    store.name_store=Faker::Name.name
+    store.address_store=Faker::Address.street_address
+    store.email_store=Faker::Internet.email
+    store.dateregis_store=Faker::Date.between(2.days.ago, Date.today) 
+    store.score_store= Faker::Number.number(1)
+    store.password_store=Faker::Name.name 
+    store.phonenum_store=Faker::PhoneNumber.phone_number 
+    store.celphone_store= Faker::PhoneNumber.cell_phone
+    store.city=city
+    store.save
 
-    Component.create(
-        type_component:Faker::Name.name ,
-        price_component:Faker::Number.decimal(2) ,
-        description_component:Faker::Commerce.material ,
-        brand_component:Faker::Vehicle.manufacture ,
-        sizes_component:Faker::Number.decimal(2) ,
-        material_component:Faker::Name.name
-    )
+    user=User.new
+    user.idUser= Faker::Number.number(6)
+    user.nameUser= Faker::Name.first_name  
+    user.surnameUser= Faker::Name.last_name 
+    user.genderUser=  "male"
+    user.emailUser= Faker::Internet.email 
+    user.passwordUser= Faker::Name.first_name 
+    user.phonenumUser= Faker::PhoneNumber.phone_number 
+    user.celphoneUser= Faker::PhoneNumber.cell_phone
+    user.city=city
+    user.save
+    
+    bicycle=Bicycle.new
+    bicycle.id_bicy = Faker::Number.number(6)
+    bicycle.brand_bicy= Faker::Vehicle.manufacture
+    bicycle.material_bicy= Faker::Beer.hop
+    bicycle.components_bicy= Faker::Cat.name
+    bicycle.price_bicy= Faker::Number.decimal(2)
+    bicycle.usetype_bicy= Faker::Friends.character
+    bicycle.description_bicy= Faker::Friends.quote
+    bicycle.store= store
+    bicycle.save
 
-    Forum.create(topic:Faker::Job.field )
-    Store.create(
-        id_store: Faker::Number.number(6),
-        name_store:Faker::Name.name,
-        address_store:Faker::Address.street_address,
-        email_store:Faker::Internet.email,
-        dateregis_store:Faker::Date.between(2.days.ago, Date.today) ,
-        score_store: Faker::Number.number(1),
-        password_store:Faker::Name.name ,
-        phonenum_store:Faker::PhoneNumber.phone_number ,
-        celphone_store: Faker::PhoneNumber.cell_phone
-    )
-    Technician.create(
-        id_technical:Faker::Number.number(6) ,
-        NameTec:Faker::Name.first_name  ,
-        SurnameTec:Faker::Name.last_name ,
-        typeworktec:Faker::Job.field ,
-        emailtec:Faker::Internet.email ,
-        costhourtec: Faker::Number.decimal(2),
-        passwordtec:Faker::Name.first_name ,
-        phonenumtec:Faker::PhoneNumber.phone_number 
-    )
-    Transaction.create(
-        date_transaction:Faker::Date.between(2.days.ago, Date.today),
-        type_transaction:Faker::Job.field ,
-        total_transaction:Faker::Number.decimal(2) 
-    )
-    User.create(
-        idUser: Faker::Number.number(6),
-        nameUser:Faker::Name.first_name  ,
-        surnameUser:Faker::Name.last_name ,
-        genderUser: "male",
-        emailUser:Faker::Internet.email ,
-        passwordUser:Faker::Name.first_name ,
-        phonenumUser:Faker::PhoneNumber.phone_number ,
-        celphoneUser:Faker::PhoneNumber.cell_phone 
-    )
+    component =Component.new
+    component.type_component=Faker::Name.name 
+    component.price_component=Faker::Number.decimal(2) 
+    component.description_component=Faker::Commerce.material 
+    component.brand_component=Faker::Vehicle.manufacture 
+    component.sizes_component=Faker::Number.decimal(2) 
+    component.material_component=Faker::Name.name
+    component.store=store
+    component.save
+
+    forum =Forum.new
+    forum.topic= Faker::Job.field 
+    forum.user= user
+    forum.save
+
+    comment =Comment.new
+    comment.description= Faker::Book.genre
+    comment.forum=forum
+    comment.user= user
+    comment.save
+
+    
+    technician = Technician.new
+    technician.id_technical= Faker::Number.number(6) 
+    technician.NameTec= Faker::Name.first_name  
+    technician.SurnameTec= Faker::Name.last_name 
+    technician.typeworktec= Faker::Job.field 
+    technician.emailtec= Faker::Internet.email 
+    technician.costhourtec= Faker::Number.decimal(2)
+    technician.passwordtec= Faker::Name.first_name 
+    technician.phonenumtec= Faker::PhoneNumber.phone_number 
+    technician.save
+
+    transaction= Transaction.new
+    transaction.date_transaction= Faker::Date.between(2.days.ago, Date.today)
+    transaction.type_transaction= Faker::Job.field 
+    transaction.total_transaction= Faker::Number.decimal(2) 
+    transaction.user=user
+    transaction.store=store
+    transaction.save
+
 
 end
 puts 'finished loading  data'

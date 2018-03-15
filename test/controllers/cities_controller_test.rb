@@ -12,7 +12,7 @@ class CitiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create city" do
     assert_difference('City.count') do
-      post cities_url, params: { city: { id_city: @city.id_city, name_city: @city.name_city } }, as: :json
+      post cities_url, params: { city: { idcity: @city.idcity, name_city: @city.name_city } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class CitiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update city" do
-    patch city_url(@city), params: { city: { id_city: @city.id_city, name_city: @city.name_city } }, as: :json
+    patch city_url(@city), params: { city: { idcity: @city.idcity, name_city: @city.name_city } }, as: :json
     assert_response 200
   end
 
