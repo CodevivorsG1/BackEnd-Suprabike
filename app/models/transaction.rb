@@ -4,4 +4,5 @@ class Transaction < ApplicationRecord
     validates :total, presence: true, numericality: { only_float: true }
 
     belongs_to :technician
+    belongs_to :user
 end
