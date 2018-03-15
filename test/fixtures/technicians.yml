@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_technical: 1
+  NameTec: MyString
+  SurnameTec: MyString
+  typeworktec: MyString
+  emailtec: MyString
+  costhourtec: 1.5
+  passwordtec: MyString
+  phonenumtec: 1
+
+two:
+  id_technical: 1
+  NameTec: MyString
+  SurnameTec: MyString
+  typeworktec: MyString
+  emailtec: MyString
+  costhourtec: 1.5
+  passwordtec: MyString
+  phonenumtec: 1
