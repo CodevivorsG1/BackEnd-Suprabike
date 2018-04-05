@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # == Schema Information
 #
 # Table name: technicians
@@ -21,7 +19,6 @@
 #  authentication_token   :string(30)
 #
 
->>>>>>> marlon
 require 'test_helper'
 
 class TechnicianTest < ActiveSupport::TestCase

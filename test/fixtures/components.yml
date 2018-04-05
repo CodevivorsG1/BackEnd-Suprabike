@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  type: 
-  price: 1.5
-  description: MyText
-  brand: MyString
-  sizes: MyString
-  material: MyString
-
-two:
-  type: 
-  price: 1.5
-  description: MyText
-  brand: MyString
-  sizes: MyString
-  material: MyString
-=======
 # == Schema Information
 #
 # Table name: components
@@ -49,4 +30,3 @@ two:
   brand_component: MyString
   sizes_component: 1.5
   material_component: MyString
->>>>>>> marlon

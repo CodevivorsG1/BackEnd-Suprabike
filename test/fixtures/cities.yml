@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-
-two:
-  name: MyString
-=======
 # == Schema Information
 #
 # Table name: cities
@@ -27,4 +18,3 @@ one:
 two:
   idcity: 1
   name_city: MyString
->>>>>>> marlon

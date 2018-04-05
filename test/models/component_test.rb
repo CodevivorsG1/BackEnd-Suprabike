@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # == Schema Information
 #
 # Table name: components
@@ -15,7 +13,6 @@
 #  updated_at            :datetime         not null
 #
 
->>>>>>> marlon
 require 'test_helper'
 
 class ComponentTest < ActiveSupport::TestCase

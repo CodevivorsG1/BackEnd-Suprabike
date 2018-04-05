@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # == Schema Information
 #
 # Table name: stores
@@ -22,7 +20,6 @@
 #  city_id                :integer
 #
 
->>>>>>> marlon
 require 'test_helper'
 
 class StoreTest < ActiveSupport::TestCase

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-=======
 # == Schema Information
 #
 # Table name: users
@@ -34,28 +29,18 @@ one:
 
 one:
 <<<<<<< Updated upstream
->>>>>>> marlon
   name: MyString
   surname: MyString
   gender: MyString
   email: MyString
-<<<<<<< HEAD
-  phoneNum: MyString
-  cellphone: MyString
-=======
   password: MyString
   iduser: 1
->>>>>>> marlon
 
 two:
   name: MyString
   surname: MyString
   gender: MyString
   email: MyString
-<<<<<<< HEAD
-  phoneNum: MyString
-  cellphone: MyString
-=======
   password: MyString
   iduser: 1
 =======
@@ -78,4 +63,3 @@ two:
   phonenumUser: 1
   celphoneUser: 1
 >>>>>>> Stashed changes
->>>>>>> marlon

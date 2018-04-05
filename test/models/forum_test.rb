@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # == Schema Information
 #
 # Table name: forums
@@ -10,7 +8,6 @@
 #  updated_at :datetime         not null
 #
 
->>>>>>> marlon
 require 'test_helper'
 
 class ForumTest < ActiveSupport::TestCase

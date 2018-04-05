@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # == Schema Information
 #
 # Table name: cities
@@ -11,7 +9,6 @@
 #  updated_at :datetime         not null
 #
 
->>>>>>> marlon
 require 'test_helper'
 
 class CityTest < ActiveSupport::TestCase

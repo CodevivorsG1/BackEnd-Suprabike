@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-  surname: MyString
-  typework: MyString
-  email: MyString
-  costhour: 1.5
-  phoneNum: MyString
-
-two:
-  name: MyString
-  surname: MyString
-  typework: MyString
-  email: MyString
-  costhour: 1.5
-  phoneNum: MyString
-=======
 # == Schema Information
 #
 # Table name: technicians
@@ -59,4 +40,3 @@ two:
   costhourtec: 1.5
   passwordtec: MyString
   phonenumtec: 1
->>>>>>> marlon
