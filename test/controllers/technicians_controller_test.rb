@@ -6,43 +6,33 @@ class TechniciansControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get technicians_url
-    assert_response :success
-  end
-
-  test "should get new" do
-    get new_technician_url
+    get technicians_url, as: :json
     assert_response :success
   end
 
   test "should create technician" do
     assert_difference('Technician.count') do
-      post technicians_url, params: { technician: { costhour: @technician.costhour, email: @technician.email, name: @technician.name, phoneNum: @technician.phoneNum, surname: @technician.surname, typework: @technician.typework } }
+      post technicians_url, params: { technician: { NameTec: @technician.NameTec, SurnameTec: @technician.SurnameTec, costhourtec: @technician.costhourtec, emailtec: @technician.emailtec, id_technical: @technician.id_technical, passwordtec: @technician.passwordtec, phonenumtec: @technician.phonenumtec, typeworktec: @technician.typeworktec } }, as: :json
     end
 
-    assert_redirected_to technician_url(Technician.last)
+    assert_response 201
   end
 
   test "should show technician" do
-    get technician_url(@technician)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_technician_url(@technician)
+    get technician_url(@technician), as: :json
     assert_response :success
   end
 
   test "should update technician" do
-    patch technician_url(@technician), params: { technician: { costhour: @technician.costhour, email: @technician.email, name: @technician.name, phoneNum: @technician.phoneNum, surname: @technician.surname, typework: @technician.typework } }
-    assert_redirected_to technician_url(@technician)
+    patch technician_url(@technician), params: { technician: { NameTec: @technician.NameTec, SurnameTec: @technician.SurnameTec, costhourtec: @technician.costhourtec, emailtec: @technician.emailtec, id_technical: @technician.id_technical, passwordtec: @technician.passwordtec, phonenumtec: @technician.phonenumtec, typeworktec: @technician.typeworktec } }, as: :json
+    assert_response 200
   end
 
   test "should destroy technician" do
     assert_difference('Technician.count', -1) do
-      delete technician_url(@technician)
+      delete technician_url(@technician), as: :json
     end
 
-    assert_redirected_to technicians_url
+    assert_response 204
   end
 end

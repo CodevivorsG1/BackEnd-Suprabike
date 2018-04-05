@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -5,3 +6,25 @@ one:
 
 two:
   name: MyString
+=======
+# == Schema Information
+#
+# Table name: cities
+#
+#  id         :integer          not null, primary key
+#  idcity     :integer
+#  name_city  :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idcity: 1
+  name_city: MyString
+
+two:
+  idcity: 1
+  name_city: MyString
+>>>>>>> marlon

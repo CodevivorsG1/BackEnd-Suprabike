@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -5,3 +6,22 @@ one:
 
 two:
   description: MyText
+=======
+# == Schema Information
+#
+# Table name: comments
+#
+#  id          :integer          not null, primary key
+#  description :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+
+two:
+  description: MyString
+>>>>>>> marlon

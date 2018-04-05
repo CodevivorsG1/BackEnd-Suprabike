@@ -6,43 +6,33 @@ class ForumsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get forums_url
-    assert_response :success
-  end
-
-  test "should get new" do
-    get new_forum_url
+    get forums_url, as: :json
     assert_response :success
   end
 
   test "should create forum" do
     assert_difference('Forum.count') do
-      post forums_url, params: { forum: { topic: @forum.topic } }
+      post forums_url, params: { forum: { topic: @forum.topic } }, as: :json
     end
 
-    assert_redirected_to forum_url(Forum.last)
+    assert_response 201
   end
 
   test "should show forum" do
-    get forum_url(@forum)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_forum_url(@forum)
+    get forum_url(@forum), as: :json
     assert_response :success
   end
 
   test "should update forum" do
-    patch forum_url(@forum), params: { forum: { topic: @forum.topic } }
-    assert_redirected_to forum_url(@forum)
+    patch forum_url(@forum), params: { forum: { topic: @forum.topic } }, as: :json
+    assert_response 200
   end
 
   test "should destroy forum" do
     assert_difference('Forum.count', -1) do
-      delete forum_url(@forum)
+      delete forum_url(@forum), as: :json
     end
 
-    assert_redirected_to forums_url
+    assert_response 204
   end
 end

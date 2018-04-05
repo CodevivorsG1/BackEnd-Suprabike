@@ -6,43 +6,33 @@ class TransactionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get transactions_url
-    assert_response :success
-  end
-
-  test "should get new" do
-    get new_transaction_url
+    get transactions_url, as: :json
     assert_response :success
   end
 
   test "should create transaction" do
     assert_difference('Transaction.count') do
-      post transactions_url, params: { transaction: { date: @transaction.date, total: @transaction.total, type: @transaction.type } }
+      post transactions_url, params: { transaction: { date_transaction: @transaction.date_transaction, total_transaction: @transaction.total_transaction, type_transaction: @transaction.type_transaction } }, as: :json
     end
 
-    assert_redirected_to transaction_url(Transaction.last)
+    assert_response 201
   end
 
   test "should show transaction" do
-    get transaction_url(@transaction)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_transaction_url(@transaction)
+    get transaction_url(@transaction), as: :json
     assert_response :success
   end
 
   test "should update transaction" do
-    patch transaction_url(@transaction), params: { transaction: { date: @transaction.date, total: @transaction.total, type: @transaction.type } }
-    assert_redirected_to transaction_url(@transaction)
+    patch transaction_url(@transaction), params: { transaction: { date_transaction: @transaction.date_transaction, total_transaction: @transaction.total_transaction, type_transaction: @transaction.type_transaction } }, as: :json
+    assert_response 200
   end
 
   test "should destroy transaction" do
     assert_difference('Transaction.count', -1) do
-      delete transaction_url(@transaction)
+      delete transaction_url(@transaction), as: :json
     end
 
-    assert_redirected_to transactions_url
+    assert_response 204
   end
 end

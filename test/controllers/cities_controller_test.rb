@@ -6,43 +6,33 @@ class CitiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get cities_url
-    assert_response :success
-  end
-
-  test "should get new" do
-    get new_city_url
+    get cities_url, as: :json
     assert_response :success
   end
 
   test "should create city" do
     assert_difference('City.count') do
-      post cities_url, params: { city: { name: @city.name } }
+      post cities_url, params: { city: { idcity: @city.idcity, name_city: @city.name_city } }, as: :json
     end
 
-    assert_redirected_to city_url(City.last)
+    assert_response 201
   end
 
   test "should show city" do
-    get city_url(@city)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_city_url(@city)
+    get city_url(@city), as: :json
     assert_response :success
   end
 
   test "should update city" do
-    patch city_url(@city), params: { city: { name: @city.name } }
-    assert_redirected_to city_url(@city)
+    patch city_url(@city), params: { city: { idcity: @city.idcity, name_city: @city.name_city } }, as: :json
+    assert_response 200
   end
 
   test "should destroy city" do
     assert_difference('City.count', -1) do
-      delete city_url(@city)
+      delete city_url(@city), as: :json
     end
 
-    assert_redirected_to cities_url
+    assert_response 204
   end
 end

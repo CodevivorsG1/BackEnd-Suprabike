@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -5,3 +6,22 @@ one:
 
 two:
   topic: MyText
+=======
+# == Schema Information
+#
+# Table name: forums
+#
+#  id         :integer          not null, primary key
+#  topic      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  topic: MyString
+
+two:
+  topic: MyString
+>>>>>>> marlon

@@ -6,43 +6,33 @@ class StoresControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get stores_url
-    assert_response :success
-  end
-
-  test "should get new" do
-    get new_store_url
+    get stores_url, as: :json
     assert_response :success
   end
 
   test "should create store" do
     assert_difference('Store.count') do
-      post stores_url, params: { store: { address: @store.address, cellphone: @store.cellphone, dateregis: @store.dateregis, email: @store.email, name: @store.name, phoneNum: @store.phoneNum, score: @store.score } }
+      post stores_url, params: { store: { address_store: @store.address_store, celphone_store: @store.celphone_store, dateregis_store: @store.dateregis_store, email_store: @store.email_store, id_store: @store.id_store, name_store: @store.name_store, password_store: @store.password_store, phonenum_store: @store.phonenum_store, score_store: @store.score_store } }, as: :json
     end
 
-    assert_redirected_to store_url(Store.last)
+    assert_response 201
   end
 
   test "should show store" do
-    get store_url(@store)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_store_url(@store)
+    get store_url(@store), as: :json
     assert_response :success
   end
 
   test "should update store" do
-    patch store_url(@store), params: { store: { address: @store.address, cellphone: @store.cellphone, dateregis: @store.dateregis, email: @store.email, name: @store.name, phoneNum: @store.phoneNum, score: @store.score } }
-    assert_redirected_to store_url(@store)
+    patch store_url(@store), params: { store: { address_store: @store.address_store, celphone_store: @store.celphone_store, dateregis_store: @store.dateregis_store, email_store: @store.email_store, id_store: @store.id_store, name_store: @store.name_store, password_store: @store.password_store, phonenum_store: @store.phonenum_store, score_store: @store.score_store } }, as: :json
+    assert_response 200
   end
 
   test "should destroy store" do
     assert_difference('Store.count', -1) do
-      delete store_url(@store)
+      delete store_url(@store), as: :json
     end
 
-    assert_redirected_to stores_url
+    assert_response 204
   end
 end

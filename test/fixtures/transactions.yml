@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -9,3 +10,28 @@ two:
   date: 2018-03-15 11:31:49
   type: 
   total: 1.5
+=======
+# == Schema Information
+#
+# Table name: transactions
+#
+#  id                :integer          not null, primary key
+#  date_transaction  :string
+#  type_transaction  :string
+#  total_transaction :float
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_transaction: MyString
+  type_transaction: MyString
+  total_transaction: 1.5
+
+two:
+  date_transaction: MyString
+  type_transaction: MyString
+  total_transaction: 1.5
+>>>>>>> marlon
