@@ -8,6 +8,9 @@ class CreateComponents < ActiveRecord::Migration[5.1]
       t.float :sizes_component
       t.string :material_component
 
+
+      t.integer :store_id
+
       t.timestamps
     end
   end

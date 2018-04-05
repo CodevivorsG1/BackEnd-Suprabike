@@ -14,3 +14,5 @@ City.create(idcity:666,name_city:"Buga") #si entra
 Store.create(id_store:777,name_store:"pruebaStore",address_store:"craTienda",score_store:4,phonenum_store:777777,celphone_store:777777,email:"tienda@mail")
 Bicycle.create(id_bicy:444,brand_bicy:"GW",material_bicy:"aluminio",components_bicy:"alum marco",price_bicy:888888,usetype_bicy:"mountain",description_bicy:"para calle")
 
+
+

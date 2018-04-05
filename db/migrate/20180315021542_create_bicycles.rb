@@ -9,6 +9,9 @@ class CreateBicycles < ActiveRecord::Migration[5.1]
       t.string :usetype_bicy
       t.string :description_bicy
 
+      
+      t.integer :store_id
+
       t.timestamps
     end
   end

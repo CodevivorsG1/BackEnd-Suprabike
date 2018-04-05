@@ -34,6 +34,8 @@ class Technician < ApplicationRecord
 
     has_many :transactions
     has_one :image, as: :imageable
- 
+
+    #Technician.where(:typeworktec => "mantenimiento")
+
 
 end
