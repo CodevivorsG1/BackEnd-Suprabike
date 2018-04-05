@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
+    @users = User.paginate(:page => params[:page], :per_page => 10)
 
     render json: @users
   end
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      render json: @user, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:idUser, :nameUser, :surnameUser, :genderUser, :emailUser, :passwordUser, :phonenumUser, :celphoneUser)
+      params.require(:user).permit( :email, :password,:idUser, :nameUser, :surnameUser, :genderUser, :phonenumUser, :celphoneUser, :city_id)
     end
 end

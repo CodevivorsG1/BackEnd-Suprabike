@@ -3,14 +3,13 @@ class BicyclesController < ApplicationController
 
   # GET /bicycles
   def index
-    @bicycles = Bicycle.all
-
-    render json: @bicycles
+    @bicycles = Bicycle.paginate(:page => params[:page], :per_page => 10)
+    render json: @bicycles, each_serializer: BicycleSerializer
   end
 
   # GET /bicycles/1
   def show
-    render json: @bicycle
+    render json: @bicycle, serializer: BicycleSerializer
   end
 
   # POST /bicycles

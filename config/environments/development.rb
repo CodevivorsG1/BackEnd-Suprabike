@@ -26,6 +26,7 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
@@ -37,7 +38,7 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
-
+  Paperclip.options[:command_path] = "/usr/bin/"
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

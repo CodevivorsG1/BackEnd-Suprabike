@@ -3,7 +3,7 @@ class StoresController < ApplicationController
 
   # GET /stores
   def index
-    @stores = Store.all
+    @stores = Store.paginate(:page => params[:page], :per_page => 10)
 
     render json: @stores
   end
@@ -18,7 +18,7 @@ class StoresController < ApplicationController
     @store = Store.new(store_params)
 
     if @store.save
-      render json: @store, status: :created, location: @store
+      render json: @store, status: :created
     else
       render json: @store.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class StoresController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def store_params
-      params.require(:store).permit(:id_store, :name_store, :address_store, :email_store, :dateregis_store, :score_store, :password_store, :phonenum_store, :celphone_store)
+      params.require(:store).permit(:email, :password, :id_store, :name_store, :address_store, :score_store, :phonenum_store, :celphone_store, :city_id)
     end
 end
