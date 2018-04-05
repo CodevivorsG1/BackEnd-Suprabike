@@ -11,11 +11,14 @@
 #
 
 class Image < ApplicationRecord
-    belongs_to :imageable , polymorphic: true
-    belongs_to :technician
-    belongs_to :user
-    belongs_to :store
-    belongs_to :component
-    belongs_to :bycicle
+    has_attached_file :this_image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+    validates_attachment_content_type :this_image, content_type: /\Aimage\/.*\z/
+
+    belongs_to :imageable , polymorphic: true , optional: true
+    belongs_to :technician, optional: true
+    belongs_to :user, optional: true
+    belongs_to :store, optional: true
+    belongs_to :component, optional: true
+    belongs_to :bycicle, optional: true
   
 end
