@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405183205) do
+ActiveRecord::Schema.define(version: 20180405214714) do
 
   create_table "bicycles", force: :cascade do |t|
     t.integer "id_bicy"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20180405183205) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "forum_id"
+    t.string "user_id"
+    t.index ["forum_id"], name: "index_comments_on_forum_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "components", force: :cascade do |t|
@@ -48,12 +52,16 @@ ActiveRecord::Schema.define(version: 20180405183205) do
     t.string "material_component"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "store_id"
+    t.index ["store_id"], name: "index_components_on_store_id"
   end
 
   create_table "forums", force: :cascade do |t|
     t.string "topic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_forums_on_user_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -66,7 +74,15 @@ ActiveRecord::Schema.define(version: 20180405183205) do
     t.string "this_image_content_type"
     t.integer "this_image_file_size"
     t.datetime "this_image_updated_at"
+    t.integer "bicycle_id"
+    t.integer "store_id"
+    t.integer "component_id"
+    t.integer "user_id"
+    t.index ["bicycle_id"], name: "index_images_on_bicycle_id"
+    t.index ["component_id"], name: "index_images_on_component_id"
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
+    t.index ["store_id"], name: "index_images_on_store_id"
+    t.index ["user_id"], name: "index_images_on_user_id"
   end
 
   create_table "stores", force: :cascade do |t|
@@ -117,6 +133,12 @@ ActiveRecord::Schema.define(version: 20180405183205) do
     t.float "total_transaction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "technician_id"
+    t.integer "store_id"
+    t.integer "user_id"
+    t.index ["store_id"], name: "index_transactions_on_store_id"
+    t.index ["technician_id"], name: "index_transactions_on_technician_id"
+    t.index ["user_id"], name: "index_transactions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
