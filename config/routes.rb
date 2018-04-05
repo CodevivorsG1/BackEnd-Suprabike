@@ -71,6 +71,8 @@
 # 
 
 Rails.application.routes.draw do
+  get 'home/index'
+
   #devise_for :technicians
   #devise_for :stores
   #devise_for :users
