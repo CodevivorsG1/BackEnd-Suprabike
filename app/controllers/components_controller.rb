@@ -3,7 +3,7 @@ class ComponentsController < ApplicationController
 
   # GET /components
   def index
-    @components = Component.all
+    @components = Component.paginate(:page => params[:page], :per_page => 10)
 
     render json: @components
   end

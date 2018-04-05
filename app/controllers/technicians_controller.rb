@@ -3,7 +3,7 @@ class TechniciansController < ApplicationController
 
   # GET /technicians
   def index
-    @technicians = Technician.all
+    @technicians = Technician.paginate(:page => params[:page], :per_page => 10)
 
     render json: @technicians
   end
@@ -18,7 +18,7 @@ class TechniciansController < ApplicationController
     @technician = Technician.new(technician_params)
 
     if @technician.save
-      render json: @technician, status: :created, location: @technician
+      render json: @technician, status: :created
     else
       render json: @technician.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class TechniciansController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def technician_params
-      params.require(:technician).permit(:id_technical, :NameTec, :SurnameTec, :typeworktec, :emailtec, :costhourtec, :passwordtec, :phonenumtec)
+      params.require(:technician).permit(:email, :password, :id_technical, :NameTec, :SurnameTec, :typeworktec, :costhourtec, :phonenumtec)
     end
 end

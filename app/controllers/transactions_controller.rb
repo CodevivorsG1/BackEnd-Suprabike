@@ -3,7 +3,7 @@ class TransactionsController < ApplicationController
 
   # GET /transactions
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.paginate(:page => params[:page], :per_page => 10)
 
     render json: @transactions
   end

@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: components
+#
+#  id                    :integer          not null, primary key
+#  type_component        :string
+#  price_component       :float
+#  description_component :string
+#  brand_component       :string
+#  sizes_component       :float
+#  material_component    :string
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#
+
 class Component < ApplicationRecord
     validates :type_component, presence: true,length: { maximum: 20 }
     validates :price_component, presence: true , numericality: true
@@ -7,5 +22,5 @@ class Component < ApplicationRecord
     validates :material_component, presence: true,length: { maximum: 20 }
 
     belongs_to :store
-    has_many :images
+    has_many :images, as: :imageable
 end
