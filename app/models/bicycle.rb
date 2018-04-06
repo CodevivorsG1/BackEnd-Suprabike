@@ -27,6 +27,6 @@ class Bicycle < ApplicationRecord
     belongs_to :store
     has_many :images, as: :imageable
 
-    scope :material, where(:material_bicy => "aluminio")
+    #scope :material, where(:material_bicy => "aluminio")
     
 end
