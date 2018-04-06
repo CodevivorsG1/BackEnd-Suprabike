@@ -45,6 +45,6 @@ class BicyclesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def bicycle_params
-      params.require(:bicycle).permit(:id_bicy, :brand_bicy, :material_bicy, :components_bicy, :price_bicy, :usetype_bicy, :description_bicy)
+      params.require(:bicycle).permit(:id_bicy, :brand_bicy, :material_bicy, :components_bicy, :price_bicy, :usetype_bicy, :description_bicy, :store_id)
     end
 end

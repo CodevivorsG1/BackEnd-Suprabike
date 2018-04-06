@@ -35,10 +35,10 @@ class User < ApplicationRecord
     validates :surnameUser, presence: true,length: { maximum: 20 }
     validates :genderUser, presence: true,length: { maximum: 20 }
     validates :idUser, presence: true, numericality: { only_integer: true },length: { maximum: 50 }
-    has_many :transactions
+    has_many :transactions , dependent: :destroy
     belongs_to :city
     has_many :comments, dependent: :destroy
-    has_many :forums
+    has_many :forums , dependent: :destroy
     has_one :image, as: :imageable
 
     scope :similarJuan, where(:nameUser => "Juan")

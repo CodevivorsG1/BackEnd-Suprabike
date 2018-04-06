@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405075346) do
+ActiveRecord::Schema.define(version: 20180405214926) do
 
   create_table "bicycles", force: :cascade do |t|
     t.integer "id_bicy"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20180405075346) do
     t.string "description_bicy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "store_id"
+    t.index ["store_id"], name: "index_bicycles_on_store_id"
   end
 
   create_table "cities", force: :cascade do |t|
@@ -60,6 +62,10 @@ ActiveRecord::Schema.define(version: 20180405075346) do
     t.integer "imageable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "this_image_file_name"
+    t.string "this_image_content_type"
+    t.integer "this_image_file_size"
+    t.datetime "this_image_updated_at"
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
   end
 

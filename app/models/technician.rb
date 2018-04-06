@@ -32,7 +32,7 @@ class Technician < ApplicationRecord
     validates :costhourtec, presence: true, numericality: true
     validates :phonenumtec, presence: true,length: { maximum: 20 }
 
-    has_many :transactions
+    has_many :transactions, dependent: :destroy
     has_one :image, as: :imageable
 
     #Technician.where(:typeworktec => "mantenimiento")
