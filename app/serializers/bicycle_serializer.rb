@@ -12,6 +12,7 @@
 #  description_bicy :string
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  store_id         :integer
 #
 
 class BicycleSerializer < ApplicationSerializer
