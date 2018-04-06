@@ -37,6 +37,6 @@ class Store < ApplicationRecord
     has_many :components , dependent: :destroy
     has_many :images, as: :imageable
 
-    scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
+    #scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
     has_many :bycicles , dependent: :destroy
 end

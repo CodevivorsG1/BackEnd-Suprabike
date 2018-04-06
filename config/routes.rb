@@ -82,9 +82,10 @@ Rails.application.routes.draw do
   resources :technicians
   resources :stores
   resources :images
-  resources :forums
+  resources :forums do
+    resources :comments , only: [:create, :index, :destroy]
+  end
   resources :components
-  resources :comments
   resources :bicycles
   resources :users_sessions, only: [ :create ,:destroy]
   resources :technicians_sessions, only: [ :create ,:destroy]

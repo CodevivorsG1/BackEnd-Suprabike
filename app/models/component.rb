@@ -24,5 +24,5 @@ class Component < ApplicationRecord
     belongs_to :store
     has_many :images, as: :imageable , dependent: :destroy
 
-    scope :baratos, lambda { |price_component| where("price_component < ?", price_component) }
+    #scope :baratos, lambda { |price_component| where("price_component < ?", price_component) }
 end

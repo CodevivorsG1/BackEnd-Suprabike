@@ -9,5 +9,5 @@
 #
 
 class CommentSerializer < ApplicationSerializer
-  attributes :id , :description
+  attributes :id , :description , :forum_id, :user_id
 end

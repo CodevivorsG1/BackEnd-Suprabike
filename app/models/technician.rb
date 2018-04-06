@@ -36,7 +36,7 @@ class Technician < ApplicationRecord
     has_one :image, as: :imageable
 
     #Technician.where(:typeworktec => "mantenimiento")
-    scope :typeJob, where(:typeworktec => "mantenimiento")
+    #scope :typeJob, where(:typeworktec => "mantenimiento")
 
 
 end
