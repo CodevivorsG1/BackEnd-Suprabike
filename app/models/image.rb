@@ -24,5 +24,7 @@ class Image < ApplicationRecord
     belongs_to :store, optional: true
     belongs_to :component, optional: true
     belongs_to :bycicle, optional: true
+
+    scope :biciMountain, -> { where(:name => "mountain")}
   
 end

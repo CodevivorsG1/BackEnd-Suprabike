@@ -41,6 +41,11 @@ class User < ApplicationRecord
     has_many :forums , dependent: :destroy
     has_one :image, as: :imageable
 
-    #scope :similarJuan, where(:nameUser => "Juan")
+    scope :similarJuan, where(:nameUser => "Juan")
+    scope :mujeres,-> { where(:genderUser => "mujer")}
+    scope :hombres,-> { where(:genderUser => "hombre")}
+#clentes que han hecho transacciones de mantenimiento ordenado por id
+    scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}).pluck(:user_id) }
+    
 
 end
