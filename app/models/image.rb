@@ -17,5 +17,7 @@ class Image < ApplicationRecord
     belongs_to :store
     belongs_to :component
     belongs_to :bycicle
+
+    scope :biciMountain, -> { where(:name => "mountain")}
   
 end

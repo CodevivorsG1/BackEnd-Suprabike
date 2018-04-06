@@ -41,6 +41,8 @@ class User < ApplicationRecord
     has_many :forums
     has_one :image, as: :imageable
 
-    scope :similarJuan, where(:nameUser => "Juan")
+    scope :mujeres,-> { where(:genderUser => "mujer")}
+    scope :hombres,-> { where(:genderUser => "hombre")}
+    
 
 end

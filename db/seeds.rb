@@ -6,13 +6,8 @@
  #  movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
  #  Character.create(name: 'Luke', movie: movies.first)
 
-Image.create(name:"imagen prueba")
-Component.create(type_component:"tipoPrueba",price_component:999,description_component:"descripcion componente",brand_component:"brand prueba",sizes_component:55.2,material_component:"material prueba")
-#no entra component
-Comment.create(description:"esto es una prueba")#no entra
-City.create(idcity:666,name_city:"Buga") #si entra
-Store.create(id_store:777,name_store:"pruebaStore",address_store:"craTienda",score_store:4,phonenum_store:777777,celphone_store:777777,email:"tienda@mail")
-Bicycle.create(id_bicy:444,brand_bicy:"GW",material_bicy:"aluminio",components_bicy:"alum marco",price_bicy:888888,usetype_bicy:"mountain",description_bicy:"para calle")
-
-
-
+City.create(idcity:1,name_city:"bogota")
+City.create(idcity:80,name_city:"bogota")
+City.create(idcity:66,name_city:"bogota")
+City.create(idcity:90,name_city:"bogota")
+City.create(idcity:12,name_city:"cali")
