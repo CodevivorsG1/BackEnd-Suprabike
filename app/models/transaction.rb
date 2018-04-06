@@ -17,5 +17,7 @@ class Transaction < ApplicationRecord
     belongs_to :technician
     belongs_to :store
     belongs_to :user
+
+    scope :soporte, where(:type_transaction => "soporte")
    
 end
