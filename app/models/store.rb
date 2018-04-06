@@ -32,9 +32,9 @@ class Store < ApplicationRecord
     validates :phonenum_store, presence: true, numericality: { only_integer: true }
     validates :celphone_store, presence: true, numericality: { only_integer: true }
 
-    has_many :transactions
+    has_many :transactions , dependent: :destroy
     belongs_to :city
-    has_many :components
+    has_many :components , dependent: :destroy
     has_many :images, as: :imageable
-    has_many :bycicles
+    has_many :bycicles , dependent: :destroy
 end

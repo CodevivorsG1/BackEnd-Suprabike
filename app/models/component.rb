@@ -22,5 +22,5 @@ class Component < ApplicationRecord
     validates :material_component, presence: true,length: { maximum: 20 }
 
     belongs_to :store
-    has_many :images, as: :imageable
+    has_many :images, as: :imageable , dependent: :destroy
 end
