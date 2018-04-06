@@ -37,4 +37,6 @@ class Store < ApplicationRecord
     has_many :components
     has_many :images, as: :imageable
     has_many :bycicles
+
+    scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
 end
