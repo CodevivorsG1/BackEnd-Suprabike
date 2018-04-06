@@ -32,5 +32,7 @@ class Bicycle < ApplicationRecord
     def self.baratas(price_bicy)
         where("price < ?", price_bicy) #se le pasa como argumento la plata Bicycle.baratas(9999)
     end
-    
+
+    #tiendas que han vendido bien
+    scope :successful, -> { Bicycle.joins(:stores).where(stores: {score_store: 4}) }
 end

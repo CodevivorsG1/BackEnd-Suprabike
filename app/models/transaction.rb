@@ -20,7 +20,7 @@ class Transaction < ApplicationRecord
 
     scope :soporte, -> {where(:type_transaction => "soporte")}
     scope :totalTrans, -> {where("price < ?", total_transaction)}
-    scope :soportesCaros, soporte.total_transaction
+    #scope :soportesCaros, soporte.total_transaction
     
     
 end
