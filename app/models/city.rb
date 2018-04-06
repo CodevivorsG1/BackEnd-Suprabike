@@ -16,4 +16,6 @@ class City < ApplicationRecord
     has_many :users
     has_many :stores
 
+    scope :capital, where(:name_city => "bogota")
+
 end
