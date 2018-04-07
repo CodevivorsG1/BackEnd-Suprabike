@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405214926) do
+ActiveRecord::Schema.define(version: 20180406043107) do
 
   create_table "bicycles", force: :cascade do |t|
     t.integer "id_bicy"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20180405214926) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "forum_id"
+    t.integer "user_id"
+    t.index ["forum_id"], name: "index_comments_on_forum_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "components", force: :cascade do |t|
@@ -54,6 +58,8 @@ ActiveRecord::Schema.define(version: 20180405214926) do
     t.string "topic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_forums_on_user_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -97,7 +103,6 @@ ActiveRecord::Schema.define(version: 20180405214926) do
     t.string "SurnameTec"
     t.string "typeworktec"
     t.float "costhourtec"
-    t.integer "phonenumtec"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -106,6 +111,7 @@ ActiveRecord::Schema.define(version: 20180405214926) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "authentication_token", limit: 30
+    t.integer "phonenumtec", limit: 8
     t.index ["authentication_token"], name: "index_technicians_on_authentication_token", unique: true
     t.index ["email"], name: "index_technicians_on_email", unique: true
     t.index ["reset_password_token"], name: "index_technicians_on_reset_password_token", unique: true
@@ -117,6 +123,8 @@ ActiveRecord::Schema.define(version: 20180405214926) do
     t.float "total_transaction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "technician_id"
+    t.index ["technician_id"], name: "index_transactions_on_technician_id"
   end
 
   create_table "users", force: :cascade do |t|

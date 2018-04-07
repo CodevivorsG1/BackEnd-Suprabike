@@ -8,6 +8,7 @@
 #  total_transaction :float
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  technician_id     :integer
 #
 
 class TransactionSerializer < ApplicationSerializer
