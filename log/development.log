@@ -13430,3 +13430,399 @@ Processing by ImagesController#index as */*
 Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (15.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (92.0ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "id_bicy" integer, "brand_bicy" character varying, "material_bicy" character varying, "components_bicy" character varying, "price_bicy" float, "usetype_bicy" character varying, "description_bicy" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "store_id" integer)[0m
+  [1m[35m (59.5ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_store_id" ON "bicycles"  ("store_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "cities" CASCADE[0m
+  [1m[35m (109.2ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "idcity" integer, "name_city" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (86.7ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "components" CASCADE[0m
+  [1m[35m (97.8ms)[0m  [1m[35mCREATE TABLE "components" ("id" bigserial primary key, "type_component" character varying, "price_component" float, "description_component" character varying, "brand_component" character varying, "sizes_component" float, "material_component" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "forums" CASCADE[0m
+  [1m[35m (130.6ms)[0m  [1m[35mCREATE TABLE "forums" ("id" bigserial primary key, "topic" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (98.3ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "name" character varying, "imageable_type" character varying, "imageable_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "this_image_file_name" character varying, "this_image_content_type" character varying, "this_image_file_size" integer, "this_image_updated_at" timestamp)[0m
+  [1m[35m (50.9ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_imageable_type_and_imageable_id" ON "images"  ("imageable_type", "imageable_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "stores" CASCADE[0m
+  [1m[35m (85.5ms)[0m  [1m[35mCREATE TABLE "stores" ("id" bigserial primary key, "id_store" integer, "name_store" character varying, "address_store" character varying, "score_store" integer, "phonenum_store" integer, "celphone_store" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30), "city_id" integer)[0m
+  [1m[35m (50.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_authentication_token" ON "stores"  ("authentication_token")[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCREATE  INDEX  "index_stores_on_city_id" ON "stores"  ("city_id")[0m
+  [1m[35m (62.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_email" ON "stores"  ("email")[0m
+  [1m[35m (53.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_reset_password_token" ON "stores"  ("reset_password_token")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "technicians" CASCADE[0m
+  [1m[35m (108.3ms)[0m  [1m[35mCREATE TABLE "technicians" ("id" bigserial primary key, "id_technical" integer, "NameTec" character varying, "SurnameTec" character varying, "typeworktec" character varying, "costhourtec" float, "phonenumtec" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30))[0m
+  [1m[35m (52.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_authentication_token" ON "technicians"  ("authentication_token")[0m
+  [1m[35m (63.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_email" ON "technicians"  ("email")[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_reset_password_token" ON "technicians"  ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (87.2ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "date_transaction" character varying, "type_transaction" character varying, "total_transaction" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (86.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "city_id" integer, "idUser" integer, "nameUser" character varying, "surnameUser" character varying, "genderUser" character varying, "phonenumUser" integer, "celphoneUser" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "authentication_token" character varying(30))[0m
+  [1m[35m (51.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  [1m[35m (52.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (97.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (26.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180405214926)[0m
+  [1m[35m (43.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180405073607),
+(20180405183205),
+(20180403085000),
+(20180405071816),
+(20180315183239),
+(20180315022442),
+(20180315022155),
+(20180405070227),
+(20180405180633),
+(20180405073623),
+(20180315035538),
+(20180315021542),
+(20180315040931),
+(20180315040647),
+(20180315041436),
+(20180405075346),
+(20180315022258),
+(20180405040014),
+(20180315021854);
+
+[0m
+  [1m[35m (79.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-13 00:54:31.723523"], ["updated_at", "2018-04-13 00:54:31.723523"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (556.9ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "id_bicy" integer, "brand_bicy" character varying, "material_bicy" character varying, "components_bicy" character varying, "price_bicy" float, "usetype_bicy" character varying, "description_bicy" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "store_id" integer)[0m
+  [1m[35m (58.5ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_store_id" ON "bicycles"  ("store_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "cities" CASCADE[0m
+  [1m[35m (87.1ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "idcity" integer, "name_city" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (86.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "components" CASCADE[0m
+  [1m[35m (108.7ms)[0m  [1m[35mCREATE TABLE "components" ("id" bigserial primary key, "type_component" character varying, "price_component" float, "description_component" character varying, "brand_component" character varying, "sizes_component" float, "material_component" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "forums" CASCADE[0m
+  [1m[35m (98.1ms)[0m  [1m[35mCREATE TABLE "forums" ("id" bigserial primary key, "topic" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (98.2ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "name" character varying, "imageable_type" character varying, "imageable_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "this_image_file_name" character varying, "this_image_content_type" character varying, "this_image_file_size" integer, "this_image_updated_at" timestamp)[0m
+  [1m[35m (51.3ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_imageable_type_and_imageable_id" ON "images"  ("imageable_type", "imageable_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "stores" CASCADE[0m
+  [1m[35m (85.8ms)[0m  [1m[35mCREATE TABLE "stores" ("id" bigserial primary key, "id_store" integer, "name_store" character varying, "address_store" character varying, "score_store" integer, "phonenum_store" integer, "celphone_store" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30), "city_id" integer)[0m
+  [1m[35m (52.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_authentication_token" ON "stores"  ("authentication_token")[0m
+  [1m[35m (51.2ms)[0m  [1m[35mCREATE  INDEX  "index_stores_on_city_id" ON "stores"  ("city_id")[0m
+  [1m[35m (62.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_email" ON "stores"  ("email")[0m
+  [1m[35m (62.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_reset_password_token" ON "stores"  ("reset_password_token")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "technicians" CASCADE[0m
+  [1m[35m (119.3ms)[0m  [1m[35mCREATE TABLE "technicians" ("id" bigserial primary key, "id_technical" integer, "NameTec" character varying, "SurnameTec" character varying, "typeworktec" character varying, "costhourtec" float, "phonenumtec" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30))[0m
+  [1m[35m (63.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_authentication_token" ON "technicians"  ("authentication_token")[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_email" ON "technicians"  ("email")[0m
+  [1m[35m (41.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_reset_password_token" ON "technicians"  ("reset_password_token")[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (86.4ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "date_transaction" character varying, "type_transaction" character varying, "total_transaction" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (84.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "city_id" integer, "idUser" integer, "nameUser" character varying, "surnameUser" character varying, "genderUser" character varying, "phonenumUser" integer, "celphoneUser" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "authentication_token" character varying(30))[0m
+  [1m[35m (52.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (87.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180405214926)[0m
+  [1m[35m (10.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180405073607),
+(20180405183205),
+(20180403085000),
+(20180405071816),
+(20180315183239),
+(20180315022442),
+(20180315022155),
+(20180405070227),
+(20180405180633),
+(20180405073623),
+(20180315035538),
+(20180315021542),
+(20180315040931),
+(20180315040647),
+(20180315041436),
+(20180405075346),
+(20180315022258),
+(20180405040014),
+(20180315021854);
+
+[0m
+  [1m[35m (86.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-13 00:54:34.138098"], ["updated_at", "2018-04-13 00:54:34.138098"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-04-13 00:54:34.146384"], ["key", "environment"]]
+  [1m[35m (14.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["idcity", 574], ["name_city", "Cristmouth"], ["created_at", "2018-04-13 00:54:35.310568"], ["updated_at", "2018-04-13 00:54:35.310568"]]
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (39.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (98.6ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "id_bicy" integer, "brand_bicy" character varying, "material_bicy" character varying, "components_bicy" character varying, "price_bicy" float, "usetype_bicy" character varying, "description_bicy" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "store_id" integer)[0m
+  [1m[35m (62.0ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_store_id" ON "bicycles"  ("store_id")[0m
+  [1m[35m (11.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cities" CASCADE[0m
+  [1m[35m (109.7ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "idcity" integer, "name_city" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (120.9ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "components" CASCADE[0m
+  [1m[35m (89.6ms)[0m  [1m[35mCREATE TABLE "components" ("id" bigserial primary key, "type_component" character varying, "price_component" float, "description_component" character varying, "brand_component" character varying, "sizes_component" float, "material_component" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "forums" CASCADE[0m
+  [1m[35m (110.7ms)[0m  [1m[35mCREATE TABLE "forums" ("id" bigserial primary key, "topic" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (87.8ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "name" character varying, "imageable_type" character varying, "imageable_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "this_image_file_name" character varying, "this_image_content_type" character varying, "this_image_file_size" integer, "this_image_updated_at" timestamp)[0m
+  [1m[35m (73.9ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_imageable_type_and_imageable_id" ON "images"  ("imageable_type", "imageable_id")[0m
+  [1m[35m (11.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "stores" CASCADE[0m
+  [1m[35m (84.9ms)[0m  [1m[35mCREATE TABLE "stores" ("id" bigserial primary key, "id_store" integer, "name_store" character varying, "address_store" character varying, "score_store" integer, "phonenum_store" integer, "celphone_store" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30), "city_id" integer)[0m
+  [1m[35m (51.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_authentication_token" ON "stores"  ("authentication_token")[0m
+  [1m[35m (40.9ms)[0m  [1m[35mCREATE  INDEX  "index_stores_on_city_id" ON "stores"  ("city_id")[0m
+  [1m[35m (41.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_email" ON "stores"  ("email")[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_reset_password_token" ON "stores"  ("reset_password_token")[0m
+  [1m[35m (11.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "technicians" CASCADE[0m
+  [1m[35m (97.3ms)[0m  [1m[35mCREATE TABLE "technicians" ("id" bigserial primary key, "id_technical" integer, "NameTec" character varying, "SurnameTec" character varying, "typeworktec" character varying, "costhourtec" float, "phonenumtec" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30))[0m
+  [1m[35m (42.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_authentication_token" ON "technicians"  ("authentication_token")[0m
+  [1m[35m (53.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_email" ON "technicians"  ("email")[0m
+  [1m[35m (51.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_reset_password_token" ON "technicians"  ("reset_password_token")[0m
+  [1m[35m (10.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (121.6ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "date_transaction" character varying, "type_transaction" character varying, "total_transaction" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (97.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "city_id" integer, "idUser" integer, "nameUser" character varying, "surnameUser" character varying, "genderUser" character varying, "phonenumUser" integer, "celphoneUser" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "authentication_token" character varying(30))[0m
+  [1m[35m (63.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[35m (51.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  [1m[35m (51.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (51.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (14.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (88.0ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "id_bicy" integer, "brand_bicy" character varying, "material_bicy" character varying, "components_bicy" character varying, "price_bicy" float, "usetype_bicy" character varying, "description_bicy" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "store_id" integer)[0m
+  [1m[35m (50.4ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_store_id" ON "bicycles"  ("store_id")[0m
+  [1m[35m (10.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "cities" CASCADE[0m
+  [1m[35m (88.1ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "idcity" integer, "name_city" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (88.4ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "components" CASCADE[0m
+  [1m[35m (98.9ms)[0m  [1m[35mCREATE TABLE "components" ("id" bigserial primary key, "type_component" character varying, "price_component" float, "description_component" character varying, "brand_component" character varying, "sizes_component" float, "material_component" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "forums" CASCADE[0m
+  [1m[35m (110.5ms)[0m  [1m[35mCREATE TABLE "forums" ("id" bigserial primary key, "topic" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (109.8ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "name" character varying, "imageable_type" character varying, "imageable_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "this_image_file_name" character varying, "this_image_content_type" character varying, "this_image_file_size" integer, "this_image_updated_at" timestamp)[0m
+  [1m[35m (40.9ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_imageable_type_and_imageable_id" ON "images"  ("imageable_type", "imageable_id")[0m
+  [1m[35m (11.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "stores" CASCADE[0m
+  [1m[35m (96.9ms)[0m  [1m[35mCREATE TABLE "stores" ("id" bigserial primary key, "id_store" integer, "name_store" character varying, "address_store" character varying, "score_store" integer, "phonenum_store" integer, "celphone_store" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30), "city_id" integer)[0m
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_authentication_token" ON "stores"  ("authentication_token")[0m
+  [1m[35m (51.8ms)[0m  [1m[35mCREATE  INDEX  "index_stores_on_city_id" ON "stores"  ("city_id")[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_email" ON "stores"  ("email")[0m
+  [1m[35m (51.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_reset_password_token" ON "stores"  ("reset_password_token")[0m
+  [1m[35m (11.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "technicians" CASCADE[0m
+  [1m[35m (97.9ms)[0m  [1m[35mCREATE TABLE "technicians" ("id" bigserial primary key, "id_technical" integer, "NameTec" character varying, "SurnameTec" character varying, "typeworktec" character varying, "costhourtec" float, "phonenumtec" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30))[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_authentication_token" ON "technicians"  ("authentication_token")[0m
+  [1m[35m (40.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_email" ON "technicians"  ("email")[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_reset_password_token" ON "technicians"  ("reset_password_token")[0m
+  [1m[35m (10.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (110.6ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "date_transaction" character varying, "type_transaction" character varying, "total_transaction" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (107.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "city_id" integer, "idUser" integer, "nameUser" character varying, "surnameUser" character varying, "genderUser" character varying, "phonenumUser" integer, "celphoneUser" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "authentication_token" character varying(30))[0m
+  [1m[35m (52.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[35m (52.5ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (51.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2018-04-13 00:56:54.046700"], ["key", "environment"]]
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-04-13 00:56:54.063328"], ["key", "environment"]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["idcity", 698], ["name_city", "Lonnymouth"], ["created_at", "2018-04-13 00:56:54.633967"], ["updated_at", "2018-04-13 00:56:54.633967"]]
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (16.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (87.4ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "id_bicy" integer, "brand_bicy" character varying, "material_bicy" character varying, "components_bicy" character varying, "price_bicy" float, "usetype_bicy" character varying, "description_bicy" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "store_id" integer)[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_store_id" ON "bicycles"  ("store_id")[0m
+  [1m[35m (10.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "cities" CASCADE[0m
+  [1m[35m (98.7ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "idcity" integer, "name_city" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (109.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "components" CASCADE[0m
+  [1m[35m (98.2ms)[0m  [1m[35mCREATE TABLE "components" ("id" bigserial primary key, "type_component" character varying, "price_component" float, "description_component" character varying, "brand_component" character varying, "sizes_component" float, "material_component" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "forums" CASCADE[0m
+  [1m[35m (87.8ms)[0m  [1m[35mCREATE TABLE "forums" ("id" bigserial primary key, "topic" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (88.3ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "name" character varying, "imageable_type" character varying, "imageable_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "this_image_file_name" character varying, "this_image_content_type" character varying, "this_image_file_size" integer, "this_image_updated_at" timestamp)[0m
+  [1m[35m (63.4ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_imageable_type_and_imageable_id" ON "images"  ("imageable_type", "imageable_id")[0m
+  [1m[35m (11.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "stores" CASCADE[0m
+  [1m[35m (98.1ms)[0m  [1m[35mCREATE TABLE "stores" ("id" bigserial primary key, "id_store" integer, "name_store" character varying, "address_store" character varying, "score_store" integer, "phonenum_store" integer, "celphone_store" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30), "city_id" integer)[0m
+  [1m[35m (62.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_authentication_token" ON "stores"  ("authentication_token")[0m
+  [1m[35m (51.3ms)[0m  [1m[35mCREATE  INDEX  "index_stores_on_city_id" ON "stores"  ("city_id")[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_email" ON "stores"  ("email")[0m
+  [1m[35m (53.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_reset_password_token" ON "stores"  ("reset_password_token")[0m
+  [1m[35m (10.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "technicians" CASCADE[0m
+  [1m[35m (86.9ms)[0m  [1m[35mCREATE TABLE "technicians" ("id" bigserial primary key, "id_technical" integer, "NameTec" character varying, "SurnameTec" character varying, "typeworktec" character varying, "costhourtec" float, "phonenumtec" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30))[0m
+  [1m[35m (62.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_authentication_token" ON "technicians"  ("authentication_token")[0m
+  [1m[35m (51.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_email" ON "technicians"  ("email")[0m
+  [1m[35m (51.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_reset_password_token" ON "technicians"  ("reset_password_token")[0m
+  [1m[35m (10.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (121.2ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "date_transaction" character varying, "type_transaction" character varying, "total_transaction" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (108.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "city_id" integer, "idUser" integer, "nameUser" character varying, "surnameUser" character varying, "genderUser" character varying, "phonenumUser" integer, "celphoneUser" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "authentication_token" character varying(30))[0m
+  [1m[35m (52.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[35m (63.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (51.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (8.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "bicycles" CASCADE[0m
+  [1m[35m (87.9ms)[0m  [1m[35mCREATE TABLE "bicycles" ("id" bigserial primary key, "id_bicy" integer, "brand_bicy" character varying, "material_bicy" character varying, "components_bicy" character varying, "price_bicy" float, "usetype_bicy" character varying, "description_bicy" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "store_id" integer)[0m
+  [1m[35m (50.8ms)[0m  [1m[35mCREATE  INDEX  "index_bicycles_on_store_id" ON "bicycles"  ("store_id")[0m
+  [1m[35m (10.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "cities" CASCADE[0m
+  [1m[35m (87.7ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "idcity" integer, "name_city" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (87.7ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "description" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "components" CASCADE[0m
+  [1m[35m (98.4ms)[0m  [1m[35mCREATE TABLE "components" ("id" bigserial primary key, "type_component" character varying, "price_component" float, "description_component" character varying, "brand_component" character varying, "sizes_component" float, "material_component" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "forums" CASCADE[0m
+  [1m[35m (110.0ms)[0m  [1m[35mCREATE TABLE "forums" ("id" bigserial primary key, "topic" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (87.8ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "name" character varying, "imageable_type" character varying, "imageable_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "this_image_file_name" character varying, "this_image_content_type" character varying, "this_image_file_size" integer, "this_image_updated_at" timestamp)[0m
+  [1m[35m (51.1ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_imageable_type_and_imageable_id" ON "images"  ("imageable_type", "imageable_id")[0m
+  [1m[35m (11.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "stores" CASCADE[0m
+  [1m[35m (108.2ms)[0m  [1m[35mCREATE TABLE "stores" ("id" bigserial primary key, "id_store" integer, "name_store" character varying, "address_store" character varying, "score_store" integer, "phonenum_store" integer, "celphone_store" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30), "city_id" integer)[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_authentication_token" ON "stores"  ("authentication_token")[0m
+  [1m[35m (52.6ms)[0m  [1m[35mCREATE  INDEX  "index_stores_on_city_id" ON "stores"  ("city_id")[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_email" ON "stores"  ("email")[0m
+  [1m[35m (63.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_stores_on_reset_password_token" ON "stores"  ("reset_password_token")[0m
+  [1m[35m (10.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "technicians" CASCADE[0m
+  [1m[35m (107.7ms)[0m  [1m[35mCREATE TABLE "technicians" ("id" bigserial primary key, "id_technical" integer, "NameTec" character varying, "SurnameTec" character varying, "typeworktec" character varying, "costhourtec" float, "phonenumtec" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "authentication_token" character varying(30))[0m
+  [1m[35m (61.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_authentication_token" ON "technicians"  ("authentication_token")[0m
+  [1m[35m (52.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_email" ON "technicians"  ("email")[0m
+  [1m[35m (52.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_technicians_on_reset_password_token" ON "technicians"  ("reset_password_token")[0m
+  [1m[35m (10.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (98.9ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "date_transaction" character varying, "type_transaction" character varying, "total_transaction" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (11.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (86.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "city_id" integer, "idUser" integer, "nameUser" character varying, "surnameUser" character varying, "genderUser" character varying, "phonenumUser" integer, "celphoneUser" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "authentication_token" character varying(30))[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_authentication_token" ON "users"  ("authentication_token")[0m
+  [1m[35m (42.4ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  [1m[35m (42.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (42.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2018-04-13 00:57:09.157554"], ["key", "environment"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-04-13 00:57:09.165946"], ["key", "environment"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/forums" for 127.0.0.1 at 2018-04-12 19:57:42 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ForumsController#index as */*
+  Parameters: {"forum"=>{}}
+  [1m[36mForum Load (0.5ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 95ms (Views: 93.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-04-12 19:57:49 -0500
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-04-12 19:57:58 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"asd@la.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "idUser"=>"456", "nameUser"=>"marlon", "surnameUser"=>"sadlkjalskdjl", "genderUser"=>"nasda,dsmal1", "phonenumUser"=>"nil2", "celphoneUser"=>"nil4", "city_id"=>"1"}}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asd@la.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.11ms)
+Completed 422 Unprocessable Entity in 348ms (Views: 29.7ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/technicians" for 127.0.0.1 at 2018-04-12 19:58:25 -0500
+Processing by TechniciansController#create as */*
+  Parameters: {"technician"=>{"id_technical"=>"444", "NameTec"=>"garaba", "SurnameTec"=>"ansnans", "typeworktec"=>"asjkas", "costhourtec"=>"4.5", "phonenumtec"=>"454696", "email"=>"momo@hagsha.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTechnician Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = $1 LIMIT $2[0m  [["email", "momo@hagsha.com"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = $1[0m  [["authentication_token", "jsQMyTTdheNbpvsSzEFP"]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "phonenumtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["id_technical", 444], ["NameTec", "garaba"], ["SurnameTec", "ansnans"], ["typeworktec", "asjkas"], ["costhourtec", 4.5], ["phonenumtec", 454696], ["created_at", "2018-04-13 00:58:25.308613"], ["updated_at", "2018-04-13 00:58:25.308613"], ["email", "momo@hagsha.com"], ["encrypted_password", "$2a$11$4s7BC4mkRydCirLq91syNehS6rmU1Ni0LEzEsnJDFEYDQfgi9mgry"], ["authentication_token", "jsQMyTTdheNbpvsSzEFP"]]
+  [1m[35m (19.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered TechnicianSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 201 Created in 224ms (Views: 26.7ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/technicians" for 127.0.0.1 at 2018-04-12 19:58:34 -0500
+Processing by TechniciansController#index as */*
+  Parameters: {"technician"=>{}}
+  [1m[36mTechnician Load (0.5ms)[0m  [1m[34mSELECT  "technicians".* FROM "technicians" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/technicians" for 127.0.0.1 at 2018-04-12 20:10:35 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TechniciansController#index as */*
+  Parameters: {"technician"=>{}}
+  [1m[36mTechnician Load (0.9ms)[0m  [1m[34mSELECT  "technicians".* FROM "technicians" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.87ms)
+Completed 200 OK in 178ms (Views: 173.8ms | ActiveRecord: 7.3ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (20.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTechnician Load (0.6ms)[0m  [1m[34mSELECT  "technicians".* FROM "technicians" WHERE "technicians"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
