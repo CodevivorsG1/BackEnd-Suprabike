@@ -10,6 +10,8 @@ class CreateStores < ActiveRecord::Migration[5.1]
       t.integer :phonenum_store
       t.integer :celphone_store
 
+      t.integer :city_id
+
       t.timestamps
     end
   end
