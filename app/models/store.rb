@@ -37,6 +37,8 @@ class Store < ApplicationRecord
     has_many :components , dependent: :destroy
     has_many :images, as: :imageable
 
+    #scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
+    has_many :bycicles , dependent: :destroy
     scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
     has_many :bycicles , dependent: :destroy
     #selecciona todas las tiendas que han vendido bicicletas de montanna ordenado por id de tienda
