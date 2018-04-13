@@ -10,6 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_04_13_211831) do
+
+  create_table "technicians", force: :cascade do |t|
+    t.string "name"
+    t.string "surname"
+    t.string "typework"
+    t.string "email"
+    t.float "costhour"
+    t.integer "phone"
+    t.integer "cedula"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.string "date"
+    t.string "typeTrans"
+    t.float "totalTrans"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
