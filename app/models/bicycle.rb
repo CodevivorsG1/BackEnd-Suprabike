@@ -28,9 +28,6 @@ class Bicycle < ApplicationRecord
     belongs_to :store, required: false
     has_many :images, as: :imageable
 
-    #scope :material, where(:material_bicy => "aluminio")
-
-    #scopes anadidos
     scope :material, -> { where(:material_bicy => "aluminio")}
 
     def self.baratas(price_bicy)
@@ -39,5 +36,4 @@ class Bicycle < ApplicationRecord
 
     #tiendas que han vendido bien
     scope :successful, -> { Bicycle.joins(:stores).where(stores: {score_store: 4}) }
-    
 end

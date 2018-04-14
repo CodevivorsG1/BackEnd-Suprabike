@@ -16,7 +16,12 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
 gem "paperclip", "~> 6.0.0"
+<<<<<<< HEAD
 
+=======
+# Use postgresql as the database for Active Record
+gem 'pg'
+>>>>>>> origin/marlon
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

@@ -19,9 +19,9 @@ class Transaction < ApplicationRecord
     belongs_to :store , optional: true
     belongs_to :user, optional: true
 
-    #scope :soporte, where(:type_transaction => "soporte")
     scope :soporte, -> {where(:type_transaction => "soporte")}
     scope :totalTrans, -> {where("price < ?", total_transaction)}
     #scope :soportesCaros, soporte.total_transaction
+    
     
 end
