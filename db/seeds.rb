@@ -12,8 +12,9 @@ city3 = City.create(idcity: 3, name_city: "Cali")
 city4 = City.create(idcity: 4, name_city: "Barranquilla")
 city5 = City.create(idcity: 5, name_city: "Cucuta")
 
-#store1 = Store.create(id_store: 2, name_store: "bikesmore", address_store: "cll10 #80", 
- #        score_store: 4,phonenum_store: 2222, celphone_store: 2222, email: "bk@yahoo.com",city_id: 1)
+store1 = Store.create(id_store:1, name_store:"bikeshop", address_store:"cra100",
+         score_store:4, phonenum_store:1, celphone_store:1,city_id:1, email:"bs@u.com",
+         password:"111" )
 
 
 bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "GW",
@@ -64,3 +65,10 @@ bici12 = Bicycle.create( id_bicy: 12, brand_bicy: "GW",
         material_bicy: "acero", components_bicy: "shimano base", price_bicy: 450000,
         usetype_bicy: "urbana", description_bicy: "ciudad", store_id: 7)
 
+bici13 = Bicycle.create( id_bicy: 13, brand_bicy: "Bianchi",
+        material_bicy: "acero", components_bicy: "shimano base", price_bicy: 350000,
+        usetype_bicy: "urbana", description_bicy: "ciudad", store_id: 8)
+
+bici14 = Bicycle.create( id_bicy: 14, brand_bicy: "Benelli",
+        material_bicy: "acero", components_bicy: "shimano base", price_bicy: 390000,
+        usetype_bicy: "urbana", description_bicy: "ciudad", store_id: 8)        

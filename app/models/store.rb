@@ -34,7 +34,7 @@ class Store < ApplicationRecord
     validates :email, presence: true,length: { maximum: 20 }
 
     has_many :transactions , dependent: :destroy
-    belongs_to :city
+    belongs_to :city, required: false
     has_many :components , dependent: :destroy
     has_many :images, as: :imageable
 
