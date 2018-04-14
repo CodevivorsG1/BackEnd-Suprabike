@@ -34,7 +34,7 @@ class Bicycle < ApplicationRecord
     scope :material, -> { where(:material_bicy => "aluminio")}
 
     def self.baratas(price_bicy)
-        where("price < ?", price_bicy) #se le pasa como argumento la plata Bicycle.baratas(9999)
+        where("price_bicy < ?", price_bicy) #se le pasa como argumento la plata Bicycle.baratas(9999)
     end
 
     #tiendas que han vendido bien
