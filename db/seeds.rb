@@ -12,8 +12,8 @@ city3 = City.create(idcity: 3, name_city: "Cali")
 city4 = City.create(idcity: 4, name_city: "Barranquilla")
 city5 = City.create(idcity: 5, name_city: "Cucuta")
 
-store1 = Store.create(id_store: 2, name_store: "bikesmore", address_store: "cll10 #80", 
-         score_store: 4,phonenum_store: 2222, celphone_store: 2222, email: "bk@yahoo.com",city_id: 1)
+#store1 = Store.create(id_store: 2, name_store: "bikesmore", address_store: "cll10 #80", 
+ #        score_store: 4,phonenum_store: 2222, celphone_store: 2222, email: "bk@yahoo.com",city_id: 1)
 
 
 bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "GW",
@@ -44,6 +44,23 @@ bici7 = Bicycle.create( id_bicy: 7, brand_bicy: "Trek",
         material_bicy: "fibraCarbono", components_bicy: "sram auto", price_bicy: 2100000,
         usetype_bicy: "ruta", description_bicy: "ruta alto lvl", store_id: 5)
 
-bici6 = Bicycle.create( id_bicy: 6, brand_bicy: "specialized",
-        material_bicy: "fibraCarbono", components_bicy: "todo sram", price_bicy: 1500000,
-        usetype_bicy: "ruta", description_bicy: "ruta alto lvl", store_id: 4)
+bici8 = Bicycle.create( id_bicy: 8, brand_bicy: "specialized",
+        material_bicy: "aluminio", components_bicy: "shimano", price_bicy: 750000,
+        usetype_bicy: "montana", description_bicy: "mountain", store_id: 5)
+
+bici9 = Bicycle.create( id_bicy: 9, brand_bicy: "GW",
+        material_bicy: "acero", components_bicy: "shimano base", price_bicy: 450000,
+        usetype_bicy: "montana", description_bicy: "mountain", store_id: 6)
+
+bici10 = Bicycle.create( id_bicy: 10, brand_bicy: "Bianchi",
+        material_bicy: "acero", components_bicy: "shimano base", price_bicy: 350000,
+        usetype_bicy: "montana", description_bicy: "mountain", store_id: 6)
+
+bici11 = Bicycle.create( id_bicy: 11, brand_bicy: "Giant",
+        material_bicy: "acero", components_bicy: "shimano medio", price_bicy: 650000,
+        usetype_bicy: "montana", description_bicy: "mountain", store_id: 7)
+
+bici12 = Bicycle.create( id_bicy: 12, brand_bicy: "GW",
+        material_bicy: "acero", components_bicy: "shimano base", price_bicy: 450000,
+        usetype_bicy: "urbana", description_bicy: "ciudad", store_id: 7)
+
