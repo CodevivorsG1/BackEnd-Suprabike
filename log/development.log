@@ -22237,3 +22237,484 @@ Completed 201 Created in 353ms (Views: 1.7ms | ActiveRecord: 126.8ms)
   [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 14], ["brand_bicy", "Benelli"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 390000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 22:22:12.908140"], ["updated_at", "2018-04-14 22:22:12.908140"], ["store_id", 8]]
   [1m[35m (98.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mTechnician Load (1.7ms)[0m  [1m[34mSELECT  "technicians".* FROM "technicians" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 1], ["name_city", "Bogota"], ["created_at", "2018-04-14 22:37:59.672946"], ["updated_at", "2018-04-14 22:37:59.672946"]]
+  [1m[35m (129.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 2], ["name_city", "Medellin"], ["created_at", "2018-04-14 22:37:59.813131"], ["updated_at", "2018-04-14 22:37:59.813131"]]
+  [1m[35m (97.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 3], ["name_city", "Cali"], ["created_at", "2018-04-14 22:37:59.916723"], ["updated_at", "2018-04-14 22:37:59.916723"]]
+  [1m[35m (112.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 4], ["name_city", "Barranquilla"], ["created_at", "2018-04-14 22:38:00.035029"], ["updated_at", "2018-04-14 22:38:00.035029"]]
+  [1m[35m (78.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 5], ["name_city", "Cucuta"], ["created_at", "2018-04-14 22:38:00.118619"], ["updated_at", "2018-04-14 22:38:00.118619"]]
+  [1m[35m (90.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "bs@u.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "marinn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "pedrof@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = ?[0m  [["authentication_token", "y8x5JrPDKY2iDuBmk_h3"]]
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumtec") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_technical", 2], ["NameTec", "Pedro"], ["SurnameTec", "Fernandez"], ["typeworktec", "ensamblado"], ["costhourtec", 80000.0], ["created_at", "2018-04-14 22:38:01.016247"], ["updated_at", "2018-04-14 22:38:01.016247"], ["email", "pedrof@outlook.com"], ["encrypted_password", "$2a$11$QvHs4UPYIYZAC4LElETNOuYzZH4ITLAtsr.Jg5gzLXKB/rTcyIM12"], ["authentication_token", "y8x5JrPDKY2iDuBmk_h3"], ["phonenumtec", 2222]]
+  [1m[35m (126.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "nricardoe@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = ?[0m  [["authentication_token", "X5kAW2y7tjaAF4gw33Um"]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumtec") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_technical", 3], ["NameTec", "Nicolas"], ["SurnameTec", "Enciso"], ["typeworktec", "reparacion"], ["costhourtec", 50000.0], ["created_at", "2018-04-14 22:38:01.368219"], ["updated_at", "2018-04-14 22:38:01.368219"], ["email", "nricardoe@gmail.com"], ["encrypted_password", "$2a$11$okoDxoNMmmjOosbAp7sxX.invCZiol0CG9eT6EO6..RWkRXrOKYx2"], ["authentication_token", "X5kAW2y7tjaAF4gw33Um"], ["phonenumtec", 3333]]
+  [1m[35m (96.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 1], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "todo gw"], ["price_bicy", 680000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-14 22:38:01.509659"], ["updated_at", "2018-04-14 22:38:01.509659"], ["store_id", 2]]
+  [1m[35m (99.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 2], ["brand_bicy", "Raleigh"], ["material_bicy", "aluminio"], ["components_bicy", "marco,rines"], ["price_bicy", 700000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-14 22:38:01.616138"], ["updated_at", "2018-04-14 22:38:01.616138"], ["store_id", 2]]
+  [1m[35m (96.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 3], ["brand_bicy", "DeRosa"], ["material_bicy", "fibraCarbono"], ["components_bicy", "todo italia"], ["price_bicy", 4700000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta italia"], ["created_at", "2018-04-14 22:38:01.717873"], ["updated_at", "2018-04-14 22:38:01.717873"], ["store_id", 3]]
+  [1m[35m (108.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 4], ["brand_bicy", "Raleigh"], ["material_bicy", "acero"], ["components_bicy", "marco,rines"], ["price_bicy", 450000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-14 22:38:01.830924"], ["updated_at", "2018-04-14 22:38:01.830924"], ["store_id", 3]]
+  [1m[35m (78.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 5], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "grupo shimano"], ["price_bicy", 700000.0], ["usetype_bicy", "ruta"], ["description_bicy", "GW scorpion"], ["created_at", "2018-04-14 22:38:01.916951"], ["updated_at", "2018-04-14 22:38:01.916951"], ["store_id", 4]]
+  [1m[35m (67.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 6], ["brand_bicy", "specialized"], ["material_bicy", "fibraCarbono"], ["components_bicy", "todo sram"], ["price_bicy", 1500000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta alto lvl"], ["created_at", "2018-04-14 22:38:01.992830"], ["updated_at", "2018-04-14 22:38:01.992830"], ["store_id", 4]]
+  [1m[35m (119.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 7], ["brand_bicy", "Trek"], ["material_bicy", "fibraCarbono"], ["components_bicy", "sram auto"], ["price_bicy", 2100000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta alto lvl"], ["created_at", "2018-04-14 22:38:02.118493"], ["updated_at", "2018-04-14 22:38:02.118493"], ["store_id", 5]]
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 8], ["brand_bicy", "specialized"], ["material_bicy", "aluminio"], ["components_bicy", "shimano"], ["price_bicy", 750000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 22:38:02.230350"], ["updated_at", "2018-04-14 22:38:02.230350"], ["store_id", 5]]
+  [1m[35m (120.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 9], ["brand_bicy", "GW"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 450000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 22:38:02.361281"], ["updated_at", "2018-04-14 22:38:02.361281"], ["store_id", 6]]
+  [1m[35m (90.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 10], ["brand_bicy", "Bianchi"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 350000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 22:38:02.458251"], ["updated_at", "2018-04-14 22:38:02.458251"], ["store_id", 6]]
+  [1m[35m (114.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 11], ["brand_bicy", "Giant"], ["material_bicy", "acero"], ["components_bicy", "shimano medio"], ["price_bicy", 650000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 22:38:02.580922"], ["updated_at", "2018-04-14 22:38:02.580922"], ["store_id", 7]]
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 12], ["brand_bicy", "GW"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 450000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 22:38:02.670322"], ["updated_at", "2018-04-14 22:38:02.670322"], ["store_id", 7]]
+  [1m[35m (117.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 13], ["brand_bicy", "Bianchi"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 350000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 22:38:02.792974"], ["updated_at", "2018-04-14 22:38:02.792974"], ["store_id", 8]]
+  [1m[35m (103.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 14], ["brand_bicy", "Benelli"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 390000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 22:38:02.902883"], ["updated_at", "2018-04-14 22:38:02.902883"], ["store_id", 8]]
+  [1m[35m (115.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTechnician Load (2.1ms)[0m  [1m[34mSELECT  "technicians".* FROM "technicians" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 1], ["name_city", "Bogota"], ["created_at", "2018-04-14 22:59:58.467979"], ["updated_at", "2018-04-14 22:59:58.467979"]]
+  [1m[35m (92.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 2], ["name_city", "Medellin"], ["created_at", "2018-04-14 22:59:58.580627"], ["updated_at", "2018-04-14 22:59:58.580627"]]
+  [1m[35m (114.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 3], ["name_city", "Cali"], ["created_at", "2018-04-14 22:59:58.702652"], ["updated_at", "2018-04-14 22:59:58.702652"]]
+  [1m[35m (80.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 4], ["name_city", "Barranquilla"], ["created_at", "2018-04-14 22:59:58.790831"], ["updated_at", "2018-04-14 22:59:58.790831"]]
+  [1m[35m (82.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 5], ["name_city", "Cucuta"], ["created_at", "2018-04-14 22:59:58.879562"], ["updated_at", "2018-04-14 22:59:58.879562"]]
+  [1m[35m (83.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "bs@u.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "marinn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "pedrof@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "nricardoe@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "julirojas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = ?[0m  [["authentication_token", "asv-thXRcH7hbkVo6K1E"]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumtec") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_technical", 4], ["NameTec", "Juliana"], ["SurnameTec", "Rojas"], ["typeworktec", "mantenimiento"], ["costhourtec", 40000.0], ["created_at", "2018-04-14 23:00:00.176488"], ["updated_at", "2018-04-14 23:00:00.176488"], ["email", "julirojas@gmail.com"], ["encrypted_password", "$2a$11$HwmIkVtCDA1VZnj5l2feaODXZlc1R.XctbXoLGcIeMJs/E1ElzQiC"], ["authentication_token", "asv-thXRcH7hbkVo6K1E"], ["phonenumtec", 4444]]
+  [1m[35m (143.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "atapala@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = ?[0m  [["authentication_token", "XzHuhBhS6XDfLy4zcQtn"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumtec") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_technical", 5], ["NameTec", "Atanael"], ["SurnameTec", "Palacios"], ["typeworktec", "ensamblado"], ["costhourtec", 45000.0], ["created_at", "2018-04-14 23:00:00.541554"], ["updated_at", "2018-04-14 23:00:00.541554"], ["email", "atapala@yahoo.com"], ["encrypted_password", "$2a$11$7WH6.T7PsPCjQbpWYKt44.MufpTTuadYPCc8Q/oySORNoEw8fRgVC"], ["authentication_token", "XzHuhBhS6XDfLy4zcQtn"], ["phonenumtec", 5555]]
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "linap@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = ?[0m  [["authentication_token", "roxCe_hxw5xAyr9xGkg2"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumtec") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_technical", 6], ["NameTec", "Lina"], ["SurnameTec", "Perez"], ["typeworktec", "reparacion"], ["costhourtec", 75000.0], ["created_at", "2018-04-14 23:00:00.837860"], ["updated_at", "2018-04-14 23:00:00.837860"], ["email", "linap@outlook.com"], ["encrypted_password", "$2a$11$woS6tqmi0Muv6VN.HTflkuhheRkKhKLAfoh/.VkBpB/iDspgkwNqS"], ["authentication_token", "roxCe_hxw5xAyr9xGkg2"], ["phonenumtec", 6666]]
+  [1m[35m (101.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "alegom@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = ?[0m  [["authentication_token", "pcdHdtDn1QddhNQ_FYzM"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumtec") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_technical", 7], ["NameTec", "Alejandro"], ["SurnameTec", "Gomez"], ["typeworktec", "ensamblado"], ["costhourtec", 39000.0], ["created_at", "2018-04-14 23:00:01.160455"], ["updated_at", "2018-04-14 23:00:01.160455"], ["email", "alegom@yahoo.com"], ["encrypted_password", "$2a$11$n7ho7J7rwj6MdV98y2zhReNgPsHohmUzrSGle.ySiKKytve2xkD76"], ["authentication_token", "pcdHdtDn1QddhNQ_FYzM"], ["phonenumtec", 7777]]
+  [1m[35m (73.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "marmarti@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = ?[0m  [["authentication_token", "1YhJkWHoFrePtyc8awfB"]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumtec") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_technical", 8], ["NameTec", "Margarita"], ["SurnameTec", "Martinez"], ["typeworktec", "mantenimiento"], ["costhourtec", 25000.0], ["created_at", "2018-04-14 23:00:01.457327"], ["updated_at", "2018-04-14 23:00:01.457327"], ["email", "marmarti@hotmail.com"], ["encrypted_password", "$2a$11$Dnsn9Xs9nMykO0S1j5htz.ESabYMsZIuMM6kuDixdkwJCAO8/bnt2"], ["authentication_token", "1YhJkWHoFrePtyc8awfB"], ["phonenumtec", 8888]]
+  [1m[35m (100.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "armacasa@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = ?[0m  [["authentication_token", "FsjZUwxgvipmT4t28jD_"]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumtec") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_technical", 9], ["NameTec", "Armando"], ["SurnameTec", "Casas"], ["typeworktec", "reparacion"], ["costhourtec", 72000.0], ["created_at", "2018-04-14 23:00:01.781292"], ["updated_at", "2018-04-14 23:00:01.781292"], ["email", "armacasa@hotmail.com"], ["encrypted_password", "$2a$11$klrm76qdOfWzUIN77bQZaOrwcNov4sDZPswRxuLk4GvQyVifai68y"], ["authentication_token", "FsjZUwxgvipmT4t28jD_"], ["phonenumtec", 9999]]
+  [1m[35m (112.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "manurodri@aol.com"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "technicians" WHERE "technicians"."authentication_token" = ?[0m  [["authentication_token", "4oBgSaG4Lo53ThgrkV58"]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "technicians" ("id_technical", "NameTec", "SurnameTec", "typeworktec", "costhourtec", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumtec") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_technical", 10], ["NameTec", "Manuela"], ["SurnameTec", "Rodriguez"], ["typeworktec", "ensamblado"], ["costhourtec", 20000.0], ["created_at", "2018-04-14 23:00:02.114286"], ["updated_at", "2018-04-14 23:00:02.114286"], ["email", "manurodri@aol.com"], ["encrypted_password", "$2a$11$Tg6pUsgw05L6YTyjo2VbNuM2q5wMH.pnOa04Ta8BlPx5WeIFnRljK"], ["authentication_token", "4oBgSaG4Lo53ThgrkV58"], ["phonenumtec", 1010]]
+  [1m[35m (72.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 1], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "todo gw"], ["price_bicy", 680000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-14 23:00:02.235884"], ["updated_at", "2018-04-14 23:00:02.235884"], ["store_id", 2]]
+  [1m[35m (99.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 2], ["brand_bicy", "Raleigh"], ["material_bicy", "aluminio"], ["components_bicy", "marco,rines"], ["price_bicy", 700000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-14 23:00:02.341255"], ["updated_at", "2018-04-14 23:00:02.341255"], ["store_id", 2]]
+  [1m[35m (103.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 3], ["brand_bicy", "DeRosa"], ["material_bicy", "fibraCarbono"], ["components_bicy", "todo italia"], ["price_bicy", 4700000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta italia"], ["created_at", "2018-04-14 23:00:02.450926"], ["updated_at", "2018-04-14 23:00:02.450926"], ["store_id", 3]]
+  [1m[35m (108.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 4], ["brand_bicy", "Raleigh"], ["material_bicy", "acero"], ["components_bicy", "marco,rines"], ["price_bicy", 450000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-14 23:00:02.567668"], ["updated_at", "2018-04-14 23:00:02.567668"], ["store_id", 3]]
+  [1m[35m (76.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 5], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "grupo shimano"], ["price_bicy", 700000.0], ["usetype_bicy", "ruta"], ["description_bicy", "GW scorpion"], ["created_at", "2018-04-14 23:00:02.649861"], ["updated_at", "2018-04-14 23:00:02.649861"], ["store_id", 4]]
+  [1m[35m (94.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 6], ["brand_bicy", "specialized"], ["material_bicy", "fibraCarbono"], ["components_bicy", "todo sram"], ["price_bicy", 1500000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta alto lvl"], ["created_at", "2018-04-14 23:00:02.750484"], ["updated_at", "2018-04-14 23:00:02.750484"], ["store_id", 4]]
+  [1m[35m (103.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 7], ["brand_bicy", "Trek"], ["material_bicy", "fibraCarbono"], ["components_bicy", "sram auto"], ["price_bicy", 2100000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta alto lvl"], ["created_at", "2018-04-14 23:00:02.861111"], ["updated_at", "2018-04-14 23:00:02.861111"], ["store_id", 5]]
+  [1m[35m (125.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 8], ["brand_bicy", "specialized"], ["material_bicy", "aluminio"], ["components_bicy", "shimano"], ["price_bicy", 750000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 23:00:02.994062"], ["updated_at", "2018-04-14 23:00:02.994062"], ["store_id", 5]]
+  [1m[35m (104.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 9], ["brand_bicy", "GW"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 450000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 23:00:03.105023"], ["updated_at", "2018-04-14 23:00:03.105023"], ["store_id", 6]]
+  [1m[35m (93.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 10], ["brand_bicy", "Bianchi"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 350000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 23:00:03.204635"], ["updated_at", "2018-04-14 23:00:03.204635"], ["store_id", 6]]
+  [1m[35m (94.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 11], ["brand_bicy", "Giant"], ["material_bicy", "acero"], ["components_bicy", "shimano medio"], ["price_bicy", 650000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 23:00:03.304964"], ["updated_at", "2018-04-14 23:00:03.304964"], ["store_id", 7]]
+  [1m[35m (117.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 12], ["brand_bicy", "GW"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 450000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 23:00:03.428009"], ["updated_at", "2018-04-14 23:00:03.428009"], ["store_id", 7]]
+  [1m[35m (347.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 13], ["brand_bicy", "Bianchi"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 350000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 23:00:03.781401"], ["updated_at", "2018-04-14 23:00:03.781401"], ["store_id", 8]]
+  [1m[35m (92.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 14], ["brand_bicy", "Benelli"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 390000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 23:00:03.880123"], ["updated_at", "2018-04-14 23:00:03.880123"], ["store_id", 8]]
+  [1m[35m (115.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 15], ["brand_bicy", "DeRosa"], ["material_bicy", "fibraCarbono"], ["components_bicy", "sram ultra"], ["price_bicy", 20000000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta competencia"], ["created_at", "2018-04-14 23:00:04.002712"], ["updated_at", "2018-04-14 23:00:04.002712"], ["store_id", 9]]
+  [1m[35m (93.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 16], ["brand_bicy", "Specialized"], ["material_bicy", "fibraCarbono"], ["components_bicy", "shimano ultra"], ["price_bicy", 9000000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta competencia"], ["created_at", "2018-04-14 23:00:04.103964"], ["updated_at", "2018-04-14 23:00:04.103964"], ["store_id", 9]]
+  [1m[35m (102.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 17], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "shimano medio"], ["price_bicy", 650000.0], ["usetype_bicy", "montana"], ["description_bicy", "ciudad y urbana"], ["created_at", "2018-04-14 23:00:04.213874"], ["updated_at", "2018-04-14 23:00:04.213874"], ["store_id", 10]]
+  [1m[35m (104.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 18], ["brand_bicy", "Trek"], ["material_bicy", "aluminio"], ["components_bicy", "shimano medio"], ["price_bicy", 780000.0], ["usetype_bicy", "montana"], ["description_bicy", "ciudad montana"], ["created_at", "2018-04-14 23:00:04.325283"], ["updated_at", "2018-04-14 23:00:04.325283"], ["store_id", 10]]
+  [1m[35m (113.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBicycle Load (1.7ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mBicycle Load (0.6ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" ORDER BY "bicycles"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBicycle Load (0.7ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" WHERE (price_bicy < 500000) LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTechnician Load (0.4ms)[0m  [1m[34mSELECT  "technicians".* FROM "technicians" WHERE "technicians"."typeworktec" = ? LIMIT ?[0m  [["typeworktec", "mantenimiento"], ["LIMIT", 11]]
+  [1m[36mTechnician Load (0.4ms)[0m  [1m[34mSELECT  "technicians"."NameTec" FROM "technicians" INNER JOIN "transactions" ON "transactions"."technician_id" = "technicians"."id" WHERE "transactions"."type_transaction" = ? LIMIT ?[0m  [["type_transaction", "mantenimiento"], ["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bicycles_on_store_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bicycles_on_store_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_forum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_forum_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_forums_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_forums_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_images_on_imageable_type_and_imageable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_images_on_imageable_type_and_imageable_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_city_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_city_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_authentication_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_authentication_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_authentication_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_authentication_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_store_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_store_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_technician_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_technician_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_city_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_city_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_authentication_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_authentication_token' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 1], ["name_city", "Bogota"], ["created_at", "2018-04-14 23:13:54.625095"], ["updated_at", "2018-04-14 23:13:54.625095"]]
+  [1m[35m (131.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 2], ["name_city", "Medellin"], ["created_at", "2018-04-14 23:13:54.779776"], ["updated_at", "2018-04-14 23:13:54.779776"]]
+  [1m[35m (110.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 3], ["name_city", "Cali"], ["created_at", "2018-04-14 23:13:54.895474"], ["updated_at", "2018-04-14 23:13:54.895474"]]
+  [1m[35m (88.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 4], ["name_city", "Barranquilla"], ["created_at", "2018-04-14 23:13:54.990098"], ["updated_at", "2018-04-14 23:13:54.990098"]]
+  [1m[35m (97.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 5], ["name_city", "Cucuta"], ["created_at", "2018-04-14 23:13:55.091343"], ["updated_at", "2018-04-14 23:13:55.091343"]]
+  [1m[35m (92.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "bs@u.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "marinn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "pedrof@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "nricardoe@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "julirojas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "atapala@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "linap@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "alegom@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "marmarti@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "armacasa@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "manurodri@aol.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 1], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "todo gw"], ["price_bicy", 680000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-14 23:13:57.708632"], ["updated_at", "2018-04-14 23:13:57.708632"], ["store_id", 2]]
+  [1m[35m (135.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 2], ["brand_bicy", "Raleigh"], ["material_bicy", "aluminio"], ["components_bicy", "marco,rines"], ["price_bicy", 700000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-14 23:13:57.851321"], ["updated_at", "2018-04-14 23:13:57.851321"], ["store_id", 2]]
+  [1m[35m (72.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 3], ["brand_bicy", "DeRosa"], ["material_bicy", "fibraCarbono"], ["components_bicy", "todo italia"], ["price_bicy", 4700000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta italia"], ["created_at", "2018-04-14 23:13:57.931729"], ["updated_at", "2018-04-14 23:13:57.931729"], ["store_id", 3]]
+  [1m[35m (115.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 4], ["brand_bicy", "Raleigh"], ["material_bicy", "acero"], ["components_bicy", "marco,rines"], ["price_bicy", 450000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-14 23:13:58.054749"], ["updated_at", "2018-04-14 23:13:58.054749"], ["store_id", 3]]
+  [1m[35m (87.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 5], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "grupo shimano"], ["price_bicy", 700000.0], ["usetype_bicy", "ruta"], ["description_bicy", "GW scorpion"], ["created_at", "2018-04-14 23:13:58.166211"], ["updated_at", "2018-04-14 23:13:58.166211"], ["store_id", 4]]
+  [1m[35m (102.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 6], ["brand_bicy", "specialized"], ["material_bicy", "fibraCarbono"], ["components_bicy", "todo sram"], ["price_bicy", 1500000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta alto lvl"], ["created_at", "2018-04-14 23:13:58.274564"], ["updated_at", "2018-04-14 23:13:58.274564"], ["store_id", 4]]
+  [1m[35m (93.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 7], ["brand_bicy", "Trek"], ["material_bicy", "fibraCarbono"], ["components_bicy", "sram auto"], ["price_bicy", 2100000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta alto lvl"], ["created_at", "2018-04-14 23:13:58.375771"], ["updated_at", "2018-04-14 23:13:58.375771"], ["store_id", 5]]
+  [1m[35m (103.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 8], ["brand_bicy", "specialized"], ["material_bicy", "aluminio"], ["components_bicy", "shimano"], ["price_bicy", 750000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 23:13:58.485601"], ["updated_at", "2018-04-14 23:13:58.485601"], ["store_id", 5]]
+  [1m[35m (94.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 9], ["brand_bicy", "GW"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 450000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 23:13:58.586087"], ["updated_at", "2018-04-14 23:13:58.586087"], ["store_id", 6]]
+  [1m[35m (93.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 10], ["brand_bicy", "Bianchi"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 350000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 23:13:58.685726"], ["updated_at", "2018-04-14 23:13:58.685726"], ["store_id", 6]]
+  [1m[35m (105.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 11], ["brand_bicy", "Giant"], ["material_bicy", "acero"], ["components_bicy", "shimano medio"], ["price_bicy", 650000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-14 23:13:58.799176"], ["updated_at", "2018-04-14 23:13:58.799176"], ["store_id", 7]]
+  [1m[35m (93.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 12], ["brand_bicy", "GW"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 450000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 23:13:58.898162"], ["updated_at", "2018-04-14 23:13:58.898162"], ["store_id", 7]]
+  [1m[35m (90.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 13], ["brand_bicy", "Bianchi"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 350000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 23:13:58.995721"], ["updated_at", "2018-04-14 23:13:58.995721"], ["store_id", 8]]
+  [1m[35m (95.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 14], ["brand_bicy", "Benelli"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 390000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-14 23:13:59.096804"], ["updated_at", "2018-04-14 23:13:59.096804"], ["store_id", 8]]
+  [1m[35m (94.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 15], ["brand_bicy", "DeRosa"], ["material_bicy", "fibraCarbono"], ["components_bicy", "sram ultra"], ["price_bicy", 20000000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta competencia"], ["created_at", "2018-04-14 23:13:59.197782"], ["updated_at", "2018-04-14 23:13:59.197782"], ["store_id", 9]]
+  [1m[35m (111.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 16], ["brand_bicy", "Specialized"], ["material_bicy", "fibraCarbono"], ["components_bicy", "shimano ultra"], ["price_bicy", 9000000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta competencia"], ["created_at", "2018-04-14 23:13:59.317780"], ["updated_at", "2018-04-14 23:13:59.317780"], ["store_id", 9]]
+  [1m[35m (82.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 17], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "shimano medio"], ["price_bicy", 650000.0], ["usetype_bicy", "montana"], ["description_bicy", "ciudad y urbana"], ["created_at", "2018-04-14 23:13:59.405856"], ["updated_at", "2018-04-14 23:13:59.405856"], ["store_id", 10]]
+  [1m[35m (104.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 18], ["brand_bicy", "Trek"], ["material_bicy", "aluminio"], ["components_bicy", "shimano medio"], ["price_bicy", 780000.0], ["usetype_bicy", "montana"], ["description_bicy", "ciudad montana"], ["created_at", "2018-04-14 23:13:59.518295"], ["updated_at", "2018-04-14 23:13:59.518295"], ["store_id", 10]]
+  [1m[35m (109.7ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/users" for 127.0.0.1 at 2018-04-14 22:03:24 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"email"=>"juan@la.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "idUser"=>"20", "nameUser"=>"Juan", "surnameUser"=>"Perez", "genderUser"=>"hombre", "phonenumUser"=>"3145", "celphoneUser"=>"3145", "city_id"=>"1"}}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "juan@la.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "A_GDQQysjMYYHjymh6vq"]]
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 1], ["idUser", 20], ["nameUser", "Juan"], ["surnameUser", "Perez"], ["genderUser", "hombre"], ["created_at", "2018-04-15 03:03:25.169385"], ["updated_at", "2018-04-15 03:03:25.169385"], ["email", "juan@la.com"], ["encrypted_password", "$2a$11$9JNFefhD6CbMku6ef4Nw6uffCEHdcKPpRhsNE9T914C37fi34O5aq"], ["authentication_token", "A_GDQQysjMYYHjymh6vq"], ["phonenumUser", 3145], ["celphoneUser", 3145]]
+  [1m[35m (158.2ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.11ms)
+Completed 201 Created in 534ms (Views: 31.9ms | ActiveRecord: 164.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ferg@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "7doiAoaqoVq1yNAxrWPy"]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 1], ["idUser", 1], ["nameUser", "Fernando"], ["surnameUser", "Perez"], ["genderUser", "hombre"], ["created_at", "2018-04-15 04:25:21.916983"], ["updated_at", "2018-04-15 04:25:21.916983"], ["email", "ferg@gmail.com"], ["encrypted_password", "$2a$11$9Y2200weGQgx.Go3foYpduzrOH.uG8Sr9c4y9JUeJnFyBq0i3JPD."], ["authentication_token", "7doiAoaqoVq1yNAxrWPy"], ["phonenumUser", 1111], ["celphoneUser", 1111]]
+  [1m[35m (79.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]

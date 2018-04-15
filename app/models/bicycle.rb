@@ -35,5 +35,5 @@ class Bicycle < ApplicationRecord
     end
 
     #tiendas que han vendido bien
-    scope :successful, -> { Bicycle.joins(:stores).where(stores: {score_store: 4}) }
+    scope :successful, -> { Bicycle.joins(:stores).where(stores: {score_store: 5}) }
 end
