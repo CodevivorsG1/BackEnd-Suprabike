@@ -26,11 +26,11 @@ tech6 =  Technician.create( id_technical:6, NameTec:"Lina", SurnameTec:"Perez",
          email:"linap@outlook.com", password:"666666" )
 
 tech7 =  Technician.create( id_technical:7, NameTec:"Alejandro", SurnameTec:"Gomez",
-         typeworktec:"ensamblado", costhourtec:39000, phonenumtec:7777,
+         typeworktec:"mantenimiento", costhourtec:39000, phonenumtec:7777,
          email:"alegom@yahoo.com", password:"777777" )
 
 tech8 =  Technician.create( id_technical:8, NameTec:"Margarita", SurnameTec:"Martinez",
-         typeworktec:"mantenimiento", costhourtec:25000, phonenumtec:8888,
+         typeworktec:"ensamblado", costhourtec:25000, phonenumtec:8888,
          email:"marmarti@hotmail.com", password:"888888" )
 
 tech9 =  Technician.create( id_technical:9, NameTec:"Armando", SurnameTec:"Casas",
@@ -38,7 +38,7 @@ tech9 =  Technician.create( id_technical:9, NameTec:"Armando", SurnameTec:"Casas
          email:"armacasa@hotmail.com", password:"999999" )
 
 tech10 =  Technician.create( id_technical:10, NameTec:"Manuela", SurnameTec:"Rodriguez",
-         typeworktec:"ensamblado", costhourtec:20000, phonenumtec:1010,
+         typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1010,
          email:"manurodri@aol.com", password:"101010" )
 
 
@@ -46,6 +46,33 @@ tech10 =  Technician.create( id_technical:10, NameTec:"Manuela", SurnameTec:"Rod
 
 tran1 = Transaction.create(date_transaction:"25/05/2016",type_transaction:"mantenimiento",
         total_transaction:50000,technician_id:1)
+
+tran2 = Transaction.create(date_transaction:"12/11/2015",type_transaction:"ensamblado",
+        total_transaction:75000,technician_id:2)
+
+tran3 = Transaction.create(date_transaction:"09/02/2017",type_transaction:"reparacion",
+        total_transaction:25000,technician_id:3)
+
+tran4 = Transaction.create(date_transaction:"17/09/2014",type_transaction:"mantenimiento",
+        total_transaction:90000,technician_id:4)
+
+tran5 = Transaction.create(date_transaction:"12/10/2016",type_transaction:"ensamblado",
+        total_transaction:85000,technician_id:5)
+
+tran6 = Transaction.create(date_transaction:"18/05/2015",type_transaction:"reparacion",
+        total_transaction:65000,technician_id:6)
+
+tran7 = Transaction.create(date_transaction:"19/12/2017",type_transaction:"mantenimiento",
+        total_transaction:50000,technician_id:7)
+
+tran8 = Transaction.create(date_transaction:"13/08/2017",type_transaction:"ensamblado",
+        total_transaction:35000,technician_id:8)
+
+tran9 = Transaction.create(date_transaction:"11/11/2014",type_transaction:"reparacion",
+        total_transaction:45000,technician_id:9)
+
+tran10 = Transaction.create(date_transaction:"02/13/2015",type_transaction:"mantenimiento",
+        total_transaction:60000,technician_id:10)
 
 #25 registros usuarios
 user1 = User.create( email:"ferg@gmail.com", password:"111111", password_confirmation:"111111",
@@ -195,7 +222,9 @@ city2 = City.create(idcity: 2, name_city: "Medellin")
 city3 = City.create(idcity: 3, name_city: "Cali")
 city4 = City.create(idcity: 4, name_city: "Barranquilla")
 city5 = City.create(idcity: 5, name_city: "Cucuta")
-   
+
+# 25 registros forum
+
 
 #20 registros bicycle
 bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "GW",
