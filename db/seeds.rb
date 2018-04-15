@@ -1,16 +1,51 @@
 #Registros a mano
 
-# 5 registros ciudades
-city1 = City.create(idcity: 1, name_city: "Bogota")
-city2 = City.create(idcity: 2, name_city: "Medellin")
-city3 = City.create(idcity: 3, name_city: "Cali")
-city4 = City.create(idcity: 4, name_city: "Barranquilla")
-city5 = City.create(idcity: 5, name_city: "Cucuta")
-   
+#10 registros technician
+tech1 =  Technician.create( id_technical:1, NameTec:"Mariana", SurnameTec:"Suarez",
+         typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1111,
+         email:"marinn@gmail.com", password:"111111" )
 
-store1 = Store.create(id_store:1, name_store:"bikeshop", address_store:"cra100",
-         score_store:4, phonenum_store:1, celphone_store:1,city_id:1, email:"bikeshop@gmail.com",
-         password:"111111" )
+tech2 =  Technician.create( id_technical:2, NameTec:"Pedro", SurnameTec:"Fernandez",
+         typeworktec:"ensamblado", costhourtec:80000, phonenumtec:2222,
+         email:"pedrof@outlook.com", password:"222222" )
+
+tech3 =  Technician.create( id_technical:3, NameTec:"Nicolas", SurnameTec:"Enciso",
+         typeworktec:"reparacion", costhourtec:50000, phonenumtec:3333,
+         email:"nricardoe@gmail.com", password:"333333" )
+
+tech4 =  Technician.create( id_technical:4, NameTec:"Juliana", SurnameTec:"Rojas",
+         typeworktec:"mantenimiento", costhourtec:40000, phonenumtec:4444,
+         email:"julirojas@gmail.com", password:"444444" )
+
+tech5 =  Technician.create( id_technical:5, NameTec:"Atanael", SurnameTec:"Palacios",
+         typeworktec:"ensamblado", costhourtec:45000, phonenumtec:5555,
+         email:"atapala@yahoo.com", password:"555555" )
+
+tech6 =  Technician.create( id_technical:6, NameTec:"Lina", SurnameTec:"Perez",
+         typeworktec:"reparacion", costhourtec:75000, phonenumtec:6666,
+         email:"linap@outlook.com", password:"666666" )
+
+tech7 =  Technician.create( id_technical:7, NameTec:"Alejandro", SurnameTec:"Gomez",
+         typeworktec:"ensamblado", costhourtec:39000, phonenumtec:7777,
+         email:"alegom@yahoo.com", password:"777777" )
+
+tech8 =  Technician.create( id_technical:8, NameTec:"Margarita", SurnameTec:"Martinez",
+         typeworktec:"mantenimiento", costhourtec:25000, phonenumtec:8888,
+         email:"marmarti@hotmail.com", password:"888888" )
+
+tech9 =  Technician.create( id_technical:9, NameTec:"Armando", SurnameTec:"Casas",
+         typeworktec:"reparacion", costhourtec:72000, phonenumtec:9999,
+         email:"armacasa@hotmail.com", password:"999999" )
+
+tech10 =  Technician.create( id_technical:10, NameTec:"Manuela", SurnameTec:"Rodriguez",
+         typeworktec:"ensamblado", costhourtec:20000, phonenumtec:1010,
+         email:"manurodri@aol.com", password:"101010" )
+
+
+#10 transactions
+
+tran1 = Transaction.create(date_transaction:"25/05/2016",type_transaction:"mantenimiento",
+        total_transaction:50000,technician_id:1)
 
 #25 registros usuarios
 user1 = User.create( email:"ferg@gmail.com", password:"111111", password_confirmation:"111111",
@@ -113,46 +148,54 @@ user25 = User.create( email:"camoch@gmail.com", password:"252525", password_conf
         idUser:25, nameUser:"Camilo", surnameUser:"Ochoa", genderUser:"hombre", phonenumUser:2525,
         celphoneUser:2525, city_id:5 )
 
-#10 registros technician
-tech1 =  Technician.create( id_technical:1, NameTec:"Mariana", SurnameTec:"Suarez",
-         typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1111,
-         email:"marinn@gmail.com", password:"111111" )
+#10 stores
+store1 = Store.create(id_store:1, name_store:"bikeshop", address_store:"cra100",
+         score_store:4, phonenum_store:8152436, celphone_store:3054785112,city_id:1,
+         email:"bikeshop@gmail.com",password:"111111" )
 
-tech2 =  Technician.create( id_technical:2, NameTec:"Pedro", SurnameTec:"Fernandez",
-         typeworktec:"ensamblado", costhourtec:80000, phonenumtec:2222,
-         email:"pedrof@outlook.com", password:"222222" )
+store2 = Store.create(id_store:2, name_store:"running", address_store:"cll80",
+         score_store:3, phonenum_store:6325447, celphone_store:3112253652,city_id:2,
+         email:"runbikes@gmail.com",password:"222222" )
 
-tech3 =  Technician.create( id_technical:3, NameTec:"Nicolas", SurnameTec:"Enciso",
-         typeworktec:"reparacion", costhourtec:50000, phonenumtec:3333,
-         email:"nricardoe@gmail.com", password:"333333" )
+store3 = Store.create(id_store:3, name_store:"ruteros", address_store:"cll13",
+         score_store:4, phonenum_store:2336598, celphone_store:3162543652,city_id:3,
+         email:"ruteros@hotmail.com",password:"333333" )
 
-tech4 =  Technician.create( id_technical:4, NameTec:"Juliana", SurnameTec:"Rojas",
-         typeworktec:"mantenimiento", costhourtec:40000, phonenumtec:4444,
-         email:"julirojas@gmail.com", password:"444444" )
+store4 = Store.create(id_store:4, name_store:"ciclasymas", address_store:"autonorte cll100",
+         score_store:5, phonenum_store:9562136, celphone_store:3057896223,city_id:4,
+         email:"ciclasmas@hotmail.com",password:"444444" )
 
-tech5 =  Technician.create( id_technical:5, NameTec:"Atanael", SurnameTec:"Palacios",
-         typeworktec:"ensamblado", costhourtec:45000, phonenumtec:5555,
-         email:"atapala@yahoo.com", password:"555555" )
+store5 = Store.create(id_store:5, name_store:"fastandfurious", address_store:"NQScll30",
+         score_store:3, phonenum_store:6521423, celphone_store:3115243658,city_id:5,
+         email:"ffbikes@yahoo.com",password:"555555" )
 
-tech6 =  Technician.create( id_technical:6, NameTec:"Lina", SurnameTec:"Perez",
-         typeworktec:"reparacion", costhourtec:75000, phonenumtec:6666,
-         email:"linap@outlook.com", password:"666666" )
+store6 = Store.create(id_store:6, name_store:"bikeros", address_store:"av68",
+         score_store:4, phonenum_store:3526598, celphone_store:3054125869,city_id:1,
+         email:"bikeros@hotmail.com",password:"666666" )
 
-tech7 =  Technician.create( id_technical:7, NameTec:"Alejandro", SurnameTec:"Gomez",
-         typeworktec:"ensamblado", costhourtec:39000, phonenumtec:7777,
-         email:"alegom@yahoo.com", password:"777777" )
+store7 = Store.create(id_store:7, name_store:"turbociclas", address_store:"cra68",
+         score_store:4, phonenum_store:6521452, celphone_store:3185234562,city_id:2,
+         email:"turbociclas@hotmail.com",password:"777777" )
 
-tech8 =  Technician.create( id_technical:8, NameTec:"Margarita", SurnameTec:"Martinez",
-         typeworktec:"mantenimiento", costhourtec:25000, phonenumtec:8888,
-         email:"marmarti@hotmail.com", password:"888888" )
+store8 = Store.create(id_store:8, name_store:"speedbike", address_store:"cll13",
+         score_store:2, phonenum_store:2336598, celphone_store:3162543652,city_id:3,
+         email:"speedbike@yahoo.com",password:"888888" )
 
-tech9 =  Technician.create( id_technical:9, NameTec:"Armando", SurnameTec:"Casas",
-         typeworktec:"reparacion", costhourtec:72000, phonenumtec:9999,
-         email:"armacasa@hotmail.com", password:"999999" )
+store9 = Store.create(id_store:9, name_store:"ciclotienda", address_store:"transv82",
+         score_store:1, phonenum_store:5421256, celphone_store:3142563226,city_id:4,
+         email:"citien@gmail.com",password:"999999" )
 
-tech10 =  Technician.create( id_technical:10, NameTec:"Manuela", SurnameTec:"Rodriguez",
-         typeworktec:"ensamblado", costhourtec:20000, phonenumtec:1010,
-         email:"manurodri@aol.com", password:"101010" )
+store10 = Store.create(id_store:10, name_store:"inbikes", address_store:"av68",
+         score_store:5, phonenum_store:6521425, celphone_store:3071452869,city_id:5,
+         email:"inbik@hotmail.com",password:"101010" )
+
+# 5 registros ciudades
+city1 = City.create(idcity: 1, name_city: "Bogota")
+city2 = City.create(idcity: 2, name_city: "Medellin")
+city3 = City.create(idcity: 3, name_city: "Cali")
+city4 = City.create(idcity: 4, name_city: "Barranquilla")
+city5 = City.create(idcity: 5, name_city: "Cucuta")
+   
 
 #20 registros bicycle
 bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "GW",
