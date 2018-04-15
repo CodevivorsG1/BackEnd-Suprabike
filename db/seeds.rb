@@ -9,8 +9,8 @@ city5 = City.create(idcity: 5, name_city: "Cucuta")
    
 
 store1 = Store.create(id_store:1, name_store:"bikeshop", address_store:"cra100",
-         score_store:4, phonenum_store:1, celphone_store:1,city_id:1, email:"bs@u.com",
-         password:"111" )
+         score_store:4, phonenum_store:1, celphone_store:1,city_id:1, email:"bikeshop@gmail.com",
+         password:"111111" )
 
 #25 registros usuarios
 user1 = User.create( email:"ferg@gmail.com", password:"111111", password_confirmation:"111111",
