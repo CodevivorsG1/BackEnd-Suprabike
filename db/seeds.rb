@@ -53,6 +53,66 @@ user10 = User.create( email:"camimar@hotmail.com", password:"101010", password_c
         idUser:10, nameUser:"Camila", surnameUser:"Martinez", genderUser:"mujer", phonenumUser:1010,
         celphoneUser:1010, city_id:2 )
 
+user11 = User.create( email:"sebgom@yahoo.com", password:"111111", password_confirmation:"111111",
+        idUser:11, nameUser:"Sebastian", surnameUser:"Gomez", genderUser:"hombre", phonenumUser:1111,
+        celphoneUser:1111, city_id:3 )
+
+user12 = User.create( email:"dapine@yahoo.com", password:"121212", password_confirmation:"121212",
+        idUser:12, nameUser:"Daniela", surnameUser:"Pineda", genderUser:"mujer", phonenumUser:1212,
+        celphoneUser:1212, city_id:3 )
+
+user13 = User.create( email:"jortor@yahoo.com", password:"131313", password_confirmation:"131313",
+        idUser:13, nameUser:"Jorge", surnameUser:"Torres", genderUser:"hombre", phonenumUser:1313,
+        celphoneUser:1313, city_id:3 )
+
+user14 = User.create( email:"camvil@yahoo.com", password:"141414", password_confirmation:"141414",
+        idUser:14, nameUser:"Camila", surnameUser:"Villegas", genderUser:"mujer", phonenumUser:1414,
+        celphoneUser:1414, city_id:3 )
+
+user15 = User.create( email:"juancaal@yahoo.com", password:"151515", password_confirmation:"151515",
+        idUser:15, nameUser:"Juan Carlos", surnameUser:"Alvarez", genderUser:"hombre", phonenumUser:1515,
+        celphoneUser:1515, city_id:3 )
+
+user16 = User.create( email:"juliher@outlook.com", password:"161616", password_confirmation:"161616",
+        idUser:16, nameUser:"Juliana", surnameUser:"Hernandez", genderUser:"mujer", phonenumUser:1616,
+        celphoneUser:1616, city_id:4 )
+
+user17 = User.create( email:"migarb@outlook.com", password:"171717", password_confirmation:"171717",
+        idUser:17, nameUser:"Miguel", surnameUser:"Arbelaez", genderUser:"hombre", phonenumUser:1717,
+        celphoneUser:1717, city_id:4 )
+
+user18 = User.create( email:"rocvel@outlook.com", password:"181818", password_confirmation:"181818",
+        idUser:18, nameUser:"Rocio", surnameUser:"Velandia", genderUser:"mujer", phonenumUser:1818,
+        celphoneUser:1818, city_id:4 )
+
+user19 = User.create( email:"andes@outlook.com", password:"191919", password_confirmation:"191919",
+        idUser:19, nameUser:"Andres", surnameUser:"Escobar", genderUser:"hombre", phonenumUser:1919,
+        celphoneUser:1919, city_id:4 )
+
+user20 = User.create( email:"sanroj@outlook.com", password:"202020", password_confirmation:"202020",
+        idUser:20, nameUser:"Sandra", surnameUser:"Rojas", genderUser:"mujer", phonenumUser:2020,
+        celphoneUser:2020, city_id:4 )
+
+user21 = User.create( email:"josbec@gmail.com", password:"212121", password_confirmation:"212121",
+        idUser:21, nameUser:"Jose", surnameUser:"Becerra", genderUser:"hombre", phonenumUser:2121,
+        celphoneUser:2121, city_id:5 )
+
+user22 = User.create( email:"sofivar@gmail.com", password:"222222", password_confirmation:"222222",
+        idUser:22, nameUser:"Sofia", surnameUser:"Vargas", genderUser:"mujer", phonenumUser:2222,
+        celphoneUser:2222, city_id:5 )
+
+user23 = User.create( email:"manupal@gmail.com", password:"232323", password_confirmation:"232323",
+        idUser:23, nameUser:"Manuel", surnameUser:"Palacios", genderUser:"hombre", phonenumUser:2323,
+        celphoneUser:2323, city_id:5 )
+
+user24 = User.create( email:"crishe@gmail.com", password:"242424", password_confirmation:"242424",
+        idUser:24, nameUser:"Cristina", surnameUser:"Henao", genderUser:"mujer", phonenumUser:2424,
+        celphoneUser:2424, city_id:5 )
+
+user25 = User.create( email:"camoch@gmail.com", password:"252525", password_confirmation:"252525",
+        idUser:25, nameUser:"Camilo", surnameUser:"Ochoa", genderUser:"hombre", phonenumUser:2525,
+        celphoneUser:2525, city_id:5 )
+
 #10 registros technician
 tech1 =  Technician.create( id_technical:1, NameTec:"Mariana", SurnameTec:"Suarez",
          typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1111,
@@ -94,10 +154,10 @@ tech10 =  Technician.create( id_technical:10, NameTec:"Manuela", SurnameTec:"Rod
          typeworktec:"ensamblado", costhourtec:20000, phonenumtec:1010,
          email:"manurodri@aol.com", password:"101010" )
 
-#18 registros bicycle
+#20 registros bicycle
 bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "GW",
         material_bicy: "aluminio", components_bicy: "todo gw", price_bicy: 680000,
-        usetype_bicy: "montana", description_bicy: "montana", store_id: 2)
+        usetype_bicy: "montana", description_bicy: "montana", store_id: 1)
 
 bici2 = Bicycle.create( id_bicy: 2, brand_bicy: "Raleigh",
         material_bicy: "aluminio", components_bicy: "marco,rines", price_bicy: 700000,
@@ -165,4 +225,12 @@ bici17 = Bicycle.create( id_bicy: 17, brand_bicy: "GW",
 
 bici18 = Bicycle.create( id_bicy: 18, brand_bicy: "Trek",
         material_bicy: "aluminio", components_bicy: "shimano medio", price_bicy: 780000,
+        usetype_bicy: "montana", description_bicy: "ciudad montana", store_id: 10)
+
+bici19 = Bicycle.create( id_bicy: 19, brand_bicy: "GW",
+        material_bicy: "aluminio", components_bicy: "shimano medio", price_bicy: 580000,
+        usetype_bicy: "montana", description_bicy: "ciudad montana", store_id: 10)
+
+bici20 = Bicycle.create( id_bicy: 20, brand_bicy: "Specialized",
+        material_bicy: "aluminio", components_bicy: "shimano alto", price_bicy: 850000,
         usetype_bicy: "montana", description_bicy: "ciudad montana", store_id: 10)
