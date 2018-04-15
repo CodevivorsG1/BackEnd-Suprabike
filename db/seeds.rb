@@ -1,5 +1,6 @@
 #Registros a mano
 
+# 5 registros ciudades
 city1 = City.create(idcity: 1, name_city: "Bogota")
 city2 = City.create(idcity: 2, name_city: "Medellin")
 city3 = City.create(idcity: 3, name_city: "Cali")
@@ -11,10 +12,48 @@ store1 = Store.create(id_store:1, name_store:"bikeshop", address_store:"cra100",
          score_store:4, phonenum_store:1, celphone_store:1,city_id:1, email:"bs@u.com",
          password:"111" )
 
+#25 registros usuarios
 user1 = User.create( email:"ferg@gmail.com", password:"111111", password_confirmation:"111111",
         idUser:1, nameUser:"Fernando", surnameUser:"Perez", genderUser:"hombre", phonenumUser:1111,
         celphoneUser:1111, city_id:1 )
 
+user2 = User.create( email:"julque@gmail.com", password:"222222", password_confirmation:"222222",
+        idUser:2, nameUser:"Juliana", surnameUser:"Quevedo", genderUser:"mujer", phonenumUser:2222,
+        celphoneUser:2222, city_id:1 )
+
+user3 = User.create( email:"estemur@yahoo.com", password:"333333", password_confirmation:"333333",
+        idUser:3, nameUser:"Esteban", surnameUser:"Murcia", genderUser:"hombre", phonenumUser:3333,
+        celphoneUser:3333, city_id:1 )
+
+user4 = User.create( email:"sarar@gmail.com", password:"444444", password_confirmation:"444444",
+        idUser:4, nameUser:"Sara", surnameUser:"Ramirez", genderUser:"mujer", phonenumUser:4444,
+        celphoneUser:4444, city_id:1 )
+
+user5 = User.create( email:"serher@gmail.com", password:"555555", password_confirmation:"555555",
+        idUser:5, nameUser:"Sergio", surnameUser:"Hernandez", genderUser:"hombre", phonenumUser:5555,
+        celphoneUser:5555, city_id:1 )
+
+user6 = User.create( email:"juaber@hotmail.com", password:"666666", password_confirmation:"666666",
+        idUser:6, nameUser:"Juana", surnameUser:"Bermudez", genderUser:"mujer", phonenumUser:6666,
+        celphoneUser:6666, city_id:2 )
+
+user7 = User.create( email:"pedcas@hotmail.com", password:"777777", password_confirmation:"777777",
+        idUser:7, nameUser:"Pedro", surnameUser:"Castro", genderUser:"hombre", phonenumUser:7777,
+        celphoneUser:7777, city_id:2 )
+
+user8 = User.create( email:"masaenz@hotmail.com", password:"888888", password_confirmation:"888888",
+        idUser:8, nameUser:"Maria", surnameUser:"Saenz", genderUser:"mujer", phonenumUser:8888,
+        celphoneUser:8888, city_id:2 )
+
+user9 = User.create( email:"jorod@hotmail.com", password:"999999", password_confirmation:"999999",
+        idUser:9, nameUser:"Joaquin", surnameUser:"Rodriguez", genderUser:"hombre", phonenumUser:9999,
+        celphoneUser:9999, city_id:2 )
+
+user10 = User.create( email:"camimar@hotmail.com", password:"101010", password_confirmation:"101010",
+        idUser:10, nameUser:"Camila", surnameUser:"Martinez", genderUser:"mujer", phonenumUser:1010,
+        celphoneUser:1010, city_id:2 )
+
+#10 registros technician
 tech1 =  Technician.create( id_technical:1, NameTec:"Mariana", SurnameTec:"Suarez",
          typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1111,
          email:"marinn@gmail.com", password:"111111" )
@@ -55,6 +94,7 @@ tech10 =  Technician.create( id_technical:10, NameTec:"Manuela", SurnameTec:"Rod
          typeworktec:"ensamblado", costhourtec:20000, phonenumtec:1010,
          email:"manurodri@aol.com", password:"101010" )
 
+#18 registros bicycle
 bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "GW",
         material_bicy: "aluminio", components_bicy: "todo gw", price_bicy: 680000,
         usetype_bicy: "montana", description_bicy: "montana", store_id: 2)
