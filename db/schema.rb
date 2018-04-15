@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180413051012) do
+ActiveRecord::Schema.define(version: 20180415205529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 20180413051012) do
     t.string "material_component"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "store_id"
+    t.index ["store_id"], name: "index_components_on_store_id"
   end
 
   create_table "forums", force: :cascade do |t|
@@ -115,7 +117,9 @@ ActiveRecord::Schema.define(version: 20180413051012) do
     t.datetime "remember_created_at"
     t.string "authentication_token", limit: 30
     t.bigint "phonenumtec"
+    t.integer "city_id"
     t.index ["authentication_token"], name: "index_technicians_on_authentication_token", unique: true
+    t.index ["city_id"], name: "index_technicians_on_city_id"
     t.index ["email"], name: "index_technicians_on_email", unique: true
     t.index ["reset_password_token"], name: "index_technicians_on_reset_password_token", unique: true
   end

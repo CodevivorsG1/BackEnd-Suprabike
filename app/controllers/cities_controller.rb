@@ -4,7 +4,7 @@ class CitiesController < ApplicationController
   # GET /cities
   def index
     @cities = City.paginate(:page => params[:page], :per_page => 10)
-    @cities = City.capital
+    #@cities = City.capital
     render json: @cities
   end
 

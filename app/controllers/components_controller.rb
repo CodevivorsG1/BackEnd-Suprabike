@@ -46,6 +46,6 @@ class ComponentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def component_params
-      params.require(:component).permit(:type_component, :price_component, :description_component, :brand_component, :sizes_component, :material_component)
+      params.require(:component).permit(:type_component, :price_component, :description_component, :brand_component, :sizes_component, :material_component , :store_id) 
     end
 end
