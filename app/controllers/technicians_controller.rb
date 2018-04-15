@@ -46,6 +46,6 @@ class TechniciansController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def technician_params
-      params.require(:technician).permit(:email, :password, :id_technical, :NameTec, :SurnameTec, :typeworktec, :costhourtec, :phonenumtec)
+      params.require(:technician).permit(:email, :password, :id_technical, :NameTec, :SurnameTec, :typeworktec, :costhourtec, :phonenumtec, :city_id) 
     end
 end
