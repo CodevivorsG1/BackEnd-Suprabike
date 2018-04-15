@@ -250,6 +250,12 @@ forum23 = Forum.create(topic:"marcos",user_id:23)
 forum24 = Forum.create(topic:"rines",user_id:24)
 forum25 = Forum.create(topic:"manubrios",user_id:25)
 
+#25 registros component
+com1 = Component.create(type_component:"manubrio",price_component:50000,
+       description_component:"alta calidad",brand_component:"GW",
+       sizes_component:27,material_component:"aluminio")
+
+
 
 #20 registros bicycle
 bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "GW",
