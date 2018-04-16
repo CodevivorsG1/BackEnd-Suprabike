@@ -45,34 +45,34 @@ tech10 =  Technician.create( id_technical:10, NameTec:"Manuela", SurnameTec:"Rod
 #10 transactions
 
 tran1 = Transaction.create(date_transaction:"25/05/2016",type_transaction:"mantenimiento",
-        total_transaction:50000,technician_id:1)
+        total_transaction:50000,technician_id:1, user_id:1)
 
 tran2 = Transaction.create(date_transaction:"12/11/2015",type_transaction:"ensamblado",
-        total_transaction:75000,technician_id:2)
+        total_transaction:75000,technician_id:2, user_id:2)
 
 tran3 = Transaction.create(date_transaction:"09/02/2017",type_transaction:"reparacion",
-        total_transaction:25000,technician_id:3)
+        total_transaction:25000,technician_id:3, user_id:3)
 
 tran4 = Transaction.create(date_transaction:"17/09/2014",type_transaction:"mantenimiento",
-        total_transaction:90000,technician_id:4)
+        total_transaction:90000,technician_id:4, user_id:4)
 
 tran5 = Transaction.create(date_transaction:"12/10/2016",type_transaction:"ensamblado",
-        total_transaction:85000,technician_id:5)
+        total_transaction:85000,technician_id:5, user_id:5)
 
 tran6 = Transaction.create(date_transaction:"18/05/2015",type_transaction:"reparacion",
-        total_transaction:65000,technician_id:6)
+        total_transaction:65000,store_id:1, user_id:6)
 
 tran7 = Transaction.create(date_transaction:"19/12/2017",type_transaction:"mantenimiento",
-        total_transaction:50000,technician_id:7)
+        total_transaction:50000,store_id:2, user_id:7)
 
 tran8 = Transaction.create(date_transaction:"13/08/2017",type_transaction:"ensamblado",
-        total_transaction:35000,technician_id:8)
+        total_transaction:35000,store_id:3, user_id:8)
 
 tran9 = Transaction.create(date_transaction:"11/11/2014",type_transaction:"reparacion",
-        total_transaction:45000,technician_id:9)
+        total_transaction:45000,store_id:4, user_id:9)
 
 tran10 = Transaction.create(date_transaction:"02/13/2015",type_transaction:"mantenimiento",
-        total_transaction:60000,technician_id:10)
+        total_transaction:60000,store_id:10, user_id:10)
 
 #25 registros usuarios
 user1 = User.create( email:"ferg@gmail.com", password:"111111", password_confirmation:"111111",
@@ -216,6 +216,14 @@ store10 = Store.create(id_store:10, name_store:"inbikes", address_store:"av68",
          score_store:5, phonenum_store:6521425, celphone_store:3071452869,city_id:5,
          email:"inbik@hotmail.com",password:"101010" )
 
+store11 = Store.create(id_store:11, name_store:"inbikes", address_store:"av68",
+         score_store:5, phonenum_store:6521425, celphone_store:3071452869,city_id:5,
+         email:"inbik2@hotmail.com",password:"101010" )
+
+store12 = Store.create(id_store:12, name_store:"inbikes", address_store:"av68",
+         score_store:5, phonenum_store:6521425, celphone_store:3071452869,city_id:5,
+         email:"inbik3@hotmail.com",password:"101010" )
+
 # 5 registros ciudades
 city1 = City.create(idcity: 1, name_city: "Bogota")
 city2 = City.create(idcity: 2, name_city: "Medellin")
@@ -250,11 +258,86 @@ forum23 = Forum.create(topic:"marcos",user_id:23)
 forum24 = Forum.create(topic:"rines",user_id:24)
 forum25 = Forum.create(topic:"manubrios",user_id:25)
 
-#25 registros component
+#20 registros component
 com1 = Component.create(type_component:"manubrio",price_component:50000,
        description_component:"alta calidad",brand_component:"GW",
-       sizes_component:27,material_component:"aluminio")
+       sizes_component:27,material_component:"aluminio", store_id:1)
 
+com2 = Component.create(type_component:"marco",price_component:350000,
+       description_component:"alta calidad",brand_component:"GW",
+       sizes_component:27,material_component:"aluminio", store_id:1)
+
+com3 = Component.create(type_component:"rines",price_component:80000,
+       description_component:"economicas",brand_component:"GW",
+       sizes_component:27.5,material_component:"acero", store_id:2)
+
+com4 = Component.create(type_component:"grupo",price_component:150000,
+       description_component:"economicas",brand_component:"shimano",
+       sizes_component:30,material_component:"acero", store_id:2)
+
+com5 = Component.create(type_component:"manubrio",price_component:250000,
+       description_component:"calidad media",brand_component:"Trek",
+       sizes_component:40,material_component:"aluminio", store_id:3)
+
+com6 = Component.create(type_component:"grupo",price_component:1200000,
+       description_component:"alto rendimiento",brand_component:"sram",
+       sizes_component:35,material_component:"aluminio", store_id:3)
+
+com7 = Component.create(type_component:"marco",price_component:650000,
+       description_component:"ruta media",brand_component:"Specialized",
+       sizes_component:27.5,material_component:"aluminio", store_id:4)
+
+com8 = Component.create(type_component:"manubrio",price_component:120000,
+       description_component:"economicas",brand_component:"GW",
+       sizes_component:45,material_component:"aluminio", store_id:4)
+
+com9 = Component.create(type_component:"marco",price_component:750000,
+       description_component:"montana media",brand_component:"Trek",
+       sizes_component:31,material_component:"aluminio", store_id:5)
+
+com10 = Component.create(type_component:"rines",price_component:1500000,
+       description_component:"ultra liviana",brand_component:"DeRosa",
+       sizes_component:30,material_component:"fibraCarbono", store_id:5)
+
+com11 = Component.create(type_component:"marco",price_component:80000,
+       description_component:"economicas",brand_component:"Benelli",
+       sizes_component:27.5,material_component:"acero", store_id:6)
+
+com12 = Component.create(type_component:"manubrio",price_component:40000,
+       description_component:"economicas",brand_component:"Benelli",
+       sizes_component:27.5,material_component:"acero", store_id:6)
+
+com13 = Component.create(type_component:"grupo",price_component:500000,
+       description_component:"tourney",brand_component:"shimano",
+       sizes_component:27.5,material_component:"aluminio", store_id:7)
+
+com14 = Component.create(type_component:"manubrio",price_component:200000,
+       description_component:"ruta media",brand_component:"Specialized",
+       sizes_component:27.5,material_component:"aluminio", store_id:7)
+
+com15 = Component.create(type_component:"marco",price_component:800000,
+       description_component:"ruta liviana",brand_component:"Specialized",
+       sizes_component:27.5,material_component:"aluminio", store_id:8)
+
+com16 = Component.create(type_component:"manubrio",price_component:180000,
+       description_component:"ruta liviana",brand_component:"Specialized",
+       sizes_component:27.5,material_component:"aluminio", store_id:8)
+
+com17 = Component.create(type_component:"grupo",price_component:350000,
+       description_component:"sram entrada",brand_component:"sram",
+       sizes_component:27.5,material_component:"acero", store_id:9)
+
+com18 = Component.create(type_component:"rines",price_component:200000,
+       description_component:"montana media",brand_component:"Trek",
+       sizes_component:27.5,material_component:"aluminio", store_id:9)
+
+com19 = Component.create(type_component:"marco",price_component:450000,
+       description_component:"scorpion",brand_component:"GW",
+       sizes_component:27.5,material_component:"aluminio", store_id:10)
+
+com20 = Component.create(type_component:"manubrio",price_component:180000,
+       description_component:"scorpion",brand_component:"GW",
+       sizes_component:27.5,material_component:"aluminio", store_id:10)
 
 
 #20 registros bicycle
@@ -337,3 +420,30 @@ bici19 = Bicycle.create( id_bicy: 19, brand_bicy: "GW",
 bici20 = Bicycle.create( id_bicy: 20, brand_bicy: "Specialized",
         material_bicy: "aluminio", components_bicy: "shimano alto", price_bicy: 850000,
         usetype_bicy: "montana", description_bicy: "ciudad montana", store_id: 10)
+
+#25 regitros comment
+comt1 = Comment.create(description:"comment 1",forum_id:1,user_id:1)
+comt2 = Comment.create(description:"comment 2",forum_id:2,user_id:2)
+comt3= Comment.create(description:"comment 3",forum_id:3,user_id:3) 
+comt4= Comment.create(description:"comment 4",forum_id:4,user_id:4) 
+comt5= Comment.create(description:"comment 5",forum_id:5,user_id:5) 
+comt6= Comment.create(description:"marcos",forum_id:6,user_id:6) 
+comt7= Comment.create(description:"marcos",forum_id:7,user_id:7) 
+comt8= Comment.create(description:"comment 8",forum_id:8,user_id:8) 
+comt9= Comment.create(description:"comment 9",forum_id:9,user_id:9) 
+comt10= Comment.create(description:"comment 10",forum_id:10,user_id:10) 
+comt11= Comment.create(description:"comment 11",forum_id:11,user_id:11) 
+comt12= Comment.create(description:"comment 12",forum_id:12,user_id:12) 
+comt13= Comment.create(description:"comment 13",forum_id:13,user_id:13) 
+comt14= Comment.create(description:"comment 14",forum_id:14,user_id:14) 
+comt15= Comment.create(description:"comment 15",forum_id:15,user_id:15) 
+comt16= Comment.create(description:"comment 16",forum_id:16,user_id:16) 
+comt17= Comment.create(description:"comment 17",forum_id:17,user_id:17) 
+comt18= Comment.create(description:"comment 18",forum_id:18,user_id:18) 
+comt19= Comment.create(description:"comment 19",forum_id:19,user_id:19) 
+comt20= Comment.create(description:"comment 20",forum_id:20,user_id:20) 
+comt21= Comment.create(description:"comment 21",forum_id:21,user_id:21) 
+comt22= Comment.create(description:"comment 22",forum_id:22,user_id:22) 
+comt23= Comment.create(description:"comment 23",forum_id:23,user_id:23) 
+comt24= Comment.create(description:"comment 24",forum_id:24,user_id:24) 
+comt25= Comment.create(description:"comment 25",forum_id:25,user_id:25)

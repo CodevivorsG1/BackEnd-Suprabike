@@ -15,5 +15,5 @@ class Forum < ApplicationRecord
     belongs_to :user
     has_many :comments, dependent: :destroy
 
-    scope :carreras, -> { where(:topic => "carreras")}
+    scope :manubrios, -> { where(:topic => "manubrios")}
 end
