@@ -1,4 +1,4 @@
-require "time"
+#require "time"
 class CreateTransactions < ActiveRecord::Migration[5.1]
   def change
     create_table :transactions do |t|
