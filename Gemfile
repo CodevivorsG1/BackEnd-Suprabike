@@ -8,7 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
-
+gem 'delayed_job_active_record'
 gem 'faker', require: false
 gem 'annotate'
 gem 'will_paginate', '~> 3.1.0'
