@@ -17,7 +17,7 @@ gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
 gem "paperclip", "~> 6.0.0"
 # Use postgresql as the database for Active Record
-gem 'pg'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -34,8 +34,13 @@ gem 'puma', '~> 3.7'
 gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
+  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :development do
