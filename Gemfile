@@ -19,6 +19,7 @@ gem "paperclip", "~> 6.0.0"
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'responders'
+
 # Use postgresql as the database for Active Record
 
 # Use Puma as the app server
