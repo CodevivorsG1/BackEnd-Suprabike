@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :update, :destroy]
-  before_action :authenticate_user!, :except => [:show, :index]
+  before_action :authenticate_user_from_token!, :except => [:show, :index]
   # GET /comments
   def index
     @comments = Comment.paginate(:page => params[:page], :per_page => 10)

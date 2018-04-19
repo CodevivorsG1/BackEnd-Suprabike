@@ -26,11 +26,13 @@
 #
 
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  acts_as_token_authenticatable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [ :google_oauth2] #:facebook ,
+    # Include default devise modules. Others available are:
+    # :confirmable, :lockable, :timeoutable and :omniauthable
+    devise :database_authenticatable, :registerable,
+    :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [ :google_oauth2] #:facebook ,
+
+    acts_as_token_authenticatable
+
     validates :nameUser, presence: true,length: { maximum: 20 }
     validates :surnameUser, presence: true,length: { maximum: 20 }
     validates :genderUser, presence: true,length: { maximum: 20 }

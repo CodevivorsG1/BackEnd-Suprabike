@@ -1,6 +1,6 @@
 class ForumsController < ApplicationController
   before_action :set_forum, only: [:show, :update, :destroy]
-  before_action :authenticate_user!, :except => [:show, :index]
+  before_action :authenticate_user_from_token!, :except => [:show, :index]
   
 
   # GET /forums
