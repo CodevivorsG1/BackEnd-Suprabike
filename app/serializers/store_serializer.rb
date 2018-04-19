@@ -22,4 +22,7 @@
 
 class StoreSerializer < ApplicationSerializer
   attributes :id , :id_store, :name_store, :address_store, :score_store , :phonenum_store, :celphone_store, :email , :password
+  has_many :transactions
+  has_many :components
+  has_many :bicycles
 end

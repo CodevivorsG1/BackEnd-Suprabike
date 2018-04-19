@@ -1,9 +1,11 @@
 class ForumsController < ApplicationController
   before_action :set_forum, only: [:show, :update, :destroy]
+  before_action :authenticate_user!, :except => [:show, :index]
+  
 
   # GET /forums
   def index
-    @forums = Forum.paginate(:page => params[:page], :per_page => 10)
+    @forums = Forum.paginate(:page => params[:page], :per_page => 1000)
 
     render json: @forums
   end

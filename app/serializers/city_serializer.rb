@@ -11,4 +11,7 @@
 
 class CitySerializer < ActiveModel::Serializer
   attributes :id ,:idcity , :name_city
+  has_many :users
+  has_many :stores
+  has_many :technicians
 end
