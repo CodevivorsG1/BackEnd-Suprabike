@@ -11,7 +11,7 @@ class BicyclesController < ApplicationController
     render json: @bicycles, each_serializer: BicycleSerializer
     respond_to do |format|
       format.html
-      format.pdf {render layout: 'pdf', pdf: 'pdf', template: 'pdf'}
+      format.pdf {render layout: 'pdf', pdf: 'pdf'}
     end
   end
 
