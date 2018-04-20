@@ -21,7 +21,7 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'responders'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', :group => :production
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 # Use Puma as the app server
