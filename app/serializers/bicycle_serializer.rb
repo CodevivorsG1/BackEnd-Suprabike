@@ -12,10 +12,11 @@
 #  description_bicy :string
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  store_id         :integer
 #
 
 class BicycleSerializer < ApplicationSerializer
-  attributes :id , :brand_bicy , :material_bicy , :components_bicy , :price_bicy , :usetype_bicy , :description_bicy
+  attributes :id , :brand_bicy , :material_bicy , :components_bicy , :price_bicy , :usetype_bicy , :description_bicy , :store_id
 
 
 end

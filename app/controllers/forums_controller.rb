@@ -1,9 +1,11 @@
 class ForumsController < ApplicationController
   before_action :set_forum, only: [:show, :update, :destroy]
+  before_action :authenticate_user_from_token!, :except => [:show, :index]
+  
 
   # GET /forums
   def index
-    @forums = Forum.paginate(:page => params[:page], :per_page => 10)
+    @forums = Forum.paginate(:page => params[:page], :per_page => 1000)
 
     render json: @forums
   end
@@ -46,6 +48,6 @@ class ForumsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def forum_params
-      params.require(:forum).permit(:topic)
+      params.require(:forum).permit(:topic, :user_id)
     end
 end
