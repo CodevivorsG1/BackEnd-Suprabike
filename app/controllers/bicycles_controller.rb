@@ -1,6 +1,3 @@
-class ApplicationController < ActionController::API 
-  include ActionController::MimeResponds
-end
 
 class BicyclesController < ApplicationController
   before_action :set_bicycle, only: [:show, :update, :destroy]
