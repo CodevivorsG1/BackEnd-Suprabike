@@ -16,7 +16,6 @@ class BicyclesController < ApplicationController
   end
 
   
-
   # GET /bicycles/1
   def show
     render json: @bicycle, serializer: BicycleSerializer
