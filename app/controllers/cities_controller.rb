@@ -1,10 +1,11 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show, :update, :destroy]
+  before_action :authenticate_user_from_token!, :except => [:show, :index]
 
   # GET /cities
   def index
     @cities = City.paginate(:page => params[:page], :per_page => 10)
-
+    #@cities = City.capital
     render json: @cities
   end
 

@@ -19,9 +19,14 @@ class Transaction < ApplicationRecord
     belongs_to :store , optional: true
     belongs_to :user, optional: true
 
-    #scope :soporte, where(:type_transaction => "soporte")
-    scope :soporte, -> {where(:type_transaction => "soporte")}
-    scope :totalTrans, -> {where("price < ?", total_transaction)}
-    #scope :soportesCaros, soporte.total_transaction
+    scope :ensamble, -> {where(:type_transaction => "ensamblado")}
+    #scope :totalTrans, -> {where("total_transaction < ?", total_transaction)}
+    
+    def self.precios(total_transaction)
+        where("total_transaction < ?", total_transaction)
+    end
+
+    
+    
     
 end

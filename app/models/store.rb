@@ -31,14 +31,15 @@ class Store < ApplicationRecord
     validates :score_store, presence: true, numericality: { only_integer: true }
     validates :phonenum_store, presence: true, numericality: { only_integer: true }
     validates :celphone_store, presence: true, numericality: { only_integer: true }
+    validates :email, presence: true,length: { maximum: 20 }
 
     has_many :transactions , dependent: :destroy
-    belongs_to :city
+    belongs_to :city, required: false
     has_many :components , dependent: :destroy
     has_many :images, as: :imageable
 
     #scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
-    has_many :bycicles , dependent: :destroy
+    has_many :bicycles , dependent: :destroy
     scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
     #selecciona todas las tiendas que han vendido bicicletas de montanna ordenado por id de tienda
     scope :ranking, -> { Store.joins(:bicycles).where(bicycles: {usetype_bicy: "mountain"}).pluck(:store_id) }
