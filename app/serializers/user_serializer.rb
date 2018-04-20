@@ -27,4 +27,7 @@
 
 class UserSerializer < ApplicationSerializer
   attributes :id, :city_id, :idUser, :nameUser, :surnameUser, :genderUser, :phonenumUser, :celphoneUser, :email
+  has_many :transactions
+  has_many :comments
+  has_many :forums
 end

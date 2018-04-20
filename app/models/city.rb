@@ -15,6 +15,7 @@ class City < ApplicationRecord
     #relations
     has_many :users
     has_many :stores
+    has_many :technicians 
 
     scope :capital, -> { where(:name_city => "Bogota")}
 

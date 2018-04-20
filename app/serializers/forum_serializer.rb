@@ -10,5 +10,6 @@
 #
 
 class ForumSerializer < ApplicationSerializer
-  attributes :id, :topic
+  attributes :id, :topic , :user_id 
+  has_many :comments
 end
