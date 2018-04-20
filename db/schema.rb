@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180418021614) do
+ActiveRecord::Schema.define(version: 20180419091211) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "bicycles", force: :cascade do |t|
     t.integer "id_bicy"
@@ -106,8 +109,8 @@ ActiveRecord::Schema.define(version: 20180418021614) do
     t.datetime "remember_created_at"
     t.string "authentication_token", limit: 30
     t.integer "city_id"
-    t.integer "celphone_store", limit: 8
-    t.integer "phonenum_store", limit: 8
+    t.bigint "celphone_store"
+    t.bigint "phonenum_store"
     t.index ["authentication_token"], name: "index_stores_on_authentication_token", unique: true
     t.index ["city_id"], name: "index_stores_on_city_id"
     t.index ["email"], name: "index_stores_on_email", unique: true
@@ -128,8 +131,10 @@ ActiveRecord::Schema.define(version: 20180418021614) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "authentication_token", limit: 30
-    t.integer "phonenumtec", limit: 8
+    t.bigint "phonenumtec"
+    t.integer "city_id"
     t.index ["authentication_token"], name: "index_technicians_on_authentication_token", unique: true
+    t.index ["city_id"], name: "index_technicians_on_city_id"
     t.index ["email"], name: "index_technicians_on_email", unique: true
     t.index ["reset_password_token"], name: "index_technicians_on_reset_password_token", unique: true
   end
@@ -167,8 +172,10 @@ ActiveRecord::Schema.define(version: 20180418021614) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.string "authentication_token", limit: 30
-    t.integer "phonenumUser", limit: 8
-    t.integer "celphoneUser", limit: 8
+    t.bigint "phonenumUser"
+    t.bigint "celphoneUser"
+    t.string "provider"
+    t.string "uid"
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["email"], name: "index_users_on_email", unique: true

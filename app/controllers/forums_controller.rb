@@ -6,7 +6,6 @@ class ForumsController < ApplicationController
   # GET /forums
   def index
     @forums = Forum.paginate(:page => params[:page], :per_page => 10)
-    @forums = Forum.paginate(:page => params[:page], :per_page => 1000)
 
     render json: @forums
   end
