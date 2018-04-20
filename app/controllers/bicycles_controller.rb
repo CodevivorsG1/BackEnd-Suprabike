@@ -6,8 +6,13 @@ class BicyclesController < ApplicationController
   def index
     @bicycles = Bicycle.paginate(:page => params[:page], :per_page => 10)
     render json: @bicycles, each_serializer: BicycleSerializer
+    #respond_to do |format|
+    #  format.html
+    #  format.pdf {render  pdf: 'reporte', template: 'bicycles/reporte'} 
+    #end
   end
 
+  
   # GET /bicycles/1
   def show
     render json: @bicycle, serializer: BicycleSerializer

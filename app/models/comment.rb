@@ -15,5 +15,5 @@ class Comment < ApplicationRecord
     belongs_to :user
     belongs_to :forum
 
-    scope :seguridad, -> { where(:description => "cascos")}
+    scope :marcos, -> { where(:description => "marcos")}
 end

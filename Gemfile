@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
+gem 'delayed_job_active_record'
 
 gem 'faker', require: false
 gem 'annotate'
@@ -16,6 +17,9 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
 gem "paperclip", "~> 6.0.0"
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem 'responders'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'omniauth-facebook'

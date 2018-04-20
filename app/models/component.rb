@@ -21,7 +21,7 @@ class Component < ApplicationRecord
     validates :sizes_component, presence: true, numericality: true,length: { maximum: 20 }
     validates :material_component, presence: true,length: { maximum: 20 }
 
-    belongs_to :store
+    belongs_to :store, required: false
     has_many :images, as: :imageable , dependent: :destroy
 
     #scope :baratos, lambda { |price_component| where("price_component < ?", price_component) }

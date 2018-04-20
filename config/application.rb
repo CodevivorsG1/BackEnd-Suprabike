@@ -20,6 +20,9 @@ module SuprabikesBE
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+    config.active_job.queue_adapter = :delayed_job
+    config.action_mailer.default_url_options = { host: 'suprabikes.com' }
+    config.action_mailer.delivery_method = :smtp
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -32,6 +35,7 @@ module SuprabikesBE
     config.middleware.use ActionDispatch::Flash
     config.middleware.insert_after ActiveRecord::Migration::CheckPending, ActionDispatch::Cookies
     config.middleware.insert_after ActionDispatch::Cookies, ActionDispatch::Session::CookieStore
+    #config.middleware.use WickedPdf::Middleware
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'

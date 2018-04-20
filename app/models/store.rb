@@ -31,9 +31,10 @@ class Store < ApplicationRecord
     validates :score_store, presence: true, numericality: { only_integer: true }
     validates :phonenum_store, presence: true, numericality: { only_integer: true }
     validates :celphone_store, presence: true, numericality: { only_integer: true }
+    validates :email, presence: true,length: { maximum: 20 }
 
     has_many :transactions , dependent: :destroy
-    belongs_to :city
+    belongs_to :city, required: false
     has_many :components , dependent: :destroy
     has_many :images, as: :imageable
 

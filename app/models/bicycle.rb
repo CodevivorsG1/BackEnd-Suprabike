@@ -25,15 +25,15 @@ class Bicycle < ApplicationRecord
     validates :brand_bicy,:material_bicy ,:components_bicy ,length: { maximum: 20 }
     validates :description_bicy, length: { maximum: 100 }
 
-    belongs_to :store
+    belongs_to :store, required: false
     has_many :images, as: :imageable
 
     scope :material, -> { where(:material_bicy => "aluminio")}
 
     def self.baratas(price_bicy)
-        where("price < ?", price_bicy) #se le pasa como argumento la plata Bicycle.baratas(9999)
+        where("price_bicy < ?", price_bicy) #se le pasa como argumento la plata Bicycle.baratas(9999)
     end
 
     #tiendas que han vendido bien
-    scope :successful, -> { Bicycle.joins(:stores).where(stores: {score_store: 4}) }
+    scope :buenventa, -> { Bicycle.joins(:stores).where(stores: {score_store: 5}) }
 end

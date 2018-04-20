@@ -18,6 +18,7 @@ class StoresController < ApplicationController
     @store = Store.new(store_params)
 
     if @store.save
+      WelcomeStoreMailer.notify(@store).deliver_now
       render json: @store, status: :created
     else
       render json: @store.errors, status: :unprocessable_entity

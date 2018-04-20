@@ -1,19 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
- #The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#Registros a mano
 
- #Examples:
+#10 registros technician
+tech1 =  Technician.create( id_technical:1, NameTec:"Mariana", SurnameTec:"Suarez",
+         typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1111,
+         email:"marinn@gmail.com", password:"111111" )
 
- #  movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
- #  Character.create(name: 'Luke', movie: movies.first)
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+tech2 =  Technician.create( id_technical:2, NameTec:"Pedro", SurnameTec:"Fernandez",
+         typeworktec:"ensamblado", costhourtec:80000, phonenumtec:2222,
+         email:"pedrof@outlook.com", password:"222222" )
 
-require 'faker'
+tech3 =  Technician.create( id_technical:3, NameTec:"Nicolas", SurnameTec:"Enciso",
+         typeworktec:"reparacion", costhourtec:50000, phonenumtec:3333,
+         email:"nricardoe@gmail.com", password:"333333" )
 
 puts 'started loading  data'
 count = 0
@@ -85,6 +83,8 @@ count = 0
         user_id: randomId,
         store_id: randomId )
 
+tran3 = Transaction.create(date_transaction:"09/02/2017",type_transaction:"reparacion",
+        total_transaction:25000,technician_id:3, user_id:3)
 
 end
 puts 'finished loading  data'
