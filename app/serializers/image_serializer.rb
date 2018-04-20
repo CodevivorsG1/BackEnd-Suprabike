@@ -15,5 +15,5 @@
 #
 
 class ImageSerializer < ApplicationSerializer
-  attributes :id, :this_image
+  attributes :id, :name , :this_image
 end
