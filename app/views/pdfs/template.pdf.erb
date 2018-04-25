@@ -2,8 +2,32 @@
 <html>
     <head>
         <title>CATALOGO DE BICICLETAS</title>
+        <meta charset="utf-8">
     </head>
     <body>
-        <h1>HOLA MUNDO</h1>
+        <h1>CATALOGO SUPRABIKES</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 150px;">Marca</th>
+                    <th style="width: 150px;">Material</th>
+                    <th style="width: 150px;">Tipo de uso</th>
+                    <th style="width: 150px;">Precio</th>
+                    <th style="width: 150px;">Tienda</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% @bicycles.each do |bicycle| %>
+                    <tr>
+                        <td><%= bicycle.brand_bicy %></td>
+                        <td><%= bicycle.material_bicy %></td>
+                        <td><%= bicycle.usetype_bicy %></td>
+                        <td><%= bicycle.price_bicy %></td>
+                        <td><%= bicycle.store.name_store %></td>
+                    </tr>
+                <%end%>
+            </tbody>
+        </table>
     </body>
 </html>

@@ -1,6 +1,7 @@
 class PdfsController < ActionController::Base
     def get_model
       @bicycle = Bicycle.find(params[:id])
+      @bicycles = Bicycle.all
     end
   
   
