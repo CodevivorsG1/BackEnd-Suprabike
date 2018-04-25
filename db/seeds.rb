@@ -452,7 +452,7 @@ comt24= Comment.create(description:"comment 24",forum_id:24,user_id:24)
 comt25= Comment.create(description:"comment 25",forum_id:25,user_id:25)
 
 
-=begin puts 'started loading  data'
+puts 'started loading  data'
 count = 0
 20.times do |row|
     count = count +1
@@ -527,4 +527,3 @@ tran3 = Transaction.create(date_transaction:"09/02/2017",type_transaction:"repar
 
 end
 puts 'finished loading  data' 
-=end
