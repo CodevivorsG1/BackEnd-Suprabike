@@ -32740,3 +32740,1227 @@ Completed 200 OK in 957ms (Views: 614.6ms | ActiveRecord: 379.5ms)
             FROM sqlite_temp_master
             WHERE name='index_users_on_authentication_token' AND type='index'
 [0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bicycles_on_store_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bicycles_on_store_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_forum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_forum_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_components_on_store_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_components_on_store_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='delayed_jobs_priority' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='delayed_jobs_priority' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_forums_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_forums_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_images_on_imageable_type_and_imageable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_images_on_imageable_type_and_imageable_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_city_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_city_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_authentication_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_authentication_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_city_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_city_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_authentication_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_authentication_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_technician_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_technician_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_store_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_store_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_city_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_city_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_authentication_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_authentication_token' AND type='index'
+[0m
+Started GET "/bicycles/1/showpdf.pdf" for 127.0.0.1 at 2018-04-25 00:27:34 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PdfsController#show as PDF
+  Parameters: {"id"=>"1"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+***************WICKED***************
+  Rendering pdfs/template.pdf.erb
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered pdfs/template.pdf.erb (127.4ms)
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name_store' for nil:NilClass):
+    24:                         <td><%= bicycle.material_bicy %></td>
+    25:                         <td><%= bicycle.usetype_bicy %></td>
+    26:                         <td><%= bicycle.price_bicy %></td>
+    27:                         <td><%= bicycle.store.name_store %></td>
+    28:                     </tr>
+    29:                 <%end%>
+    30:             </tbody>
+  
+app/views/pdfs/template.pdf.erb:27:in `block in _app_views_pdfs_template_pdf_erb__2002849426893117616_47147080536420'
+app/views/pdfs/template.pdf.erb:21:in `_app_views_pdfs_template_pdf_erb__2002849426893117616_47147080536420'
+app/controllers/pdfs_controller.rb:12:in `block (2 levels) in show'
+app/controllers/pdfs_controller.rb:10:in `show'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-04-25 00:27:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/bicycles" for 127.0.0.1 at 2018-04-25 00:28:33 -0500
+Processing by BicyclesController#index as HTML
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.39ms)
+Completed 200 OK in 55ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bicycles?page=4" for 127.0.0.1 at 2018-04-25 00:28:50 -0500
+Processing by BicyclesController#index as HTML
+  Parameters: {"page"=>"4"}
+  [1m[36mBicycle Load (0.4ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 30]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bicycles?page=3" for 127.0.0.1 at 2018-04-25 00:28:55 -0500
+Processing by BicyclesController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bicycles?page=2" for 127.0.0.1 at 2018-04-25 00:28:58 -0500
+Processing by BicyclesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 10]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bicycles?page=1" for 127.0.0.1 at 2018-04-25 00:29:00 -0500
+Processing by BicyclesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.92ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "marinn@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "pedrof@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "nricardoe@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "julirojas@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "atapala@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "linap@outlook.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "alegom@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "marmarti@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "armacasa@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTechnician Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "technicians" WHERE "technicians"."email" = ? LIMIT ?[0m  [["email", "manurodri@aol.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.8ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "technician_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "25/05/2016"], ["type_transaction", "mantenimiento"], ["total_transaction", 50000.0], ["created_at", "2018-04-25 05:29:35.606875"], ["updated_at", "2018-04-25 05:29:35.606875"], ["technician_id", 1], ["user_id", 1]]
+  [1m[35m (70.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "technician_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "12/11/2015"], ["type_transaction", "ensamblado"], ["total_transaction", 75000.0], ["created_at", "2018-04-25 05:29:35.697937"], ["updated_at", "2018-04-25 05:29:35.697937"], ["technician_id", 2], ["user_id", 2]]
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "technician_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "09/02/2017"], ["type_transaction", "reparacion"], ["total_transaction", 25000.0], ["created_at", "2018-04-25 05:29:35.786035"], ["updated_at", "2018-04-25 05:29:35.786035"], ["technician_id", 3], ["user_id", 3]]
+  [1m[35m (62.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "technician_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "17/09/2014"], ["type_transaction", "mantenimiento"], ["total_transaction", 90000.0], ["created_at", "2018-04-25 05:29:35.853271"], ["updated_at", "2018-04-25 05:29:35.853271"], ["technician_id", 4], ["user_id", 4]]
+  [1m[35m (80.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "technician_id", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "12/10/2016"], ["type_transaction", "ensamblado"], ["total_transaction", 85000.0], ["created_at", "2018-04-25 05:29:35.938568"], ["updated_at", "2018-04-25 05:29:35.938568"], ["technician_id", 5], ["user_id", 5]]
+  [1m[35m (53.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "user_id", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "18/05/2015"], ["type_transaction", "reparacion"], ["total_transaction", 65000.0], ["created_at", "2018-04-25 05:29:35.996637"], ["updated_at", "2018-04-25 05:29:35.996637"], ["user_id", 6], ["store_id", 1]]
+  [1m[35m (53.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "user_id", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "19/12/2017"], ["type_transaction", "mantenimiento"], ["total_transaction", 50000.0], ["created_at", "2018-04-25 05:29:36.054137"], ["updated_at", "2018-04-25 05:29:36.054137"], ["user_id", 7], ["store_id", 2]]
+  [1m[35m (59.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "user_id", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "13/08/2017"], ["type_transaction", "ensamblado"], ["total_transaction", 35000.0], ["created_at", "2018-04-25 05:29:36.118956"], ["updated_at", "2018-04-25 05:29:36.118956"], ["user_id", 8], ["store_id", 3]]
+  [1m[35m (63.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "user_id", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "11/11/2014"], ["type_transaction", "reparacion"], ["total_transaction", 45000.0], ["created_at", "2018-04-25 05:29:36.187506"], ["updated_at", "2018-04-25 05:29:36.187506"], ["user_id", 9], ["store_id", 4]]
+  [1m[35m (59.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("date_transaction", "type_transaction", "total_transaction", "created_at", "updated_at", "user_id", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["date_transaction", "02/13/2015"], ["type_transaction", "mantenimiento"], ["total_transaction", 60000.0], ["created_at", "2018-04-25 05:29:36.252714"], ["updated_at", "2018-04-25 05:29:36.252714"], ["user_id", 10], ["store_id", 10]]
+  [1m[35m (94.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ferg@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "qJRk8fmks6sydBiuAxzC"]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 1], ["idUser", 1], ["nameUser", "Fernando"], ["surnameUser", "Perez"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:36.557076"], ["updated_at", "2018-04-25 05:29:36.557076"], ["email", "ferg@gmail.com"], ["encrypted_password", "$2a$11$O3mS.h9D3m2BEV11VlX7UeohXHVJEFZlPWVd4a8Jke65OmCxzmtzq"], ["authentication_token", "qJRk8fmks6sydBiuAxzC"], ["phonenumUser", 1111], ["celphoneUser", 1111]]
+  [1m[35m (77.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "julque@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "es5LNTW-_CfzPxX7VXnv"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 1], ["idUser", 2], ["nameUser", "Juliana"], ["surnameUser", "Quevedo"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:36.777865"], ["updated_at", "2018-04-25 05:29:36.777865"], ["email", "julque@gmail.com"], ["encrypted_password", "$2a$11$UkW6HbozPGXtsPk5k0Hi9.i8A3C/uFvPy5aTlH9yDCmGl5446vuv."], ["authentication_token", "es5LNTW-_CfzPxX7VXnv"], ["phonenumUser", 2222], ["celphoneUser", 2222]]
+  [1m[35m (57.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "estemur@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "MrpbCsqRecmsgXzR13op"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 1], ["idUser", 3], ["nameUser", "Esteban"], ["surnameUser", "Murcia"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:36.984967"], ["updated_at", "2018-04-25 05:29:36.984967"], ["email", "estemur@yahoo.com"], ["encrypted_password", "$2a$11$paH53FZS00WQ2y.JcN8l2ereZk1wcpHIfu5uwUmPa0.4ZkReMnbU6"], ["authentication_token", "MrpbCsqRecmsgXzR13op"], ["phonenumUser", 3333], ["celphoneUser", 3333]]
+  [1m[35m (60.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sarar@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "nd1jq7zLvxfw2sEbnxrv"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 1], ["idUser", 4], ["nameUser", "Sara"], ["surnameUser", "Ramirez"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:37.194187"], ["updated_at", "2018-04-25 05:29:37.194187"], ["email", "sarar@gmail.com"], ["encrypted_password", "$2a$11$rerSWiq9ntiuGEXIq0p68eVZwsYQHnCZM7jM8TsapZvYjJ6kd.ULe"], ["authentication_token", "nd1jq7zLvxfw2sEbnxrv"], ["phonenumUser", 4444], ["celphoneUser", 4444]]
+  [1m[35m (74.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "serher@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "DwjJJFJrcDJ1KyLq9GB_"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 1], ["idUser", 5], ["nameUser", "Sergio"], ["surnameUser", "Hernandez"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:37.415455"], ["updated_at", "2018-04-25 05:29:37.415455"], ["email", "serher@gmail.com"], ["encrypted_password", "$2a$11$4p6KBMzw/i/qdChj22mUIeEl.2dA5/RF/2VIB2jx4IGsNnOopw.Xa"], ["authentication_token", "DwjJJFJrcDJ1KyLq9GB_"], ["phonenumUser", 5555], ["celphoneUser", 5555]]
+  [1m[35m (118.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "juaber@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "jdeQoGW6A-suYBeTgTNA"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 2], ["idUser", 6], ["nameUser", "Juana"], ["surnameUser", "Bermudez"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:37.688881"], ["updated_at", "2018-04-25 05:29:37.688881"], ["email", "juaber@hotmail.com"], ["encrypted_password", "$2a$11$cZONDbw67CUw0WmwUXfuXuBozln/.Yyy1qDIqVs5aSd.J2P5itZ0i"], ["authentication_token", "jdeQoGW6A-suYBeTgTNA"], ["phonenumUser", 6666], ["celphoneUser", 6666]]
+  [1m[35m (84.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pedcas@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "s1zU2r5_u1Zs_mAzAzcA"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 2], ["idUser", 7], ["nameUser", "Pedro"], ["surnameUser", "Castro"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:37.916888"], ["updated_at", "2018-04-25 05:29:37.916888"], ["email", "pedcas@hotmail.com"], ["encrypted_password", "$2a$11$1PyaDlUMTgCdqxnCOYtqMeIlkhSA7pPX7X1hRGChJX3Y5m2uYSG6K"], ["authentication_token", "s1zU2r5_u1Zs_mAzAzcA"], ["phonenumUser", 7777], ["celphoneUser", 7777]]
+  [1m[35m (85.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "masaenz@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "4QJss1izFWEHxmVMnRta"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 2], ["idUser", 8], ["nameUser", "Maria"], ["surnameUser", "Saenz"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:38.141497"], ["updated_at", "2018-04-25 05:29:38.141497"], ["email", "masaenz@hotmail.com"], ["encrypted_password", "$2a$11$zTr5.FVXB9QeAOqI2XoVoOWoQmjFGqQp03Jmz.K2qxE.ke0AjpolG"], ["authentication_token", "4QJss1izFWEHxmVMnRta"], ["phonenumUser", 8888], ["celphoneUser", 8888]]
+  [1m[35m (104.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jorod@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "mAw9c2ZPSxezLcTYMeCP"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 2], ["idUser", 9], ["nameUser", "Joaquin"], ["surnameUser", "Rodriguez"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:38.387483"], ["updated_at", "2018-04-25 05:29:38.387483"], ["email", "jorod@hotmail.com"], ["encrypted_password", "$2a$11$9LEqECZGmjCGTjYSs2koheMsYSWgRXNb5.xbrxQGR1TNxxcytd4Mm"], ["authentication_token", "mAw9c2ZPSxezLcTYMeCP"], ["phonenumUser", 9999], ["celphoneUser", 9999]]
+  [1m[35m (80.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "camimar@hotmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "e_bzSDnxNDAoescqcwRH"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 2], ["idUser", 10], ["nameUser", "Camila"], ["surnameUser", "Martinez"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:38.613789"], ["updated_at", "2018-04-25 05:29:38.613789"], ["email", "camimar@hotmail.com"], ["encrypted_password", "$2a$11$M.tXpNr2YwoDSi6IJwPZJeygiuM2CdunHyprvILkuiocqR9xdSwZ."], ["authentication_token", "e_bzSDnxNDAoescqcwRH"], ["phonenumUser", 1010], ["celphoneUser", 1010]]
+  [1m[35m (84.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sebgom@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "ezvLG7KMg_Zx5styiRr_"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 3], ["idUser", 11], ["nameUser", "Sebastian"], ["surnameUser", "Gomez"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:38.841755"], ["updated_at", "2018-04-25 05:29:38.841755"], ["email", "sebgom@yahoo.com"], ["encrypted_password", "$2a$11$Lgp.ef/hksGv0dji.CiZgef.ssshXTdEjysxfti8dZj5HFgjkDquG"], ["authentication_token", "ezvLG7KMg_Zx5styiRr_"], ["phonenumUser", 1111], ["celphoneUser", 1111]]
+  [1m[35m (92.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dapine@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "W1h8pYsPLkFFCymWTKV4"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 3], ["idUser", 12], ["nameUser", "Daniela"], ["surnameUser", "Pineda"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:39.085509"], ["updated_at", "2018-04-25 05:29:39.085509"], ["email", "dapine@yahoo.com"], ["encrypted_password", "$2a$11$9NVCMCV5tIjJgH8B0vmc3OEMitQtvPIAM1yDMXuTZNgCo0/Vwt66q"], ["authentication_token", "W1h8pYsPLkFFCymWTKV4"], ["phonenumUser", 1212], ["celphoneUser", 1212]]
+  [1m[35m (57.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jortor@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "tU9QLTe6GyCGyrSdXxeq"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 3], ["idUser", 13], ["nameUser", "Jorge"], ["surnameUser", "Torres"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:39.286896"], ["updated_at", "2018-04-25 05:29:39.286896"], ["email", "jortor@yahoo.com"], ["encrypted_password", "$2a$11$RaJ.3DGmLkbp.iSr37cyre44TGDU1YylW.gghRiEXaVyKu3xHnKg6"], ["authentication_token", "tU9QLTe6GyCGyrSdXxeq"], ["phonenumUser", 1313], ["celphoneUser", 1313]]
+  [1m[35m (90.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "camvil@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "rRmGvzcZpmxp33wkMAed"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 3], ["idUser", 14], ["nameUser", "Camila"], ["surnameUser", "Villegas"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:39.521730"], ["updated_at", "2018-04-25 05:29:39.521730"], ["email", "camvil@yahoo.com"], ["encrypted_password", "$2a$11$6Mpad/6vBsm9mXRKErXEnesJM7B5oFBEsh5ckoL/HBFUsLAnWeymO"], ["authentication_token", "rRmGvzcZpmxp33wkMAed"], ["phonenumUser", 1414], ["celphoneUser", 1414]]
+  [1m[35m (66.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "juancaal@yahoo.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "Y8abK5ycvjGmZfGihchH"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 3], ["idUser", 15], ["nameUser", "Juan Carlos"], ["surnameUser", "Alvarez"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:39.729821"], ["updated_at", "2018-04-25 05:29:39.729821"], ["email", "juancaal@yahoo.com"], ["encrypted_password", "$2a$11$edjtI0hKj5wl2swy.xPOWOPxHUcbI.RxOxUQWGMLhVEsnXN8B7LMe"], ["authentication_token", "Y8abK5ycvjGmZfGihchH"], ["phonenumUser", 1515], ["celphoneUser", 1515]]
+  [1m[35m (115.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "juliher@outlook.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "bysy9R5v_akqFf2qtpss"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 4], ["idUser", 16], ["nameUser", "Juliana"], ["surnameUser", "Hernandez"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:39.992967"], ["updated_at", "2018-04-25 05:29:39.992967"], ["email", "juliher@outlook.com"], ["encrypted_password", "$2a$11$hpIa2z0ttgQ0zkUS3pgbj.UXzzASgw7ORRxoLZXe53bObvohY3fey"], ["authentication_token", "bysy9R5v_akqFf2qtpss"], ["phonenumUser", 1616], ["celphoneUser", 1616]]
+  [1m[35m (83.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "migarb@outlook.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "TGEhG3yU5zwr2xyuTx_y"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 4], ["idUser", 17], ["nameUser", "Miguel"], ["surnameUser", "Arbelaez"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:40.231042"], ["updated_at", "2018-04-25 05:29:40.231042"], ["email", "migarb@outlook.com"], ["encrypted_password", "$2a$11$VKQyTtD1NUP9SamExiCHA.EPsgHEPmBXgxV7Y7u6HjsW/Z/s6HOpe"], ["authentication_token", "TGEhG3yU5zwr2xyuTx_y"], ["phonenumUser", 1717], ["celphoneUser", 1717]]
+  [1m[35m (135.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rocvel@outlook.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "zpTF_PGXcaPXDCF2Z2j8"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 4], ["idUser", 18], ["nameUser", "Rocio"], ["surnameUser", "Velandia"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:40.511809"], ["updated_at", "2018-04-25 05:29:40.511809"], ["email", "rocvel@outlook.com"], ["encrypted_password", "$2a$11$qTiL6qNtN9IBkK.94N2Fsu85F4NKGj7FKwaBjDe6NkAfBL3871RJG"], ["authentication_token", "zpTF_PGXcaPXDCF2Z2j8"], ["phonenumUser", 1818], ["celphoneUser", 1818]]
+  [1m[35m (88.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "andes@outlook.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "3aaRShjLYQWsvEBmBqrT"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 4], ["idUser", 19], ["nameUser", "Andres"], ["surnameUser", "Escobar"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:40.737101"], ["updated_at", "2018-04-25 05:29:40.737101"], ["email", "andes@outlook.com"], ["encrypted_password", "$2a$11$KLw/HakHv3J2g6APvBw07e9JiuJc/J/kXZf0GYAPJm3JDO4yBHR42"], ["authentication_token", "3aaRShjLYQWsvEBmBqrT"], ["phonenumUser", 1919], ["celphoneUser", 1919]]
+  [1m[35m (98.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sanroj@outlook.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "wCrT26yywDM8U7vg8vxh"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 4], ["idUser", 20], ["nameUser", "Sandra"], ["surnameUser", "Rojas"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:40.977112"], ["updated_at", "2018-04-25 05:29:40.977112"], ["email", "sanroj@outlook.com"], ["encrypted_password", "$2a$11$wI20siY7H2mrR.s9aFUg0ej2Bui0SY0E0kXZcN//zS2rqBNhVTU52"], ["authentication_token", "wCrT26yywDM8U7vg8vxh"], ["phonenumUser", 2020], ["celphoneUser", 2020]]
+  [1m[35m (75.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "josbec@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "K-nfxEMWGKBPCf-DPTq1"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 5], ["idUser", 21], ["nameUser", "Jose"], ["surnameUser", "Becerra"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:41.196535"], ["updated_at", "2018-04-25 05:29:41.196535"], ["email", "josbec@gmail.com"], ["encrypted_password", "$2a$11$oieQh59SbngSwKS7nnVUhepQnY5oz7JqkFbBwI4UGDDSJ7hAtBIX2"], ["authentication_token", "K-nfxEMWGKBPCf-DPTq1"], ["phonenumUser", 2121], ["celphoneUser", 2121]]
+  [1m[35m (111.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sofivar@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "LkXFpAi1KQPrNcdUby6S"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 5], ["idUser", 22], ["nameUser", "Sofia"], ["surnameUser", "Vargas"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:41.457457"], ["updated_at", "2018-04-25 05:29:41.457457"], ["email", "sofivar@gmail.com"], ["encrypted_password", "$2a$11$RK8O6zfpwKVL5x2vUrb8cO9sHFg7KfGQORnG4x5tG/k0Fy6ILota2"], ["authentication_token", "LkXFpAi1KQPrNcdUby6S"], ["phonenumUser", 2222], ["celphoneUser", 2222]]
+  [1m[35m (84.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "manupal@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "paVy7JQsKsLFR6Tnu32-"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 5], ["idUser", 23], ["nameUser", "Manuel"], ["surnameUser", "Palacios"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:41.679427"], ["updated_at", "2018-04-25 05:29:41.679427"], ["email", "manupal@gmail.com"], ["encrypted_password", "$2a$11$KG0RmefXZgWR.xN8hNd8K.D62jQNP9admWLRzkm3GiEztInNFjnUq"], ["authentication_token", "paVy7JQsKsLFR6Tnu32-"], ["phonenumUser", 2323], ["celphoneUser", 2323]]
+  [1m[35m (218.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "crishe@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "Mzoz9GRfNASTaxXXHTLn"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 5], ["idUser", 24], ["nameUser", "Cristina"], ["surnameUser", "Henao"], ["genderUser", "mujer"], ["created_at", "2018-04-25 05:29:42.047201"], ["updated_at", "2018-04-25 05:29:42.047201"], ["email", "crishe@gmail.com"], ["encrypted_password", "$2a$11$5um0Ng5rouO6xsIrVcXJg.UituV9p69vaY//vQNom1MsXJrOfDhTq"], ["authentication_token", "Mzoz9GRfNASTaxXXHTLn"], ["phonenumUser", 2424], ["celphoneUser", 2424]]
+  [1m[35m (121.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "camoch@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."authentication_token" = ?[0m  [["authentication_token", "HpFJxLnEDHQgXgHWfYJM"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("city_id", "idUser", "nameUser", "surnameUser", "genderUser", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "phonenumUser", "celphoneUser") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city_id", 5], ["idUser", 25], ["nameUser", "Camilo"], ["surnameUser", "Ochoa"], ["genderUser", "hombre"], ["created_at", "2018-04-25 05:29:42.318985"], ["updated_at", "2018-04-25 05:29:42.318985"], ["email", "camoch@gmail.com"], ["encrypted_password", "$2a$11$3HXBcgIHFl8Y.s.W2abIGOSrdc0T28DTgM0LJzn5/Dz5CMXNUs9i6"], ["authentication_token", "HpFJxLnEDHQgXgHWfYJM"], ["phonenumUser", 2525], ["celphoneUser", 2525]]
+  [1m[35m (76.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "bikeshop@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "EeZ2f9_z5sePyzRaGXSU"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 1], ["name_store", "bikeshop"], ["address_store", "cra100"], ["score_store", 4], ["created_at", "2018-04-25 05:29:42.572672"], ["updated_at", "2018-04-25 05:29:42.572672"], ["email", "bikeshop@gmail.com"], ["encrypted_password", "$2a$11$PAbwGxaaVtrbpT9KC6hmBuwk/MZ/yRfg2AHDLe0JYqKBWU5aGaedW"], ["authentication_token", "EeZ2f9_z5sePyzRaGXSU"], ["city_id", 1], ["celphone_store", 3054785112], ["phonenum_store", 8152436]]
+  [1m[35m (98.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "runbikes@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "PrUncgTWRhLvuoyKGhbQ"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 2], ["name_store", "running"], ["address_store", "cll80"], ["score_store", 3], ["created_at", "2018-04-25 05:29:42.814230"], ["updated_at", "2018-04-25 05:29:42.814230"], ["email", "runbikes@gmail.com"], ["encrypted_password", "$2a$11$jN6obI.vKr9ucG6aEeR4M.ubCipoPWUL4Ne/33BMdFBXn7RSwZOIC"], ["authentication_token", "PrUncgTWRhLvuoyKGhbQ"], ["city_id", 2], ["celphone_store", 3112253652], ["phonenum_store", 6325447]]
+  [1m[35m (80.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "ruteros@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "zhiw1Wt9zKoA4QnxzrUe"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 3], ["name_store", "ruteros"], ["address_store", "cll13"], ["score_store", 4], ["created_at", "2018-04-25 05:29:43.039022"], ["updated_at", "2018-04-25 05:29:43.039022"], ["email", "ruteros@hotmail.com"], ["encrypted_password", "$2a$11$7nHEpfbbti2M9x8q1Zfwe.UQ0vvNMnsYwe0CEvwRtyvlSGj1KUE/m"], ["authentication_token", "zhiw1Wt9zKoA4QnxzrUe"], ["city_id", 3], ["celphone_store", 3162543652], ["phonenum_store", 2336598]]
+  [1m[35m (55.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "ciclasmas@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "ffbikes@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "HtwXGnpLwjFa3j6_qdC4"]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 5], ["name_store", "fastandfurious"], ["address_store", "NQScll30"], ["score_store", 3], ["created_at", "2018-04-25 05:29:43.376952"], ["updated_at", "2018-04-25 05:29:43.376952"], ["email", "ffbikes@yahoo.com"], ["encrypted_password", "$2a$11$xUFlTcuYMXRiupd24f4v7.TUZY88uyfLaOQrEjnNE7vyr2ttx548O"], ["authentication_token", "HtwXGnpLwjFa3j6_qdC4"], ["city_id", 5], ["celphone_store", 3115243658], ["phonenum_store", 6521423]]
+  [1m[35m (93.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "bikeros@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "pgSsoykUcLCpWKjkY2_o"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 6], ["name_store", "bikeros"], ["address_store", "av68"], ["score_store", 4], ["created_at", "2018-04-25 05:29:43.607636"], ["updated_at", "2018-04-25 05:29:43.607636"], ["email", "bikeros@hotmail.com"], ["encrypted_password", "$2a$11$0Z6o95gWldyWBxMMMPHd9eWsPAAJg.gWby9OqbVj6YKWukZJEp1aC"], ["authentication_token", "pgSsoykUcLCpWKjkY2_o"], ["city_id", 1], ["celphone_store", 3054125869], ["phonenum_store", 3526598]]
+  [1m[35m (50.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "turbociclas@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "speedbike@yahoo.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "Hxnx1pLdkz5Ay5sg29vN"]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 8], ["name_store", "speedbike"], ["address_store", "cll13"], ["score_store", 2], ["created_at", "2018-04-25 05:29:43.949060"], ["updated_at", "2018-04-25 05:29:43.949060"], ["email", "speedbike@yahoo.com"], ["encrypted_password", "$2a$11$TLUiAezrdKVMXdKyinAxWudqIK3KbF9ojNT5iBVImcwSHnGwj.ISW"], ["authentication_token", "Hxnx1pLdkz5Ay5sg29vN"], ["city_id", 3], ["celphone_store", 3162543652], ["phonenum_store", 2336598]]
+  [1m[35m (76.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "citien@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "7R9U3yxgazxA82sDtKDr"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 9], ["name_store", "ciclotienda"], ["address_store", "transv82"], ["score_store", 1], ["created_at", "2018-04-25 05:29:44.177500"], ["updated_at", "2018-04-25 05:29:44.177500"], ["email", "citien@gmail.com"], ["encrypted_password", "$2a$11$cizNVtCcTQ62br/KRa.VF.Y6Dyj0LORzZ2rUxR.A76XpEEf/79Uw6"], ["authentication_token", "7R9U3yxgazxA82sDtKDr"], ["city_id", 4], ["celphone_store", 3142563226], ["phonenum_store", 5421256]]
+  [1m[35m (84.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "inbik@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "tsUk7kK7QRysbsrTjzW_"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 10], ["name_store", "inbikes"], ["address_store", "av68"], ["score_store", 5], ["created_at", "2018-04-25 05:29:44.412839"], ["updated_at", "2018-04-25 05:29:44.412839"], ["email", "inbik@hotmail.com"], ["encrypted_password", "$2a$11$FIVn0O1K6cBG6qFkxJBs2u4qB7543KJz5/RO9a7xY.x8MAtXifitS"], ["authentication_token", "tsUk7kK7QRysbsrTjzW_"], ["city_id", 5], ["celphone_store", 3071452869], ["phonenum_store", 6521425]]
+  [1m[35m (80.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "inbik2@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "8aRf8x_ycGFH3xxEthzM"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 11], ["name_store", "inbikes"], ["address_store", "av68"], ["score_store", 5], ["created_at", "2018-04-25 05:29:44.630340"], ["updated_at", "2018-04-25 05:29:44.630340"], ["email", "inbik2@hotmail.com"], ["encrypted_password", "$2a$11$PY/aIfYIjrJI5AYB3pWHauM8EJXAsp9ycJ.iROQAuDrFC/xFxXIiO"], ["authentication_token", "8aRf8x_ycGFH3xxEthzM"], ["city_id", 5], ["celphone_store", 3071452869], ["phonenum_store", 6521425]]
+  [1m[35m (72.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStore Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."email" = ? LIMIT ?[0m  [["email", "inbik3@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."authentication_token" = ?[0m  [["authentication_token", "qzs6gfkonxGFetn8Rtv1"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("id_store", "name_store", "address_store", "score_store", "created_at", "updated_at", "email", "encrypted_password", "authentication_token", "city_id", "celphone_store", "phonenum_store") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_store", 12], ["name_store", "inbikes"], ["address_store", "av68"], ["score_store", 5], ["created_at", "2018-04-25 05:29:44.840214"], ["updated_at", "2018-04-25 05:29:44.840214"], ["email", "inbik3@hotmail.com"], ["encrypted_password", "$2a$11$Qu5brnbysLJf5dMMwm/UyOFzXPYqaee7EXrMVTC1jdEoKvEMQbFuy"], ["authentication_token", "qzs6gfkonxGFetn8Rtv1"], ["city_id", 5], ["celphone_store", 3071452869], ["phonenum_store", 6521425]]
+  [1m[35m (74.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 1], ["name_city", "Bogota"], ["created_at", "2018-04-25 05:29:44.919176"], ["updated_at", "2018-04-25 05:29:44.919176"]]
+  [1m[35m (59.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 2], ["name_city", "Medellin"], ["created_at", "2018-04-25 05:29:44.983918"], ["updated_at", "2018-04-25 05:29:44.983918"]]
+  [1m[35m (75.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 3], ["name_city", "Cali"], ["created_at", "2018-04-25 05:29:45.062551"], ["updated_at", "2018-04-25 05:29:45.062551"]]
+  [1m[35m (83.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 4], ["name_city", "Barranquilla"], ["created_at", "2018-04-25 05:29:45.150519"], ["updated_at", "2018-04-25 05:29:45.150519"]]
+  [1m[35m (50.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("idcity", "name_city", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idcity", 5], ["name_city", "Cucuta"], ["created_at", "2018-04-25 05:29:45.207801"], ["updated_at", "2018-04-25 05:29:45.207801"]]
+  [1m[35m (48.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "marcos"], ["created_at", "2018-04-25 05:29:45.291202"], ["updated_at", "2018-04-25 05:29:45.291202"], ["user_id", 1]]
+  [1m[35m (78.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "rines"], ["created_at", "2018-04-25 05:29:45.375576"], ["updated_at", "2018-04-25 05:29:45.375576"], ["user_id", 2]]
+  [1m[35m (82.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "manubrios"], ["created_at", "2018-04-25 05:29:45.463421"], ["updated_at", "2018-04-25 05:29:45.463421"], ["user_id", 3]]
+  [1m[35m (50.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "grupos"], ["created_at", "2018-04-25 05:29:45.519040"], ["updated_at", "2018-04-25 05:29:45.519040"], ["user_id", 4]]
+  [1m[35m (105.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "marcos"], ["created_at", "2018-04-25 05:29:45.629775"], ["updated_at", "2018-04-25 05:29:45.629775"], ["user_id", 5]]
+  [1m[35m (58.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "rines"], ["created_at", "2018-04-25 05:29:45.698081"], ["updated_at", "2018-04-25 05:29:45.698081"], ["user_id", 6]]
+  [1m[35m (82.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "marcos"], ["created_at", "2018-04-25 05:29:45.785845"], ["updated_at", "2018-04-25 05:29:45.785845"], ["user_id", 7]]
+  [1m[35m (61.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "rines"], ["created_at", "2018-04-25 05:29:45.852702"], ["updated_at", "2018-04-25 05:29:45.852702"], ["user_id", 8]]
+  [1m[35m (59.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "manubrios"], ["created_at", "2018-04-25 05:29:45.917724"], ["updated_at", "2018-04-25 05:29:45.917724"], ["user_id", 9]]
+  [1m[35m (59.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "grupos"], ["created_at", "2018-04-25 05:29:45.984914"], ["updated_at", "2018-04-25 05:29:45.984914"], ["user_id", 10]]
+  [1m[35m (73.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "marcos"], ["created_at", "2018-04-25 05:29:46.062419"], ["updated_at", "2018-04-25 05:29:46.062419"], ["user_id", 11]]
+  [1m[35m (61.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "rines"], ["created_at", "2018-04-25 05:29:46.128331"], ["updated_at", "2018-04-25 05:29:46.128331"], ["user_id", 12]]
+  [1m[35m (61.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "manubrios"], ["created_at", "2018-04-25 05:29:46.195758"], ["updated_at", "2018-04-25 05:29:46.195758"], ["user_id", 13]]
+  [1m[35m (74.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "grupos"], ["created_at", "2018-04-25 05:29:46.275148"], ["updated_at", "2018-04-25 05:29:46.275148"], ["user_id", 14]]
+  [1m[35m (81.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "marcos"], ["created_at", "2018-04-25 05:29:46.362326"], ["updated_at", "2018-04-25 05:29:46.362326"], ["user_id", 15]]
+  [1m[35m (81.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "rines"], ["created_at", "2018-04-25 05:29:46.448854"], ["updated_at", "2018-04-25 05:29:46.448854"], ["user_id", 16]]
+  [1m[35m (82.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "manubrios"], ["created_at", "2018-04-25 05:29:46.534956"], ["updated_at", "2018-04-25 05:29:46.534956"], ["user_id", 17]]
+  [1m[35m (75.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "grupos"], ["created_at", "2018-04-25 05:29:46.615958"], ["updated_at", "2018-04-25 05:29:46.615958"], ["user_id", 18]]
+  [1m[35m (95.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "marcos"], ["created_at", "2018-04-25 05:29:46.717890"], ["updated_at", "2018-04-25 05:29:46.717890"], ["user_id", 19]]
+  [1m[35m (58.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "rines"], ["created_at", "2018-04-25 05:29:46.782921"], ["updated_at", "2018-04-25 05:29:46.782921"], ["user_id", 20]]
+  [1m[35m (72.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "manubrios"], ["created_at", "2018-04-25 05:29:46.859492"], ["updated_at", "2018-04-25 05:29:46.859492"], ["user_id", 21]]
+  [1m[35m (119.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "grupos"], ["created_at", "2018-04-25 05:29:46.984260"], ["updated_at", "2018-04-25 05:29:46.984260"], ["user_id", 22]]
+  [1m[35m (71.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "marcos"], ["created_at", "2018-04-25 05:29:47.061598"], ["updated_at", "2018-04-25 05:29:47.061598"], ["user_id", 23]]
+  [1m[35m (82.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "rines"], ["created_at", "2018-04-25 05:29:47.149294"], ["updated_at", "2018-04-25 05:29:47.149294"], ["user_id", 24]]
+  [1m[35m (62.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "forums" ("topic", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["topic", "manubrios"], ["created_at", "2018-04-25 05:29:47.215385"], ["updated_at", "2018-04-25 05:29:47.215385"], ["user_id", 25]]
+  [1m[35m (106.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "manubrio"], ["price_component", 50000.0], ["description_component", "alta calidad"], ["brand_component", "GW"], ["sizes_component", 27.0], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:47.342497"], ["updated_at", "2018-04-25 05:29:47.342497"], ["store_id", 1]]
+  [1m[35m (78.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "marco"], ["price_component", 350000.0], ["description_component", "alta calidad"], ["brand_component", "GW"], ["sizes_component", 27.0], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:47.425581"], ["updated_at", "2018-04-25 05:29:47.425581"], ["store_id", 1]]
+  [1m[35m (61.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "rines"], ["price_component", 80000.0], ["description_component", "economicas"], ["brand_component", "GW"], ["sizes_component", 27.5], ["material_component", "acero"], ["created_at", "2018-04-25 05:29:47.491772"], ["updated_at", "2018-04-25 05:29:47.491772"], ["store_id", 2]]
+  [1m[35m (62.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "grupo"], ["price_component", 150000.0], ["description_component", "economicas"], ["brand_component", "shimano"], ["sizes_component", 30.0], ["material_component", "acero"], ["created_at", "2018-04-25 05:29:47.559374"], ["updated_at", "2018-04-25 05:29:47.559374"], ["store_id", 2]]
+  [1m[35m (71.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "manubrio"], ["price_component", 250000.0], ["description_component", "calidad media"], ["brand_component", "Trek"], ["sizes_component", 40.0], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:47.637786"], ["updated_at", "2018-04-25 05:29:47.637786"], ["store_id", 3]]
+  [1m[35m (69.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "grupo"], ["price_component", 1200000.0], ["description_component", "alto rendimiento"], ["brand_component", "sram"], ["sizes_component", 35.0], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:47.713085"], ["updated_at", "2018-04-25 05:29:47.713085"], ["store_id", 3]]
+  [1m[35m (53.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "marco"], ["price_component", 650000.0], ["description_component", "ruta media"], ["brand_component", "Specialized"], ["sizes_component", 27.5], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:47.771068"], ["updated_at", "2018-04-25 05:29:47.771068"], ["store_id", 4]]
+  [1m[35m (71.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "manubrio"], ["price_component", 120000.0], ["description_component", "economicas"], ["brand_component", "GW"], ["sizes_component", 45.0], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:47.847833"], ["updated_at", "2018-04-25 05:29:47.847833"], ["store_id", 4]]
+  [1m[35m (85.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "marco"], ["price_component", 750000.0], ["description_component", "montana media"], ["brand_component", "Trek"], ["sizes_component", 31.0], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:47.936795"], ["updated_at", "2018-04-25 05:29:47.936795"], ["store_id", 5]]
+  [1m[35m (51.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "rines"], ["price_component", 1500000.0], ["description_component", "ultra liviana"], ["brand_component", "DeRosa"], ["sizes_component", 30.0], ["material_component", "fibraCarbono"], ["created_at", "2018-04-25 05:29:47.994081"], ["updated_at", "2018-04-25 05:29:47.994081"], ["store_id", 5]]
+  [1m[35m (58.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "marco"], ["price_component", 80000.0], ["description_component", "economicas"], ["brand_component", "Benelli"], ["sizes_component", 27.5], ["material_component", "acero"], ["created_at", "2018-04-25 05:29:48.058062"], ["updated_at", "2018-04-25 05:29:48.058062"], ["store_id", 6]]
+  [1m[35m (50.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "manubrio"], ["price_component", 40000.0], ["description_component", "economicas"], ["brand_component", "Benelli"], ["sizes_component", 27.5], ["material_component", "acero"], ["created_at", "2018-04-25 05:29:48.113537"], ["updated_at", "2018-04-25 05:29:48.113537"], ["store_id", 6]]
+  [1m[35m (52.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "grupo"], ["price_component", 500000.0], ["description_component", "tourney"], ["brand_component", "shimano"], ["sizes_component", 27.5], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:48.170262"], ["updated_at", "2018-04-25 05:29:48.170262"], ["store_id", 7]]
+  [1m[35m (49.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "manubrio"], ["price_component", 200000.0], ["description_component", "ruta media"], ["brand_component", "Specialized"], ["sizes_component", 27.5], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:48.224663"], ["updated_at", "2018-04-25 05:29:48.224663"], ["store_id", 7]]
+  [1m[35m (166.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "marco"], ["price_component", 800000.0], ["description_component", "ruta liviana"], ["brand_component", "Specialized"], ["sizes_component", 27.5], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:48.395681"], ["updated_at", "2018-04-25 05:29:48.395681"], ["store_id", 8]]
+  [1m[35m (46.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "manubrio"], ["price_component", 180000.0], ["description_component", "ruta liviana"], ["brand_component", "Specialized"], ["sizes_component", 27.5], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:48.447556"], ["updated_at", "2018-04-25 05:29:48.447556"], ["store_id", 8]]
+  [1m[35m (49.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "grupo"], ["price_component", 350000.0], ["description_component", "sram entrada"], ["brand_component", "sram"], ["sizes_component", 27.5], ["material_component", "acero"], ["created_at", "2018-04-25 05:29:48.502865"], ["updated_at", "2018-04-25 05:29:48.502865"], ["store_id", 9]]
+  [1m[35m (37.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "rines"], ["price_component", 200000.0], ["description_component", "montana media"], ["brand_component", "Trek"], ["sizes_component", 27.5], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:48.545858"], ["updated_at", "2018-04-25 05:29:48.545858"], ["store_id", 9]]
+  [1m[35m (86.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "marco"], ["price_component", 450000.0], ["description_component", "scorpion"], ["brand_component", "GW"], ["sizes_component", 27.5], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:48.636030"], ["updated_at", "2018-04-25 05:29:48.636030"], ["store_id", 10]]
+  [1m[35m (50.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "components" ("type_component", "price_component", "description_component", "brand_component", "sizes_component", "material_component", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["type_component", "manubrio"], ["price_component", 180000.0], ["description_component", "scorpion"], ["brand_component", "GW"], ["sizes_component", 27.5], ["material_component", "aluminio"], ["created_at", "2018-04-25 05:29:48.692599"], ["updated_at", "2018-04-25 05:29:48.692599"], ["store_id", 10]]
+  [1m[35m (58.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 1], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "todo gw"], ["price_bicy", 680000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-25 05:29:48.771392"], ["updated_at", "2018-04-25 05:29:48.771392"], ["store_id", 1]]
+  [1m[35m (80.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 2], ["brand_bicy", "Raleigh"], ["material_bicy", "aluminio"], ["components_bicy", "marco,rines"], ["price_bicy", 700000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-25 05:29:48.857074"], ["updated_at", "2018-04-25 05:29:48.857074"], ["store_id", 2]]
+  [1m[35m (75.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 3], ["brand_bicy", "DeRosa"], ["material_bicy", "fibraCarbono"], ["components_bicy", "todo italia"], ["price_bicy", 4700000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta italia"], ["created_at", "2018-04-25 05:29:48.936589"], ["updated_at", "2018-04-25 05:29:48.936589"], ["store_id", 3]]
+  [1m[35m (82.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 4], ["brand_bicy", "Raleigh"], ["material_bicy", "acero"], ["components_bicy", "marco,rines"], ["price_bicy", 450000.0], ["usetype_bicy", "montana"], ["description_bicy", "montana"], ["created_at", "2018-04-25 05:29:49.022210"], ["updated_at", "2018-04-25 05:29:49.022210"], ["store_id", 3]]
+  [1m[35m (53.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 5], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "grupo shimano"], ["price_bicy", 700000.0], ["usetype_bicy", "ruta"], ["description_bicy", "GW scorpion"], ["created_at", "2018-04-25 05:29:49.079443"], ["updated_at", "2018-04-25 05:29:49.079443"], ["store_id", 4]]
+  [1m[35m (61.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 6], ["brand_bicy", "specialized"], ["material_bicy", "fibraCarbono"], ["components_bicy", "todo sram"], ["price_bicy", 1500000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta alto lvl"], ["created_at", "2018-04-25 05:29:49.146389"], ["updated_at", "2018-04-25 05:29:49.146389"], ["store_id", 4]]
+  [1m[35m (50.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 7], ["brand_bicy", "Trek"], ["material_bicy", "fibraCarbono"], ["components_bicy", "sram auto"], ["price_bicy", 2100000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta alto lvl"], ["created_at", "2018-04-25 05:29:49.202064"], ["updated_at", "2018-04-25 05:29:49.202064"], ["store_id", 5]]
+  [1m[35m (59.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 8], ["brand_bicy", "specialized"], ["material_bicy", "aluminio"], ["components_bicy", "shimano"], ["price_bicy", 750000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-25 05:29:49.269274"], ["updated_at", "2018-04-25 05:29:49.269274"], ["store_id", 5]]
+  [1m[35m (58.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 9], ["brand_bicy", "GW"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 450000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-25 05:29:49.334486"], ["updated_at", "2018-04-25 05:29:49.334486"], ["store_id", 6]]
+  [1m[35m (163.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 10], ["brand_bicy", "Bianchi"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 350000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-25 05:29:49.501386"], ["updated_at", "2018-04-25 05:29:49.501386"], ["store_id", 6]]
+  [1m[35m (61.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 11], ["brand_bicy", "Giant"], ["material_bicy", "acero"], ["components_bicy", "shimano medio"], ["price_bicy", 650000.0], ["usetype_bicy", "montana"], ["description_bicy", "mountain"], ["created_at", "2018-04-25 05:29:49.566509"], ["updated_at", "2018-04-25 05:29:49.566509"], ["store_id", 7]]
+  [1m[35m (80.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 12], ["brand_bicy", "GW"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 450000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-25 05:29:49.652293"], ["updated_at", "2018-04-25 05:29:49.652293"], ["store_id", 7]]
+  [1m[35m (53.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 13], ["brand_bicy", "Bianchi"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 350000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-25 05:29:49.713247"], ["updated_at", "2018-04-25 05:29:49.713247"], ["store_id", 8]]
+  [1m[35m (48.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 14], ["brand_bicy", "Benelli"], ["material_bicy", "acero"], ["components_bicy", "shimano base"], ["price_bicy", 390000.0], ["usetype_bicy", "urbana"], ["description_bicy", "ciudad"], ["created_at", "2018-04-25 05:29:49.767578"], ["updated_at", "2018-04-25 05:29:49.767578"], ["store_id", 8]]
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 15], ["brand_bicy", "DeRosa"], ["material_bicy", "fibraCarbono"], ["components_bicy", "sram ultra"], ["price_bicy", 20000000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta competencia"], ["created_at", "2018-04-25 05:29:49.856280"], ["updated_at", "2018-04-25 05:29:49.856280"], ["store_id", 9]]
+  [1m[35m (62.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 16], ["brand_bicy", "Specialized"], ["material_bicy", "fibraCarbono"], ["components_bicy", "shimano ultra"], ["price_bicy", 9000000.0], ["usetype_bicy", "ruta"], ["description_bicy", "ruta competencia"], ["created_at", "2018-04-25 05:29:49.923597"], ["updated_at", "2018-04-25 05:29:49.923597"], ["store_id", 9]]
+  [1m[35m (62.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 17], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "shimano medio"], ["price_bicy", 650000.0], ["usetype_bicy", "montana"], ["description_bicy", "ciudad y urbana"], ["created_at", "2018-04-25 05:29:49.989533"], ["updated_at", "2018-04-25 05:29:49.989533"], ["store_id", 10]]
+  [1m[35m (49.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 18], ["brand_bicy", "Trek"], ["material_bicy", "aluminio"], ["components_bicy", "shimano medio"], ["price_bicy", 780000.0], ["usetype_bicy", "montana"], ["description_bicy", "ciudad montana"], ["created_at", "2018-04-25 05:29:50.044129"], ["updated_at", "2018-04-25 05:29:50.044129"], ["store_id", 10]]
+  [1m[35m (101.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 19], ["brand_bicy", "GW"], ["material_bicy", "aluminio"], ["components_bicy", "shimano medio"], ["price_bicy", 580000.0], ["usetype_bicy", "montana"], ["description_bicy", "ciudad montana"], ["created_at", "2018-04-25 05:29:50.155854"], ["updated_at", "2018-04-25 05:29:50.155854"], ["store_id", 10]]
+  [1m[35m (84.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bicycles" ("id_bicy", "brand_bicy", "material_bicy", "components_bicy", "price_bicy", "usetype_bicy", "description_bicy", "created_at", "updated_at", "store_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id_bicy", 20], ["brand_bicy", "Specialized"], ["material_bicy", "aluminio"], ["components_bicy", "shimano alto"], ["price_bicy", 850000.0], ["usetype_bicy", "montana"], ["description_bicy", "ciudad montana"], ["created_at", "2018-04-25 05:29:50.244857"], ["updated_at", "2018-04-25 05:29:50.244857"], ["store_id", 10]]
+  [1m[35m (84.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mForum Load (0.2ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 1"], ["created_at", "2018-04-25 05:29:50.361781"], ["updated_at", "2018-04-25 05:29:50.361781"], ["forum_id", 1], ["user_id", 1]]
+  [1m[35m (67.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 2"], ["created_at", "2018-04-25 05:29:50.436278"], ["updated_at", "2018-04-25 05:29:50.436278"], ["forum_id", 2], ["user_id", 2]]
+  [1m[35m (58.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 3"], ["created_at", "2018-04-25 05:29:50.501738"], ["updated_at", "2018-04-25 05:29:50.501738"], ["forum_id", 3], ["user_id", 3]]
+  [1m[35m (47.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mForum Load (0.2ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 4"], ["created_at", "2018-04-25 05:29:50.557159"], ["updated_at", "2018-04-25 05:29:50.557159"], ["forum_id", 4], ["user_id", 4]]
+  [1m[35m (49.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mForum Load (0.2ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 5"], ["created_at", "2018-04-25 05:29:50.614135"], ["updated_at", "2018-04-25 05:29:50.614135"], ["forum_id", 5], ["user_id", 5]]
+  [1m[35m (85.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "marcos"], ["created_at", "2018-04-25 05:29:50.706320"], ["updated_at", "2018-04-25 05:29:50.706320"], ["forum_id", 6], ["user_id", 6]]
+  [1m[35m (54.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "marcos"], ["created_at", "2018-04-25 05:29:50.770259"], ["updated_at", "2018-04-25 05:29:50.770259"], ["forum_id", 7], ["user_id", 7]]
+  [1m[35m (80.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mForum Load (0.2ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 8"], ["created_at", "2018-04-25 05:29:50.859184"], ["updated_at", "2018-04-25 05:29:50.859184"], ["forum_id", 8], ["user_id", 8]]
+  [1m[35m (58.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 9"], ["created_at", "2018-04-25 05:29:50.925575"], ["updated_at", "2018-04-25 05:29:50.925575"], ["forum_id", 9], ["user_id", 9]]
+  [1m[35m (69.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 10"], ["created_at", "2018-04-25 05:29:51.001985"], ["updated_at", "2018-04-25 05:29:51.001985"], ["forum_id", 10], ["user_id", 10]]
+  [1m[35m (35.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 11"], ["created_at", "2018-04-25 05:29:51.045984"], ["updated_at", "2018-04-25 05:29:51.045984"], ["forum_id", 11], ["user_id", 11]]
+  [1m[35m (59.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mForum Load (0.2ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 12"], ["created_at", "2018-04-25 05:29:51.113080"], ["updated_at", "2018-04-25 05:29:51.113080"], ["forum_id", 12], ["user_id", 12]]
+  [1m[35m (46.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 13"], ["created_at", "2018-04-25 05:29:51.168104"], ["updated_at", "2018-04-25 05:29:51.168104"], ["forum_id", 13], ["user_id", 13]]
+  [1m[35m (49.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mForum Load (0.2ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 14"], ["created_at", "2018-04-25 05:29:51.224655"], ["updated_at", "2018-04-25 05:29:51.224655"], ["forum_id", 14], ["user_id", 14]]
+  [1m[35m (92.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 15"], ["created_at", "2018-04-25 05:29:51.323403"], ["updated_at", "2018-04-25 05:29:51.323403"], ["forum_id", 15], ["user_id", 15]]
+  [1m[35m (81.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 16"], ["created_at", "2018-04-25 05:29:51.409802"], ["updated_at", "2018-04-25 05:29:51.409802"], ["forum_id", 16], ["user_id", 16]]
+  [1m[35m (119.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mForum Load (0.2ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 17"], ["created_at", "2018-04-25 05:29:51.536236"], ["updated_at", "2018-04-25 05:29:51.536236"], ["forum_id", 17], ["user_id", 17]]
+  [1m[35m (90.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mForum Load (0.2ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 18"], ["created_at", "2018-04-25 05:29:51.637057"], ["updated_at", "2018-04-25 05:29:51.637057"], ["forum_id", 18], ["user_id", 18]]
+  [1m[35m (80.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 19"], ["created_at", "2018-04-25 05:29:51.724741"], ["updated_at", "2018-04-25 05:29:51.724741"], ["forum_id", 19], ["user_id", 19]]
+  [1m[35m (69.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 20"], ["created_at", "2018-04-25 05:29:51.799361"], ["updated_at", "2018-04-25 05:29:51.799361"], ["forum_id", 20], ["user_id", 20]]
+  [1m[35m (59.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mForum Load (0.2ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 21"], ["created_at", "2018-04-25 05:29:51.869076"], ["updated_at", "2018-04-25 05:29:51.869076"], ["forum_id", 21], ["user_id", 21]]
+  [1m[35m (57.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 22"], ["created_at", "2018-04-25 05:29:51.933777"], ["updated_at", "2018-04-25 05:29:51.933777"], ["forum_id", 22], ["user_id", 22]]
+  [1m[35m (49.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 23"], ["created_at", "2018-04-25 05:29:51.989664"], ["updated_at", "2018-04-25 05:29:51.989664"], ["forum_id", 23], ["user_id", 23]]
+  [1m[35m (46.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 24"], ["created_at", "2018-04-25 05:29:52.046955"], ["updated_at", "2018-04-25 05:29:52.046955"], ["forum_id", 24], ["user_id", 24]]
+  [1m[35m (68.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mForum Load (0.1ms)[0m  [1m[34mSELECT  "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("description", "created_at", "updated_at", "forum_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "comment 25"], ["created_at", "2018-04-25 05:29:52.121822"], ["updated_at", "2018-04-25 05:29:52.121822"], ["forum_id", 25], ["user_id", 25]]
+  [1m[35m (60.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/bicycles?page=2" for 127.0.0.1 at 2018-04-25 00:30:33 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BicyclesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 10]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.39ms)
+Completed 200 OK in 32ms (Views: 21.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/bicycles?page=3" for 127.0.0.1 at 2018-04-25 00:30:39 -0500
+Processing by BicyclesController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 20]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.11ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bicycles/1" for 127.0.0.1 at 2018-04-25 00:30:48 -0500
+Processing by BicyclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBicycle Load (0.3ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered BicycleSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bicycles/1/showpdf.pdf" for 127.0.0.1 at 2018-04-25 00:31:32 -0500
+Processing by PdfsController#show as PDF
+  Parameters: {"id"=>"1"}
+  [1m[36mBicycle Load (0.1ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+***************WICKED***************
+  Rendering pdfs/template.pdf.erb
+  [1m[36mBicycle Load (0.8ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered pdfs/template.pdf.erb (89.6ms)
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data template.pdf (33.1ms)
+Completed 200 OK in 3672ms (Views: 32.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-04-25 00:31:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/bicycles/1/showpdf.pdf" for 127.0.0.1 at 2018-04-25 00:31:44 -0500
+Processing by PdfsController#show as PDF
+  Parameters: {"id"=>"1"}
+  [1m[36mBicycle Load (0.2ms)[0m  [1m[34mSELECT  "bicycles".* FROM "bicycles" WHERE "bicycles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+***************WICKED***************
+  Rendering pdfs/template.pdf.erb
+  [1m[36mBicycle Load (0.5ms)[0m  [1m[34mSELECT "bicycles".* FROM "bicycles"[0m
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered pdfs/template.pdf.erb (35.9ms)
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data template.pdf (0.9ms)
+Completed 200 OK in 976ms (Views: 0.6ms | ActiveRecord: 2.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bicycles_on_store_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bicycles_on_store_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_forum_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_forum_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_components_on_store_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_components_on_store_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='delayed_jobs_priority' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='delayed_jobs_priority' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_forums_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_forums_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_images_on_imageable_type_and_imageable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_images_on_imageable_type_and_imageable_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_city_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_city_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stores_on_authentication_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stores_on_authentication_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_city_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_city_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_technicians_on_authentication_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_technicians_on_authentication_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_technician_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_technician_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_transactions_on_store_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_transactions_on_store_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_city_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_city_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_authentication_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_authentication_token' AND type='index'
+[0m
