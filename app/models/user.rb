@@ -29,7 +29,7 @@ class User < ApplicationRecord
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
     devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [ :google_oauth2] #:facebook ,
+    :recoverable, :rememberable, :trackable, :validatable
 
     acts_as_token_authenticatable
 
@@ -43,19 +43,11 @@ class User < ApplicationRecord
     has_many :forums , dependent: :destroy
     has_one :image, as: :imageable
 
-    scope :similarJuan, where(:nameUser => "Juan")
+    #scope :similarJuan, where(:nameUser => "Juan")
     scope :mujeres,-> { where(:genderUser => "mujer")}
     scope :hombres,-> { where(:genderUser => "hombre")}
 #clentes que han hecho transacciones de mantenimiento ordenado por id
     scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}).pluck(:user_id) }
     
-    def self.from_omniauth(auth)
-        where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-          user.email = auth.info.email
-          user.password = Devise.friendly_token[0,20]
-                  # If you are using confirmable and the provider(s) you use validate emails, 
-          # uncomment the line below to skip the confirmation emails.
-          # user.skip_confirmation!
-        end
-    end
+
 end

@@ -1,7 +1,7 @@
 class CreateBicycles < ActiveRecord::Migration[5.1]
   def change
     create_table :bicycles do |t|
-      t.integer :id_bicy
+      t.integer :id_bicy, :limit => 8
       t.string :brand_bicy
       t.string :material_bicy
       t.string :components_bicy
@@ -10,7 +10,7 @@ class CreateBicycles < ActiveRecord::Migration[5.1]
       t.string :description_bicy
 
       
-      t.integer :store_id
+      #t.integer :store_id
 
       t.timestamps
     end

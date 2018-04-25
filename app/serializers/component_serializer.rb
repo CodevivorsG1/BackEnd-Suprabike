@@ -14,5 +14,5 @@
 #
 
 class ComponentSerializer < ApplicationSerializer
-  attributes :id, :type_component, :price_component, :description_component, :brand_component, :sizes_component, :material_component
+  attributes :id, :type_component, :price_component, :description_component, :brand_component, :sizes_component, :material_component , :store_id 
 end
