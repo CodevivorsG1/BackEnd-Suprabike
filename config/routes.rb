@@ -70,6 +70,7 @@
 
 Rails.application.routes.draw do
   get 'home/index'
+  get "bicycles/showpdf", to: "pdfs#show"
 
   #devise_for :technicians
   #devise_for :stores

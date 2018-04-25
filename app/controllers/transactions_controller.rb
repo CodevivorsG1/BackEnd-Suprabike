@@ -16,8 +16,10 @@ class TransactionsController < ApplicationController
   # POST /transactions
   def create
     @transaction = Transaction.new(transaction_params)
-
+    @user =  User.find(params[@transaction.user_id])
+    #@user =  Technician.find(:id)
     if @transaction.save
+      TransactionMailer.tecnic_service().deliver
       render json: @transaction, status: :created, location: @transaction
     else
       render json: @transaction.errors, status: :unprocessable_entity
