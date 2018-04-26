@@ -3,7 +3,7 @@ require 'faker'
 
 #Registros a mano
 
-=begin #10 registros technician
+#10 registros technician
 tech1 =  Technician.create( id_technical:1, NameTec:"Mariana", SurnameTec:"Suarez", 
     typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1111,
     email:"marinn@gmail.com", password:"111111" ) 
@@ -76,7 +76,7 @@ tran9 = Transaction.create(date_transaction:"11/11/2014",type_transaction:"repar
 
 tran10 = Transaction.create(date_transaction:"02/13/2015",type_transaction:"mantenimiento",
    total_transaction:60000,store_id:10, user_id:10) 
-=end
+
 
 #25 registros usuarios
 user1 = User.create( email:"ferg@gmail.com", password:"111111", password_confirmation:"111111",
@@ -480,16 +480,16 @@ count = 0
         celphoneUser:Faker::PhoneNumber.cell_phone ,
         city_id: randomId )
 
-=begin     Technician.create( id_technical:Faker::Number.number(6) ,
+    Technician.create( id_technical:Faker::Number.number(6) ,
         NameTec:Faker::Name.first_name  ,
         SurnameTec:Faker::Name.last_name ,
         typeworktec:Faker::Job.field ,
-        email:Faker::Internet.email ,
+        email:Faker::Internet.unique.email ,
         costhourtec: Faker::Number.decimal(2),
-        password:Faker::Name.first_name ,
+        password:Faker::Internet.password(8) ,
         phonenumtec:Faker::PhoneNumber.phone_number ,
         city_id: randomId ) 
-=end
+
 
     Bicycle.create( id_bicy: Faker::Number.number(6),
         brand_bicy: Faker::Vehicle.manufacture,
@@ -524,8 +524,7 @@ count = 0
         user_id: randomId,
         store_id: randomId )
 
-tran3 = Transaction.create(date_transaction:"09/02/2017",type_transaction:"reparacion",
-        total_transaction:25000,technician_id:3, user_id:3)
+
 
 end
 puts 'finished loading  data' 
