@@ -40,7 +40,7 @@ class Store < ApplicationRecord
 
     #scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
     has_many :bycicles , dependent: :destroy
-    scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
+    scope :buenVen, lambda { |score_store| where("score_store >= ?", score_store) }
     has_many :bycicles , dependent: :destroy
     #selecciona todas las tiendas que han vendido bicicletas de montanna ordenado por id de tienda
     scope :ranking, -> { Store.joins(:bicycles).where(bicycles: {usetype_bicy: "mountain"}).pluck(:store_id) }

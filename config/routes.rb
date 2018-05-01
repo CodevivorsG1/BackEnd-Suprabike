@@ -71,6 +71,7 @@
 Rails.application.routes.draw do
   get 'home/index'
   get "bicycles/showpdf", to: "pdfs#show"
+  get "stores/ranking", to: "beststores#ranking"
 
   #devise_for :technicians
   #devise_for :stores
