@@ -28,6 +28,7 @@
 class User < ApplicationRecord
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
+    include HTTParty
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
@@ -49,5 +50,15 @@ class User < ApplicationRecord
 #clentes que han hecho transacciones de mantenimiento ordenado por id
     scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}).pluck(:user_id) }
     
+    def self.create_user_for_google(data,email)                  
+        where(uid: data["email"]).first_or_initialize.tap do |user|
+          user.provider="google_oauth2"
+          user.uid=data["email"]
+          user.email=email
+          user.password=Devise.friendly_token[0,20]
+          user.password_confirmation=user.password
+          user.save!
+        end
+    end
 
 end
