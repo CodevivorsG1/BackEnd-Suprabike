@@ -22,6 +22,9 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'wkhtmltopdf-heroku'
 gem 'responders'
+gem 'httparty'
+gem 'google-id-token'
+gem 'descriptive-statistics'
 # Use postgresql as the database for Active Record
 
 
