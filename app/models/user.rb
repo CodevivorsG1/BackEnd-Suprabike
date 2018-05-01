@@ -52,8 +52,6 @@ class User < ApplicationRecord
     
     def self.create_user_for_google(data,email)                  
         where(email: data["email"]).first_or_initialize.tap do |user|
-            user.provider="google_oauth2"
-            user.uid=data["email"]
             user.email=email
             user.password=Devise.friendly_token[0,20]
             user.password_confirmation=user.password
