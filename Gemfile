@@ -24,6 +24,7 @@ gem 'wkhtmltopdf-heroku'
 gem 'responders'
 gem 'httparty'
 gem 'google-id-token'
+gem 'google-api-client', '~> 0.11'
 gem 'descriptive-statistics'
 # Use postgresql as the database for Active Record
 

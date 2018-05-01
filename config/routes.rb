@@ -71,7 +71,7 @@
 Rails.application.routes.draw do
   get 'home/index'
   get "bicycles/showpdf", to: "pdfs#show"
-  get "users_sessions/auth_google_token" , to:"users_sessions#auth_google_token"
+  post "users/create_user_for_google", to: "users#create_user_for_google"
   #devise_for :technicians
   #devise_for :stores
   #devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
@@ -86,7 +86,8 @@ Rails.application.routes.draw do
   end
   resources :components
   resources :bicycles
-  resources :users_sessions, only: [ :create ,:destroy , :auth_google_token]
+  resources :users_sessions, only: [ :create ,:destroy]
+  resources :auth_google_token, only: [ :create ,:destroy]
   resources :technicians_sessions, only: [ :create ,:destroy]
   resources :stores_sessions, only: [ :create ,:destroy]
   
