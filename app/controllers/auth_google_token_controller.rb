@@ -10,13 +10,17 @@ class AuthGoogleTokenController < ApplicationController
             puts "token validated!!"
             email = params[:email]
             puts email
-
-            url = "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=#{params["id_token"]}"                  
-            response = HTTParty.get(url)  
-            @user = User.create_user_for_google(response.parsed_response,email)      
-            tokens = @user.authentication_token                      
-            @user.save
-            render json: @user.as_json(only: [ :email, :authentication_token]) , status: :created
+            @user =User.find_by( email: email)
+            if @user
+                render json: @user.as_json(only: [:nameUser, :email, :authentication_token]) , status: :created
+            else
+                url = "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=#{params["id_token"]}"                  
+                response = HTTParty.get(url)  
+                @user = User.create_user_for_google(response.parsed_response,email)                           
+                @user.save
+                render json: @user
+            end
+            
         rescue GoogleIDToken::ValidationError => e
             puts "Cannot validate: #{e} \n"
         end
