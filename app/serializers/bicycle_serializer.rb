@@ -17,6 +17,6 @@
 
 class BicycleSerializer < ApplicationSerializer
   attributes :id , :brand_bicy , :material_bicy , :components_bicy , :price_bicy , :usetype_bicy , :description_bicy , :store_id
-
+  has_many :images
 
 end

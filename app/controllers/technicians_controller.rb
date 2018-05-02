@@ -18,6 +18,7 @@ class TechniciansController < ApplicationController
     @technician = Technician.new(technician_params)
 
     if @technician.save
+      Image.create(name: params[:name] ,this_image: params[:this_image], technician_id: @technician.id)
       render json: @technician, status: :created
     else
       render json: @technician.errors, status: :unprocessable_entity
