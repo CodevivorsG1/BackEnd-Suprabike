@@ -5,7 +5,7 @@ class BeststoresController < ActionController::Base
 
     def ranking
         get_model
-        render json: @stores.buenVen(4)
+        render json: @stores.buenVen(3)
     end
 
 end

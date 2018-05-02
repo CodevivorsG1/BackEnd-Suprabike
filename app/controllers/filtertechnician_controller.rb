@@ -13,4 +13,9 @@ class FiltertechnicianController < ActionController::Base
         render json: @technicians.hastatanto(100000)
     end
 
+    def mantenimiento
+        get_model
+        render json: @technicians.mantenimiento
+    end
+    
 end

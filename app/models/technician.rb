@@ -41,5 +41,5 @@ class Technician < ApplicationRecord
 
     #filtros
     scope :hastatanto, lambda { |costhourtec| where("costhourtec < ?", costhourtec) }
-
+    scope :mantenimiento, -> { Technician.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"})}
 end
