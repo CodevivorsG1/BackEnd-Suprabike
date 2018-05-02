@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PRECIOS TRABAJO TECNICOS</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>PRECIOS HORA LABORAL TECNICOS</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 150px;">Nombre</th>
+                    <th style="width: 150px;">Apellido</th>
+                    <th style="width: 150px;">Tipo de trabajo</th>
+                    <th style="width: 150px;">Costo</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% @technicians.each do |technician| %>
+                    <tr>
+                        <td><%= technician.NameTec %></td>
+                        <td><%= technician.SurnameTec %></td>
+                        <td><%= technician.typeworktec %></td>
+                        <td><%= technician.costhourtec %></td>
+                    </tr>
+                <%end%>
+            </tbody>
+        </table>
+    </body>
+</html>

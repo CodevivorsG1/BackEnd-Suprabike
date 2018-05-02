@@ -47,7 +47,7 @@ class User < ApplicationRecord
     scope :mujeres,-> { where(:genderUser => "mujer")}
     scope :hombres,-> { where(:genderUser => "hombre")}
 #clentes que han hecho transacciones de mantenimiento ordenado por id
-    scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}).pluck(:user_id) }
+    scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}) }
     
     def self.from_omniauth(auth)
         where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
