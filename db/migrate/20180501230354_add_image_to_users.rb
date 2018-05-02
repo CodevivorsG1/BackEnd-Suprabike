@@ -12,7 +12,7 @@ class AddImageToUsers < ActiveRecord::Migration[5.1]
     #add_column :images, :bicycle_id, :integer
     #add_index :images,:bicycle_id
 
-    add_column :images,:component_id, :integer
-    add_index :images,:component_id
+    #add_column :images,:component_id, :integer
+    #add_index :images,:component_id
   end
 end
