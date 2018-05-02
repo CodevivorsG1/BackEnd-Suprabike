@@ -25,4 +25,5 @@ class StoreSerializer < ApplicationSerializer
   has_many :transactions
   has_many :components
   has_many :bicycles
+  has_one :images, as: :imageable
 end

@@ -13,7 +13,5 @@ class PdfsController < ActionController::Base
               end
           end
     end
-  
-  
-  
+
 end

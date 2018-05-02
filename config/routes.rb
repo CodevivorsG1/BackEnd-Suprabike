@@ -71,7 +71,23 @@
 Rails.application.routes.draw do
   get 'home/index'
   get "bicycles/showpdf", to: "pdfs#show"
-  post "users/create_user_for_google", to: "users#create_user_for_google"
+  get "technicians/showpdf", to: "pricetech#show"
+  get "components/showpdf", to: "pricescomponents#show"
+  get "stores/ranking", to: "beststores#ranking"
+  get "technicians/filter1", to: "filtertechnician#filtrar1"
+  get "technicians/filter2", to: "filtertechnician#filtrar2"
+  get "technicians/tecnicosman", to: "filtertechnician#mantenimiento"
+  get "bicycles/aluminio", to: "filterbicycles#aluminio"
+  get "bicycles/acero", to: "filterbicycles#acero"
+  get "bicycles/carbono", to: "filterbicycles#carbono"
+  get "bicycles/gw", to: "filterbicycles#gw"
+  get "bicycles/specialized", to: "filterbicycles#special"
+  get "bicycles/raleigh", to: "filterbicycles#rale"
+  get "bicycles/trek", to: "filterbicycles#trek"
+  get "bicycles/h500", to: "filterbicycles#h500"
+  get "bicycles/hmillon", to: "filterbicycles#hmillon"
+  get "bicycles/dmillon", to: "filterbicycles#dmillon"
+  
   #devise_for :technicians
   #devise_for :stores
   #devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }

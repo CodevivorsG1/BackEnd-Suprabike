@@ -28,7 +28,7 @@
 class User < ApplicationRecord
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
-    include HTTParty
+
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
@@ -39,25 +39,28 @@ class User < ApplicationRecord
     validates :genderUser, presence: true,length: { maximum: 20 }
     validates :idUser, presence: true, numericality: { only_integer: true },length: { maximum: 50 }
     has_many :transactions , dependent: :destroy
-    belongs_to :city
+    belongs_to :city 
     has_many :comments, dependent: :destroy
     has_many :forums , dependent: :destroy
-    has_one :image, as: :imageable
+    has_one :image #, as: :imageable
 
     #scope :similarJuan, where(:nameUser => "Juan")
     scope :mujeres,-> { where(:genderUser => "mujer")}
     scope :hombres,-> { where(:genderUser => "hombre")}
 #clentes que han hecho transacciones de mantenimiento ordenado por id
-    scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}).pluck(:user_id) }
+    scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}) }
     
     def self.create_user_for_google(data,email)                  
-        where(uid: data["email"]).first_or_initialize.tap do |user|
-          user.provider="google_oauth2"
-          user.uid=data["email"]
-          user.email=email
-          user.password=Devise.friendly_token[0,20]
-          user.password_confirmation=user.password
-          user.save!
+        where(email: data["email"]).first_or_initialize.tap do |user|
+            user.email=email
+            user.password=Devise.friendly_token[0,20]
+            user.password_confirmation=user.password
+            user.idUser = 1              
+            user.nameUser = "yourname"            
+            user.surnameUser = "your USername"
+            user.genderUser = "your gender"
+            user.city_id = 1
+            user.save!
         end
     end
 

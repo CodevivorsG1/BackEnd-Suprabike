@@ -34,11 +34,13 @@ class Technician < ApplicationRecord
 
     belongs_to :city
     has_many :transactions, dependent: :destroy
-    has_one :image, as: :imageable
+    has_one :image #, as: :imageable
 
     #Technician.where(:typeworktec => "mantenimiento")
     scope :typeJob, -> {where(:typeworktec => "mantenimiento")}
     scope :genteMantenimiento, -> { Technician.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}).select("NameTec") }
-  
 
+    #filtros
+    scope :hastatanto, lambda { |costhourtec| where("costhourtec < ?", costhourtec) }
+    scope :mantenimiento, -> { Technician.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"})}
 end

@@ -25,14 +25,22 @@ class Bicycle < ApplicationRecord
     validates :brand_bicy,:material_bicy ,:components_bicy ,length: { maximum: 20 }
     validates :description_bicy, length: { maximum: 100 }
 
-    belongs_to :store, required: false
-    has_many :images, as: :imageable
+    belongs_to :store
+    has_many :images, dependent: :delete_all
 
-    scope :material, -> { where(:material_bicy => "aluminio")}
 
-    def self.baratas(price_bicy)
-        where("price_bicy < ?", price_bicy) #se le pasa como argumento la plata Bicycle.baratas(9999)
-    end
+    
+    #filtros
+    scope :aluminio, -> { where(:material_bicy => "aluminio")}
+    scope :acero, -> { where(:material_bicy => "acero")}
+    scope :fibraCarbono, -> { where(:material_bicy => "fibraCarbono")}
+    scope :gw, -> { where(:brand_bicy => "GW")}
+    scope :special, -> { where(:brand_bicy => "specialized")}
+    scope :rale, -> { where(:brand_bicy => "Raleigh")}
+    scope :trek, -> { where(:brand_bicy => "Trek")}
+    scope :hasta, lambda { |price_bicy| where("price_bicy <= ?", price_bicy) }
+    scope :desde, lambda { |price_bicy| where("price_bicy >= ?", price_bicy) }
+
 
     #tiendas que han vendido bien
     scope :buenventa, -> { Bicycle.joins(:stores).where(stores: {score_store: 5}) }
