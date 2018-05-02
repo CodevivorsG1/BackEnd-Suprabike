@@ -74,6 +74,8 @@ Rails.application.routes.draw do
   get "technicians/showpdf", to: "pricetech#show"
   get "components/showpdf", to: "pricescomponents#show"
   get "stores/ranking", to: "beststores#ranking"
+  get "technicians/filter1", to: "filtertechnician#filtrar1"
+  get "technicians/filter2", to: "filtertechnician#filtrar2"
 
   #devise_for :technicians
   #devise_for :stores

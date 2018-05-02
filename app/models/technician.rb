@@ -38,6 +38,8 @@ class Technician < ApplicationRecord
     #Technician.where(:typeworktec => "mantenimiento")
     scope :typeJob, -> {where(:typeworktec => "mantenimiento")}
     scope :genteMantenimiento, -> { Technician.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}).select("NameTec") }
-  
+
+    #filtros
+    scope :hastatanto, lambda { |costhourtec| where("costhourtec < ?", costhourtec) }
 
 end
