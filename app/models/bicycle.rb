@@ -29,18 +29,11 @@ class Bicycle < ApplicationRecord
     has_many :images, dependent: :delete_all
 
 
-    
-    #filtros
-    scope :aluminio, -> { where(:material_bicy => "aluminio")}
-    scope :acero, -> { where(:material_bicy => "acero")}
-    scope :fibraCarbono, -> { where(:material_bicy => "fibraCarbono")}
-    scope :gw, -> { where(:brand_bicy => "GW")}
-    scope :special, -> { where(:brand_bicy => "specialized")}
-    scope :rale, -> { where(:brand_bicy => "Raleigh")}
-    scope :trek, -> { where(:brand_bicy => "Trek")}
-    scope :hasta, lambda { |price_bicy| where("price_bicy <= ?", price_bicy) }
-    scope :desde, lambda { |price_bicy| where("price_bicy >= ?", price_bicy) }
+    scope :material, -> { where(:material_bicy => "aluminio")}
 
+    def self.baratas(price_bicy)
+        where("price_bicy < ?", price_bicy) #se le pasa como argumento la plata Bicycle.baratas(9999)
+    end
 
     #tiendas que han vendido bien
     scope :buenventa, -> { Bicycle.joins(:stores).where(stores: {score_store: 5}) }

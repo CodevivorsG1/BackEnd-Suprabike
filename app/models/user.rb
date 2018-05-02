@@ -48,7 +48,7 @@ class User < ApplicationRecord
     scope :mujeres,-> { where(:genderUser => "mujer")}
     scope :hombres,-> { where(:genderUser => "hombre")}
 #clentes que han hecho transacciones de mantenimiento ordenado por id
-    scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}) }
+    scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}).pluck(:user_id) }
     
     def self.create_user_for_google(data,email)                  
         where(email: data["email"]).first_or_initialize.tap do |user|

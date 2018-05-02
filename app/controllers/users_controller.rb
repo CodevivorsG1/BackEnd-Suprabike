@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      WelcomeMailer.notify(@user).deliver
+      WelcomeMailer.notify(@user).deliver_now
       Image.create(name: params[:name] ,this_image: params[:this_image], user_id: @user.id)
       render json: @user, status: :created
     else

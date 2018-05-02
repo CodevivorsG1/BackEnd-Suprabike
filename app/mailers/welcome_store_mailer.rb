@@ -1,5 +1,4 @@
-class WelcomeStoreMailer < ApplicationMailer::Base
-  default from: "suprabikes@example.com"
+class WelcomeStoreMailer < ApplicationMailer
   def notify(store)
     @store = store
 
