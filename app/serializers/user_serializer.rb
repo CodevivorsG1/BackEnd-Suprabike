@@ -30,4 +30,5 @@ class UserSerializer < ApplicationSerializer
   has_many :transactions
   has_many :comments
   has_many :forums
+  has_one :image, as: :imageable
 end

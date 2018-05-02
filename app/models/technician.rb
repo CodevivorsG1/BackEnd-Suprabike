@@ -34,7 +34,7 @@ class Technician < ApplicationRecord
 
     belongs_to :city
     has_many :transactions, dependent: :destroy
-    has_one :image, as: :imageable
+    has_one :image #, as: :imageable
 
     #Technician.where(:typeworktec => "mantenimiento")
     scope :typeJob, -> {where(:typeworktec => "mantenimiento")}

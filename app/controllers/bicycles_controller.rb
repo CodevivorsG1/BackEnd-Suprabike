@@ -18,8 +18,9 @@ class BicyclesController < ApplicationController
   # POST /bicycles
   def create
     @bicycle = Bicycle.new(bicycle_params)
-
+    
     if @bicycle.save
+      @image = Image.create(name: params[:name] ,this_image: params[:this_image], bicycle_id: @bicycle.id)
       render json: @bicycle, status: :created, location: @bicycle
     else
       render json: @bicycle.errors, status: :unprocessable_entity
@@ -48,6 +49,7 @@ class BicyclesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def bicycle_params
-      params.require(:bicycle).permit(:id_bicy, :brand_bicy, :material_bicy, :components_bicy, :price_bicy, :usetype_bicy, :description_bicy, :store_id)
+      params.permit(:id_bicy, :brand_bicy, :material_bicy, :components_bicy, :price_bicy, :usetype_bicy, :description_bicy, :store_id)
     end
+
 end

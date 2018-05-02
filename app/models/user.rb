@@ -28,7 +28,7 @@
 class User < ApplicationRecord
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
-    include HTTParty
+
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
@@ -42,7 +42,7 @@ class User < ApplicationRecord
     belongs_to :city 
     has_many :comments, dependent: :destroy
     has_many :forums , dependent: :destroy
-    has_one :image, as: :imageable
+    has_one :image #, as: :imageable
 
     #scope :similarJuan, where(:nameUser => "Juan")
     scope :mujeres,-> { where(:genderUser => "mujer")}
