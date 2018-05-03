@@ -28,6 +28,8 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   def update
     if @user.update(user_params)
+      @image = Image.find_by(user_id: @user.id)
+      @image.update(name: params[:name] ,this_image: params[:this_image], user_id: @user.id)
       render json: @user
     else
       render json: @user.errors, status: :unprocessable_entity
