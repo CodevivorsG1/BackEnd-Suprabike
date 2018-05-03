@@ -29,6 +29,8 @@ class Bicycle < ApplicationRecord
     has_many :images, dependent: :delete_all
 
 
+    scope :material, -> { where(:material_bicy => "aluminio")}
+
     
     #filtros
     scope :aluminio, -> { where(:material_bicy => "aluminio")}
