@@ -1,9 +1,20 @@
 class TransactionMailer < ActionMailer::Base
     def tecnic_service(user,technician)
+        @user = user
+        @technician = technician
         mail( to: user.email,
-            from: "suprabikess@gmail.com",
+            from: "suprabikes1@gmail.com",
             subject: "Servicio tecnico solicitado",
-            body: "has solicitado un servicio tecnico con thistech en breve se contactara contigo.."
+        )
+
+    end
+
+    def new_request(user,technician)
+        @user = user
+        @technician = technician
+        mail( to: technician.email,
+            from: "suprabikes1@gmail.com",
+            subject: "Servicio tecnico solicitado",
         )
 
     end

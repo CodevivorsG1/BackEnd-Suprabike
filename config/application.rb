@@ -36,6 +36,7 @@ module SuprabikesBE
     #config.middleware.insert_after ActiveRecord::Migration::CheckPending, ActionDispatch::Cookies
     #config.middleware.insert_after ActionDispatch::Cookies, ActionDispatch::Session::CookieStore
     #config.middleware.use WickedPdf::Middleware
+
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
@@ -47,5 +48,15 @@ module SuprabikesBE
         ) 
       end
     end
+
+    ActionMailer::Base.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'mail.google.com',
+      user_name:            ENV["MAILER_EMAIL"],
+      password:             ENV["MAILER_PASSWORD"],
+      authentication:       'login',
+      enable_starttls_auto: true 
+    }
   end
 end
