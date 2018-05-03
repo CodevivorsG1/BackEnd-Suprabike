@@ -23,7 +23,7 @@ class Image < ApplicationRecord
     belongs_to :user, optional: true
     belongs_to :store, optional: true
     belongs_to :component, optional: true
-    belongs_to :bycicle, optional: true
+    belongs_to :bicycle, optional: true
 
     scope :biciMountain, -> { where(:name => "mountain")}
   

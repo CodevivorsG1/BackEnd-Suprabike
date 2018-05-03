@@ -20,7 +20,12 @@ gem 'simple_token_authentication', '~> 1.0'
 gem "paperclip", "~> 6.0.0"
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'wkhtmltopdf-heroku'
 gem 'responders'
+gem 'httparty'
+gem 'google-id-token'
+gem 'google-api-client', '~> 0.11'
+gem 'descriptive-statistics'
 # Use postgresql as the database for Active Record
 
 

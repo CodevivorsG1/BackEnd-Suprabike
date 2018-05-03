@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
-
+  
   # GET /users
   def index
     @users = User.paginate(:page => params[:page], :per_page => 100)
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      WelcomeMailer.notify(@user).deliver_now
+      Image.create(name: params[:name] ,this_image: params[:this_image], user_id: @user.id)
       render json: @user, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
@@ -39,6 +39,7 @@ class UsersController < ApplicationController
     @user.destroy
   end
 
+ 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

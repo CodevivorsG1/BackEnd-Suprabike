@@ -75,7 +75,8 @@ tran9 = Transaction.create(date_transaction:"11/11/2014",type_transaction:"repar
    total_transaction:45000,store_id:4, user_id:9)
 
 tran10 = Transaction.create(date_transaction:"02/13/2015",type_transaction:"mantenimiento",
-   total_transaction:60000,store_id:10, user_id:10)
+   total_transaction:60000,store_id:10, user_id:10) 
+
 
 #25 registros usuarios
 user1 = User.create( email:"ferg@gmail.com", password:"111111", password_confirmation:"111111",
@@ -452,7 +453,7 @@ comt24= Comment.create(description:"comment 24",forum_id:24,user_id:24)
 comt25= Comment.create(description:"comment 25",forum_id:25,user_id:25)
 
 
-=begin puts 'started loading  data'
+puts 'started loading  data'
 count = 0
 20.times do |row|
     count = count +1
@@ -483,11 +484,12 @@ count = 0
         NameTec:Faker::Name.first_name  ,
         SurnameTec:Faker::Name.last_name ,
         typeworktec:Faker::Job.field ,
-        email:Faker::Internet.email ,
+        email:Faker::Internet.unique.email ,
         costhourtec: Faker::Number.decimal(2),
-        password:Faker::Name.first_name ,
+        password:Faker::Internet.password(8) ,
         phonenumtec:Faker::PhoneNumber.phone_number ,
-        city_id: randomId )
+        city_id: randomId ) 
+
 
     Bicycle.create( id_bicy: Faker::Number.number(6),
         brand_bicy: Faker::Vehicle.manufacture,
@@ -522,9 +524,8 @@ count = 0
         user_id: randomId,
         store_id: randomId )
 
-tran3 = Transaction.create(date_transaction:"09/02/2017",type_transaction:"reparacion",
-        total_transaction:25000,technician_id:3, user_id:3)
+
 
 end
 puts 'finished loading  data' 
-=end
+
