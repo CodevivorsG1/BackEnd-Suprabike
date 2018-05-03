@@ -73,7 +73,7 @@ Rails.application.routes.draw do
   get "bicycles/showpdf", to: "pdfs#show"
   get "technicians/showpdf", to: "pricetech#show"
   get "components/showpdf", to: "pricescomponents#show"
-  post "stores/ranking", to: "beststores#ranking"
+  get "stores/ranking", to: "beststores#ranking"
   get "technicians/filter1", to: "filtertechnician#filtrar1"
   get "technicians/filter2", to: "filtertechnician#filtrar2"
   get "technicians/tecnicosman", to: "filtertechnician#mantenimiento"
