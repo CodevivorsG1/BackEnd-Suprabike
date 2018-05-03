@@ -32,6 +32,10 @@ class BicyclesController < ApplicationController
   # PATCH/PUT /bicycles/1
   def update
     if @bicycle.update(bicycle_params)
+      @image = Image.find_by(bicycle_id: @bicycle.id)
+      if @image != nil
+        @image.update(name: params[:name] ,this_image: params[:this_image], bicycle_id: @bicycle.id)
+      end
       render json: @bicycle
     else
       render json: @bicycle.errors, status: :unprocessable_entity

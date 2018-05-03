@@ -26,8 +26,11 @@ class Bicycle < ApplicationRecord
     validates :description_bicy, length: { maximum: 100 }
 
     belongs_to :store
+    
     has_many :images, dependent: :delete_all
 
+
+    scope :material, -> { where(:material_bicy => "aluminio")}
 
     
     #filtros

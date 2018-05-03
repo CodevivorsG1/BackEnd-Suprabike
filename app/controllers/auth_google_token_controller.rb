@@ -6,7 +6,7 @@ class AuthGoogleTokenController < ApplicationController
     def create
         validator = GoogleIDToken::Validator.new
         begin
-            payload = validator.check(params[:id_token], "265848036385-8nb02cph4d85ca74vakqq463ggif52gc.apps.googleusercontent.com","265848036385-8nb02cph4d85ca74vakqq463ggif52gc.apps.googleusercontent.com") 
+            payload = validator.check(params[:id_token], "533966985417-qfdt7qfclu4h9si70n693fas25n1p4u1.apps.googleusercontent.com","533966985417-qfdt7qfclu4h9si70n693fas25n1p4u1.apps.googleusercontent.com") 
             puts "token validated!!"
             email = params[:email]
             puts email
