@@ -22,9 +22,12 @@ class Transaction < ApplicationRecord
     scope :ensamble, -> {where(:type_transaction => "ensamblado")}
     #scope :totalTrans, -> {where("total_transaction < ?", total_transaction)}
     
+    #filtros
     def self.precios(total_transaction)
         where("total_transaction < ?", total_transaction)
     end
+    
+    scope :mujer, -> { Transaction.joins(:users).where(users: {genderUser: "mujer"})}
 
     
     
