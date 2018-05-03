@@ -29,7 +29,9 @@ class TechniciansController < ApplicationController
   def update
     if @technician.update(technician_params)
       @image = Image.find_by(technician_id: @technician.id)
-      @image.update(name: params[:name] ,this_image: params[:this_image], technician_id: @technician.id)
+      if @image != nil
+        @image.update(name: params[:name] ,this_image: params[:this_image], technician_id: @technician.id)
+      end
       render json: @technician
     else
       render json: @technician.errors, status: :unprocessable_entity
