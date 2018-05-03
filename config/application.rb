@@ -23,6 +23,7 @@ module SuprabikesBE
     config.active_job.queue_adapter = :delayed_job
     config.action_mailer.default_url_options = { host: 'suprabikes.com' }
     config.action_mailer.delivery_method = :smtp
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -31,7 +32,11 @@ module SuprabikesBE
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.middleware.use ActionDispatch::Flash
+    #config.middleware.insert_after ActiveRecord::Migration::CheckPending, ActionDispatch::Cookies
+    #config.middleware.insert_after ActionDispatch::Cookies, ActionDispatch::Session::CookieStore
     #config.middleware.use WickedPdf::Middleware
+
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
@@ -43,5 +48,15 @@ module SuprabikesBE
         ) 
       end
     end
+
+    ActionMailer::Base.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'mail.google.com',
+      user_name:            ENV["MAILER_EMAIL"],
+      password:             ENV["MAILER_PASSWORD"],
+      authentication:       'login',
+      enable_starttls_auto: true 
+    }
   end
 end

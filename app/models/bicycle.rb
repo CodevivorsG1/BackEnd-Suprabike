@@ -25,8 +25,11 @@ class Bicycle < ApplicationRecord
     validates :brand_bicy,:material_bicy ,:components_bicy ,length: { maximum: 20 }
     validates :description_bicy, length: { maximum: 100 }
 
-    belongs_to :store, required: false
-    has_many :images, as: :imageable
+    belongs_to :store
+    has_many :images, dependent: :delete_all
+
+
+    scope :material, -> { where(:material_bicy => "aluminio")}
 
     
     #filtros

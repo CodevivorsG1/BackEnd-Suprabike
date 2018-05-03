@@ -1,7 +1,7 @@
 class CreateTechnicians < ActiveRecord::Migration[5.1]
   def change
     create_table :technicians do |t|
-      t.integer :id_technical
+      t.integer :id_technical, :limit => 8
       t.string :NameTec
       t.string :SurnameTec
       t.string :typeworktec

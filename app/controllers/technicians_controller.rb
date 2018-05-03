@@ -18,6 +18,7 @@ class TechniciansController < ApplicationController
     @technician = Technician.new(technician_params)
 
     if @technician.save
+      Image.create(name: params[:name] ,this_image: params[:this_image], technician_id: @technician.id)
       render json: @technician, status: :created
     else
       render json: @technician.errors, status: :unprocessable_entity
@@ -46,6 +47,6 @@ class TechniciansController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def technician_params
-      params.require(:technician).permit(:email, :password, :id_technical, :NameTec, :SurnameTec, :typeworktec, :costhourtec, :phonenumtec)
+      params.permit(:email, :password, :id_technical, :NameTec, :SurnameTec, :typeworktec, :costhourtec, :phonenumtec, :city_id) 
     end
 end

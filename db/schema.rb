@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180418021614) do
+ActiveRecord::Schema.define(version: 20180501230354) do
 
   create_table "bicycles", force: :cascade do |t|
     t.integer "id_bicy"
@@ -89,7 +89,17 @@ ActiveRecord::Schema.define(version: 20180418021614) do
     t.string "this_image_content_type"
     t.integer "this_image_file_size"
     t.datetime "this_image_updated_at"
+    t.integer "user_id"
+    t.integer "store_id"
+    t.integer "technician_id"
+    t.integer "bicycle_id"
+    t.integer "component_id"
+    t.index ["bicycle_id"], name: "index_images_on_bicycle_id"
+    t.index ["component_id"], name: "index_images_on_component_id"
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
+    t.index ["store_id"], name: "index_images_on_store_id"
+    t.index ["technician_id"], name: "index_images_on_technician_id"
+    t.index ["user_id"], name: "index_images_on_user_id"
   end
 
   create_table "stores", force: :cascade do |t|
@@ -129,7 +139,9 @@ ActiveRecord::Schema.define(version: 20180418021614) do
     t.datetime "remember_created_at"
     t.string "authentication_token", limit: 30
     t.integer "phonenumtec", limit: 8
+    t.integer "city_id"
     t.index ["authentication_token"], name: "index_technicians_on_authentication_token", unique: true
+    t.index ["city_id"], name: "index_technicians_on_city_id"
     t.index ["email"], name: "index_technicians_on_email", unique: true
     t.index ["reset_password_token"], name: "index_technicians_on_reset_password_token", unique: true
   end
@@ -169,6 +181,8 @@ ActiveRecord::Schema.define(version: 20180418021614) do
     t.string "authentication_token", limit: 30
     t.integer "phonenumUser", limit: 8
     t.integer "celphoneUser", limit: 8
+    t.string "provider"
+    t.string "uid"
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["email"], name: "index_users_on_email", unique: true

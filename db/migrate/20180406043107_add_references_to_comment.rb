@@ -5,5 +5,6 @@ class AddReferencesToComment < ActiveRecord::Migration[5.1]
 
     add_column :comments, :user_id, :integer
     add_index :comments, :user_id
-  end
+  end 
+
 end

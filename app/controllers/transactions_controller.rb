@@ -16,8 +16,17 @@ class TransactionsController < ApplicationController
   # POST /transactions
   def create
     @transaction = Transaction.new(transaction_params)
-
+    @user =  User.find(params[:user_id])
+    if params[:technician_id]
+      @tech = Technician.find(params[:technician_id])
+      TransactionMailer.tecnic_service(@user ,@tech).deliver
+      TransactionMailer.new_request(@user,@tech).deliver
+    elsif params[ :store_id]
+      @store = Store.find( :store_id)
+    end
+    #@user =  Technician.find(:id)
     if @transaction.save
+      TransactionMailer.tecnic_service().deliver
       render json: @transaction, status: :created, location: @transaction
     else
       render json: @transaction.errors, status: :unprocessable_entity
@@ -46,6 +55,6 @@ class TransactionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def transaction_params
-      params.require(:transaction).permit(:date_transaction, :type_transaction, :total_transaction)
+      params.permit(:date_transaction, :type_transaction, :total_transaction)
     end
 end

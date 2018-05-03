@@ -18,6 +18,7 @@ class StoresController < ApplicationController
     @store = Store.new(store_params)
 
     if @store.save
+      Image.create(name: params[:name] ,this_image: params[:this_image], store_id: @store.id)
       render json: @store, status: :created
     else
       render json: @store.errors, status: :unprocessable_entity
@@ -46,6 +47,6 @@ class StoresController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def store_params
-      params.require(:store).permit(:email, :password, :id_store, :name_store, :address_store, :score_store, :phonenum_store, :celphone_store, :city_id)
+      params.permit(:email, :password, :id_store, :name_store, :address_store, :score_store, :phonenum_store, :celphone_store, :city_id)
     end
 end

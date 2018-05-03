@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.3.1"
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -8,7 +8,9 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
+
 gem 'delayed_job_active_record'
+
 gem 'faker', require: false
 gem 'annotate'
 gem 'will_paginate', '~> 3.1.0'
@@ -20,8 +22,12 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'wkhtmltopdf-heroku'
 gem 'responders'
-
+gem 'httparty'
+gem 'google-id-token'
+gem 'google-api-client', '~> 0.11'
+gem 'descriptive-statistics'
 # Use postgresql as the database for Active Record
+
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -39,14 +45,14 @@ gem 'puma', '~> 3.7'
 gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
-  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
-#group :production do
-#  gem 'pg'
-#end
+group :production do
+  gem 'pg'
+end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
