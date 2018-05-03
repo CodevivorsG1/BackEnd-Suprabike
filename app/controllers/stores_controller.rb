@@ -18,7 +18,6 @@ class StoresController < ApplicationController
     @store = Store.new(store_params)
 
     if @store.save
-      WelcomeStoreMailer.notify(@store).deliver_now
       Image.create(name: params[:name] ,this_image: params[:this_image], store_id: @store.id)
       render json: @store, status: :created
     else
