@@ -19,7 +19,9 @@ class StoresController < ApplicationController
 
     if @store.save
       WelcomeStoreMailer.notify(@store).deliver_now
-      Image.create(name: params[:name] ,this_image: params[:this_image], store_id: @store.id)
+      if params[:this_image] 
+        Image.create(name: params[:name] ,this_image: params[:this_image], store_id: @store.id)
+      end
       render json: @store, status: :created
     else
       render json: @store.errors, status: :unprocessable_entity
