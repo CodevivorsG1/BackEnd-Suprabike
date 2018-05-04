@@ -87,6 +87,7 @@ Rails.application.routes.draw do
   get "bicycles/h500", to: "filterbicycles#h500"
   get "bicycles/hmillon", to: "filterbicycles#hmillon"
   get "bicycles/dmillon", to: "filterbicycles#dmillon"
+  get "bicycles/send_bikes_to_users", to:"bicycles#send_bikes_to_users"
   
   #devise_for :technicians
   #devise_for :stores

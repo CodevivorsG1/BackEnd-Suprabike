@@ -41,6 +41,7 @@ class FilterbicyclesController < ActionController::Base
     def h500
         get_model
         render json: @bicycles.hasta(500000)
+        
     end
 
     def hmillon
@@ -52,5 +53,7 @@ class FilterbicyclesController < ActionController::Base
         get_model
         render json: @bicycles.desde(1000000)
     end
+
+    
 
 end

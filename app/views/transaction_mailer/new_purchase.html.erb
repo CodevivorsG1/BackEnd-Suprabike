@@ -99,7 +99,7 @@
 
 </head>
 <body width="100%" bgcolor="#222222" style="Margin: 0;">
-    <center style="width: 100%; background: #33B8FF;">
+    <center style="width: 80%; background: #006699;">
 
         <!-- Visually Hidden Preheader Text : BEGIN -->
         <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;">
@@ -112,7 +112,7 @@
             1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
             2. MSO tags for Desktop Windows Outlook enforce a 600px width.
         -->
-        <div style="max-width: 600px; margin: auto;">
+        <div style="max-width: 500px; margin: auto;">
             <!--[if (gte mso 9)|(IE)]>
             <table cellspacing="0" cellpadding="0" border="0" width="600" align="center">
             <tr>
@@ -120,10 +120,10 @@
             <![endif]-->
 
             <!-- Email Header : BEGIN -->
-            <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+            <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%"  style="max-width: 600px;">
 				<tr>
 					<td style="padding: 20px 0; text-align: center">
-						<img src="../../media/mailerPurchase/logoSupraBIKES.jpg" width="200" height="50" alt="logo" border="0">
+						<img src="https://image.ibb.co/cuKCdn/logo_Supra_BIKES.png" width="50%" height="50%" alt="logo" border="0">
 					</td>
 				</tr>
             </table>
@@ -135,7 +135,7 @@
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
 					<td>
-						<img src="http://placehold.it/600x300" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px;">
+						<img src="http://www.hdfondos.eu/pictures/2015/1025/1/old-man-on-the-bicycle-wide-hd-wallpaper-for-desktop-background-download-bicycle-images-397440.jpg" width="100%" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px;">
 					</td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
@@ -151,8 +151,8 @@
 	                                <!-- Button : Begin -->
 	                                <table cellspacing="0" cellpadding="0" border="0" align="center" style="Margin: auto;">
 	                                    <tr>
-	                                        <td style="border-radius: 3px; background: #222222; text-align: center;" class="button-td">
-	                                            <a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
+	                                        <td style="border-radius: 3px; background: #1C91CF; text-align: center;" class="button-td">
+	                                            <a href="http://www.google.com" style="background: #1C91CF; border: 15px solid #1C91CF; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
 				                                    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ffffff">Tus Items</span>&nbsp;&nbsp;&nbsp;&nbsp;
 				                                </a>
 	                                        </td>
@@ -186,16 +186,16 @@
                                         <tr>
                                             
                                             <td style="text-align: center; padding: 0 10px;">
-                                                <img src="http://placehold.it/200" width="200" alt="" style="border: 0;width: 100%;max-width: 200px;" class="center-on-narrow">
+                                                <img src="https://suprabikesbackendd.herokuapp.com<%=  @profilePicture.this_image %>" width="200" alt="" style="border: 0;width: 100%;max-width: 200px;" class="center-on-narrow">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td style="text-align: center;font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding: 10px 10px 0;" class="stack-column-center">
                                                 <%=@store.name_store%>  <br/>
-                                                <%=@store.address_store%>  <br/>
-                                                <%=@store.email%>  <br/>
-                                                <%=@store.celphone_store%>  <br/>
-                                                <%=@store.phonenum_store%>  <br/>
+                                                Direccion: <%=@store.address_store%>  <br/>
+                                                Correo: <%=@store.email%>  <br/>
+                                                Celular: <%=@store.celphone_store%>  <br/>
+                                                Telefono: <%=@store.phonenum_store%>  <br/>
                                             </td>
                                         </tr>
                                     </table>

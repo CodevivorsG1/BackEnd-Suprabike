@@ -47,6 +47,19 @@ class BicyclesController < ApplicationController
     @bicycle.destroy
   end
 
+  def send_bikes_to_users
+    iduser = 1
+    @user = User.find(iduser)
+    Bicycles_mailer.catalogo(User.find(150)).deliver
+=begin while  @user do
+        
+        Biycles_mailer.catalogo(@user).deliver_later(wait_until: 168.hours.from_now)
+        iduser += 1 
+        @user = User.find(iduser)
+    end 
+=end
+
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bicycle
