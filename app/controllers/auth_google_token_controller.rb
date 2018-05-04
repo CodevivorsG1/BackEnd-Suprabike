@@ -18,7 +18,7 @@ class AuthGoogleTokenController < ApplicationController
                 response = HTTParty.get(url)  
                 @user = User.create_user_for_google(response.parsed_response,email)                           
                 @user.save
-                render json: @user
+                render json: @user.as_json(only: [:nameUser, :email, :authentication_token, :id])
             end
             
         rescue GoogleIDToken::ValidationError => e
