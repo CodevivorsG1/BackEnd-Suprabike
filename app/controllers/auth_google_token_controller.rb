@@ -12,7 +12,7 @@ class AuthGoogleTokenController < ApplicationController
             puts email
             @user =User.find_by( email: email)
             if @user
-                render json: @user.as_json(only: [:nameUser, :email, :authentication_token, :user_id]) , status: :created
+                render json: @user.as_json(only: [:nameUser, :email, :authentication_token, :id]) , status: :created
             else
                 url = "https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=#{params["id_token"]}"                  
                 response = HTTParty.get(url)  
