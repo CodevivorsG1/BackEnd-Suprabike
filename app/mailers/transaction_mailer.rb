@@ -18,4 +18,14 @@ class TransactionMailer < ActionMailer::Base
         )
 
     end
+
+    def new_purchase(user,store,items)
+        @user = user
+        @store = store
+        @items = items
+        mail( to: user.email,
+            from: "suprabikes1@gmail.com",
+            subject: "Nueva compra",
+        )
+    end
 end

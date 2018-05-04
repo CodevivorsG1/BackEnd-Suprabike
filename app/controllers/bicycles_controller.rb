@@ -20,7 +20,9 @@ class BicyclesController < ApplicationController
     @bicycle = Bicycle.new(bicycle_params)
     
     if @bicycle.save
-      @image = Image.create(name: params[:name] ,this_image: params[:this_image], bicycle_id: @bicycle.id)
+      if params[:this_image] 
+        @image = Image.create(name: params[:name] ,this_image: params[:this_image], bicycle_id: @bicycle.id)
+      end
       render json: @bicycle, status: :created, location: @bicycle
     else
       render json: @bicycle.errors, status: :unprocessable_entity
