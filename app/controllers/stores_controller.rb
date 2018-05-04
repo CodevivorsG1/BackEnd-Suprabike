@@ -28,6 +28,10 @@ class StoresController < ApplicationController
   # PATCH/PUT /stores/1
   def update
     if @store.update(store_params)
+      @image = Image.find_by(store_id: @store.id)
+      if @image != nil
+        @image.update(name: params[:name] ,this_image: params[:this_image], store_id: @store.id)
+      end
       render json: @store
     else
       render json: @store.errors, status: :unprocessable_entity
