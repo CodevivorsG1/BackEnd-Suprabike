@@ -16,17 +16,21 @@ class TransactionsController < ApplicationController
   # POST /transactions
   def create
     @transaction = Transaction.new(transaction_params)
-    @user =  User.find(params[:user_id])
-    if params[:technician_id]
-      @tech = Technician.find(params[:technician_id])
-      TransactionMailer.tecnic_service(@user ,@tech).deliver
-      TransactionMailer.new_request(@user,@tech).deliver
-    elsif params[ :store_id]
-      @store = Store.find( :store_id)
-    end
+    
     #@user =  Technician.find(:id)
     if @transaction.save
-      TransactionMailer.tecnic_service().deliver
+      @user =  User.find(params[:user_id])
+      if params[:technician_id]
+        @tech = Technician.find(params[:technician_id])
+        TransactionMailer.tecnic_service(@user ,@tech).deliver
+        TransactionMailer.new_request(@user,@tech).deliver
+      elsif params[ :store_id]
+        @store = Store.find(params[:store_id])
+        @items = params[:items]
+        if @items != nil
+          TransactionMailer.new_purchase(@user,@store,@items).deliver
+        end
+      end
       render json: @transaction, status: :created, location: @transaction
     else
       render json: @transaction.errors, status: :unprocessable_entity
