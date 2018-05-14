@@ -51,13 +51,12 @@ class BicyclesController < ApplicationController
     iduser = 1
     @user = User.find(iduser)
     Bicycles_mailer.catalogo(User.find(150)).deliver
-=begin while  @user do
-        
-        Biycles_mailer.catalogo(@user).deliver_later(wait_until: 168.hours.from_now)
-        iduser += 1 
-        @user = User.find(iduser)
-    end 
+    
+=begin     User.find_each do |user| 
+        Biycles_mailer.catalogo(user).deliver_later(wait_until: 168.hours.from_now)
+    end  
 =end
+
 
   end
   private
