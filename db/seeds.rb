@@ -1,8 +1,6 @@
 require 'faker' 
-#Registros a mano
 
-#Registros a mano
-
+puts 'started loading  data'
 #10 registros technician
 tech1 =  Technician.create( id_technical:1, NameTec:"Mariana", SurnameTec:"Suarez", 
     typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1111,
@@ -40,7 +38,7 @@ tech9 =  Technician.create( id_technical:9, NameTec:"Armando", SurnameTec:"Casas
     typeworktec:"reparacion", costhourtec:72000, phonenumtec:9999,
     email:"armacasa@hotmail.com", password:"999999" )
 
-tech10 =  Technician.create( id_technical:10, NameTec:"Manuela", SurnameTec:"Rodriguez",
+tech10 =  Technician.create( id_technical:10, NameTec:"Marlon", SurnameTec:"Noguera",
     typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1010,
     email:"manurodri@aol.com", password:"101010" )
 
@@ -175,8 +173,8 @@ user24 = User.create( email:"crishe@gmail.com", password:"242424", password_conf
    idUser:24, nameUser:"Cristina", surnameUser:"Henao", genderUser:"mujer", phonenumUser:2424,
    celphoneUser:2424, city_id:5 )
 
-user25 = User.create( email:"camoch@gmail.com", password:"252525", password_confirmation:"252525",
-   idUser:25, nameUser:"Camilo", surnameUser:"Ochoa", genderUser:"hombre", phonenumUser:2525,
+user25 = User.create( email:"menoguera95@gmail.com", password:"252525", password_confirmation:"252525",
+   idUser:25, nameUser:"Marlon", surnameUser:"Noguera", genderUser:"hombre", phonenumUser:2525,
    celphoneUser:2525, city_id:5 )
 
 #10 stores
@@ -453,7 +451,7 @@ comt24= Comment.create(description:"comment 24",forum_id:24,user_id:24)
 comt25= Comment.create(description:"comment 25",forum_id:25,user_id:25)
 
 
-puts 'started loading  data'
+
 count = 0
 20.times do |row|
     count = count +1
@@ -491,15 +489,6 @@ count = 0
         city_id: randomId ) 
 
 
-    Bicycle.create( id_bicy: Faker::Number.number(6),
-        brand_bicy: Faker::Vehicle.manufacture,
-        material_bicy: Faker::Beer.hop,
-        components_bicy: Faker::Cat.name,
-        price_bicy: Faker::Number.decimal(2),
-        usetype_bicy: Faker::Friends.character,
-        description_bicy: Faker::Friends.quote,
-        store_id: randomId)
-
     Forum.create( topic:Faker::Vehicle.manufacture,
         user_id: randomId )
 
@@ -510,13 +499,6 @@ count = 0
             user_id: randomId )
     end
 
-    Component.create( type_component:Faker::Name.name ,
-        price_component:Faker::Number.decimal(2) ,
-        description_component:Faker::Commerce.material ,
-        brand_component:Faker::Vehicle.manufacture ,
-        sizes_component:Faker::Number.decimal(2) ,
-        material_component:Faker::Name.name,
-        store_id: randomId)
 
     Transaction.create( date_transaction:Faker::Date.between(2.days.ago, Date.today),
         type_transaction:Faker::Job.field ,
