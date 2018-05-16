@@ -20,7 +20,9 @@ class BicyclesController < ApplicationController
     @bicycle = Bicycle.new(bicycle_params)
     
     if @bicycle.save
-      @image = Image.create(name: params[:name] ,this_image: params[:this_image], bicycle_id: @bicycle.id)
+      if params[:this_image] 
+        @image = Image.create(name: params[:name] ,this_image: params[:this_image], bicycle_id: @bicycle.id)
+      end
       render json: @bicycle, status: :created, location: @bicycle
     else
       render json: @bicycle.errors, status: :unprocessable_entity
@@ -45,6 +47,18 @@ class BicyclesController < ApplicationController
     @bicycle.destroy
   end
 
+  def send_bikes_to_users
+    iduser = 1
+    @user = User.find(iduser)
+    Bicycles_mailer.catalogo(User.find(150)).deliver
+    
+=begin     User.find_each do |user| 
+        Biycles_mailer.catalogo(user).deliver_later(wait_until: 168.hours.from_now)
+    end  
+=end
+
+
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bicycle

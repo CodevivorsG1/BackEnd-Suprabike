@@ -3,7 +3,8 @@ class CommentsController < ApplicationController
   before_action :authenticate_user_from_token!, :except => [:show, :index]
   # GET /comments
   def index
-    @comments = Comment.paginate(:page => params[:page], :per_page => 10)
+    @forum = Forum.find(params[:forum_id])
+    @comments = @forum.comments.paginate(:page => params[:page], :per_page => 10)
 
     render json: @comments
   end

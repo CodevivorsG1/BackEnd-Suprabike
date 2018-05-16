@@ -12,10 +12,15 @@
 #  this_image_content_type :string
 #  this_image_file_size    :integer
 #  this_image_updated_at   :datetime
+#  user_id                 :integer
+#  store_id                :integer
+#  technician_id           :integer
+#  bicycle_id              :integer
+#  component_id            :integer
 #
 
 class ImageSerializer < ApplicationSerializer
-  attributes :id, :name , :this_image , :bicycle_id , :store_id,:user_id, :technician_id
+  attributes :id, :name , :this_image , :bicycle_id , :store_id,:user_id
 
   def serializable_hash(adapter_options = nil, options = {}, adapter_instance = self.class.serialization_adapter_instance)
     hash = super

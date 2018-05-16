@@ -18,7 +18,9 @@ class StoresController < ApplicationController
     @store = Store.new(store_params)
 
     if @store.save
-      Image.create(name: params[:name] ,this_image: params[:this_image], store_id: @store.id)
+      if params[:this_image] 
+        Image.create(name: params[:name] ,this_image: params[:this_image], store_id: @store.id)
+      end
       render json: @store, status: :created
     else
       render json: @store.errors, status: :unprocessable_entity
@@ -29,9 +31,7 @@ class StoresController < ApplicationController
   def update
     if @store.update(store_params)
       @image = Image.find_by(store_id: @store.id)
-      if @image != nil
-        @image.update(name: params[:name] ,this_image: params[:this_image], store_id: @store.id)
-      end
+      @image.update(name: params[:name] ,this_image: params[:this_image], store_id: @store.id)
       render json: @store
     else
       render json: @store.errors, status: :unprocessable_entity
