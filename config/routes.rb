@@ -126,7 +126,7 @@ Rails.application.routes.draw do
   get "bicycles/dmillon", to: "filterbicycles#dmillon"
   get "bicycles/send_bikes_to_users", to:"bicycles#send_bikes_to_users"
 
-  get "bicyclefilter/prueba/:id", to: "bicyclefilter#prueba"
+  get "bicyclefilter/search/:id", to: "bicyclefilter#prueba"
 
   get "components/get_seats_to_urban", to: "get_parts#get_seats_to_urban"
   get "components/get_seats_to_bmx", to: "get_parts#get_seats_to_bmx"

@@ -13,8 +13,9 @@ class BicyclefilterController < ActionController::Base
 
         if params[:id]
             cadena = (params[:id]).to_s
-            render json: cadena
-            #render json: @bicycles.hasta(cadena)
+            arrayString = cadena.to_s.split('&')
+            render json: arrayString[0]
+            #render json: @bicycles.hasta(material)
         else
             render json: @bicycles.acero
         end
