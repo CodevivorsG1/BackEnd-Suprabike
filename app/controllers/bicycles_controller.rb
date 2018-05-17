@@ -1,6 +1,6 @@
 class BicyclesController < ApplicationController
   before_action :set_bicycle, only: [:show, :update, :destroy]
-  #before_action :authenticate_store!, :except => [:show, :index]
+  before_action :authenticate_user_from_token, :except => [:show, :index]
 
   # GET /bicycles
   def index
