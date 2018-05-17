@@ -8,7 +8,6 @@ class BicyclesController < ApplicationController
     render json: @bicycles, each_serializer: BicycleSerializer
     @bicycles = Bicycle.all
   end
-
   
   # GET /bicycles/1
   def show
