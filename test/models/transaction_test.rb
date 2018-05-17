@@ -9,6 +9,8 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #  technician_id     :integer
+#  user_id           :integer
+#  store_id          :integer
 #
 
 require 'test_helper'

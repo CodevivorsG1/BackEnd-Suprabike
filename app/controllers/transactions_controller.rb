@@ -15,8 +15,11 @@ class TransactionsController < ApplicationController
 
   # POST /transactions
   def create
-    @transaction = Transaction.new(transaction_params)
-    
+    if params[:technician_id]
+      @transaction = Transaction.new(transaction_with_tech_params)
+    else
+      @transaction = Transaction.new(transaction_with_store_params)
+    end
     #@user =  Technician.find(:id)
     if @transaction.save
       @user =  User.find(params[:user_id])
@@ -58,7 +61,11 @@ class TransactionsController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
-    def transaction_params
-      params.permit(:date_transaction, :type_transaction, :total_transaction)
+    def transaction_with_tech_params
+      params.permit(:date_transaction, :type_transaction, :total_transaction, :user_id, :technician_id)
+    end
+
+    def transaction_with_store_params
+      params.permit(:date_transaction, :type_transaction, :total_transaction, :user_id, :store_id)
     end
 end

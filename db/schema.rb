@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180501230354) do
+ActiveRecord::Schema.define(version: 20180514013035) do
+
+  create_table "assemble_parts", force: :cascade do |t|
+    t.integer "component_id"
+    t.integer "bicycle_to_assemble_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bicycle_to_assemble_id"], name: "index_assemble_parts_on_bicycle_to_assemble_id"
+    t.index ["component_id"], name: "index_assemble_parts_on_component_id"
+  end
+
+  create_table "bicycle_to_assembles", force: :cascade do |t|
+    t.float "total_price"
+    t.string "size"
+    t.string "type_of_use"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bicycle_to_assembles_on_user_id"
+  end
 
   create_table "bicycles", force: :cascade do |t|
     t.integer "id_bicy"
@@ -53,6 +72,20 @@ ActiveRecord::Schema.define(version: 20180501230354) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "store_id"
+    t.string "part_of_bike"
+    t.string "strength"
+    t.float "length"
+    t.string "height"
+    t.string "suspension"
+    t.float "width"
+    t.string "amount_of_relief"
+    t.integer "rin"
+    t.string "profile"
+    t.float "frame_size"
+    t.string "rear_suspension"
+    t.integer "number_of_changes"
+    t.integer "num_plates"
+    t.integer "num_dish_teeth"
     t.index ["store_id"], name: "index_components_on_store_id"
   end
 

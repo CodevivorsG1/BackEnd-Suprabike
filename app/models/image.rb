@@ -12,6 +12,11 @@
 #  this_image_content_type :string
 #  this_image_file_size    :integer
 #  this_image_updated_at   :datetime
+#  user_id                 :integer
+#  store_id                :integer
+#  technician_id           :integer
+#  bicycle_id              :integer
+#  component_id            :integer
 #
 
 class Image < ApplicationRecord

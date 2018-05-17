@@ -8,8 +8,6 @@
 #  nameUser               :string
 #  surnameUser            :string
 #  genderUser             :string
-#  phonenumUser           :integer
-#  celphoneUser           :integer
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  email                  :string           default(""), not null
@@ -23,6 +21,10 @@
 #  current_sign_in_ip     :string
 #  last_sign_in_ip        :string
 #  authentication_token   :string(30)
+#  phonenumUser           :integer
+#  celphoneUser           :integer
+#  provider               :string
+#  uid                    :string
 #
 
 class User < ApplicationRecord
