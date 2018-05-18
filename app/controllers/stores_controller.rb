@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
-  before_action :set_store, only: [:show, :update, :destroy]
-
+  before_action :set_store, only: [:show, :update, :destroy , :give_grate]
+  before_action :authenticate_user_from_token, :except => [:show, :index]
   # GET /stores
   def index
     @stores = Store.paginate(:page => params[:page], :per_page => 10)
@@ -27,6 +27,7 @@ class StoresController < ApplicationController
     end
   end
 
+
   # PATCH/PUT /stores/1
   def update
     if @store.update(store_params)
@@ -43,6 +44,11 @@ class StoresController < ApplicationController
     @store.destroy
   end
 
+
+  def give_grate
+    @store.score_store = (@store.score_store + params[:score].to_i)/2
+    @store.save
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_store

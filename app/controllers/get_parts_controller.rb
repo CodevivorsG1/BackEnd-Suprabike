@@ -212,4 +212,24 @@ class GetPartsController < ActionController::Base
         get_model
         render json: @components.get_frame_size_to_bmx_xl
     end
+
+    def get_group_to_urban
+        get_model
+        render json: @components.get_group_to_urban
+    end
+
+    def get_group_to_mountain
+        get_model
+        render json: @components.get_group_to_mountain
+    end
+
+    def get_group_to_road
+        get_model
+        render json: @components.get_group_to_road
+    end
+
+    def get_group_to_bmx
+        get_model
+        render json: @components.get_group_to_bmx
+    end
 end

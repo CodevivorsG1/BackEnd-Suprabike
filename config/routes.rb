@@ -180,10 +180,15 @@ Rails.application.routes.draw do
   get "components/get_frame_size_to_bmx_l" , to: "get_parts#get_frame_size_to_bmx_l"
   get "components/get_frame_size_to_bmx_xl" , to: "get_parts#get_frame_size_to_bmx_xl"
 
+  get "components/get_group_to_urban" , to: "get_parts#get_group_to_urban"
+  get "components/get_group_to_mountain" , to: "get_parts#get_group_to_mountain"
+  get "components/get_group_to_road" , to: "get_parts#get_group_to_road"
+  get "components/get_group_to_bmx" , to: "get_parts#get_group_to_bmx"
+
   get "bicycle_to_assembles/showpdf/:id", to: "pdfs#show_cot"
-  #devise_for :technicians
-  #devise_for :stores
-  #devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+  put "stores/give_grate/:id" , to: "stores#give_grate"
+
   resources :cities
   resources :users
   resources :transactions
