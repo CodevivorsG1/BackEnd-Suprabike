@@ -343,83 +343,83 @@ com20 = Component.create(type_component:"manubrio",price_component:180000,
 
 
 #20 registros bicycle
-bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "GW",
+bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "gw",
    material_bicy: "aluminio", components_bicy: "todo gw", price_bicy: 680000,
    usetype_bicy: "montana", description_bicy: "montana", store_id: 1)
 
-bici2 = Bicycle.create( id_bicy: 2, brand_bicy: "Raleigh",
+bici2 = Bicycle.create( id_bicy: 2, brand_bicy: "raleigh",
    material_bicy: "aluminio", components_bicy: "marco,rines", price_bicy: 700000,
    usetype_bicy: "montana", description_bicy: "montana", store_id: 2)
 
-bici3 = Bicycle.create( id_bicy: 3, brand_bicy: "DeRosa",
-   material_bicy: "fibraCarbono", components_bicy: "todo italia", price_bicy: 4700000,
+bici3 = Bicycle.create( id_bicy: 3, brand_bicy: "derosa",
+   material_bicy: "fibracarbono", components_bicy: "todo italia", price_bicy: 4700000,
    usetype_bicy: "ruta", description_bicy: "ruta italia", store_id: 3)
 
-bici4 = Bicycle.create( id_bicy: 4, brand_bicy: "Raleigh",
+bici4 = Bicycle.create( id_bicy: 4, brand_bicy: "raleigh",
    material_bicy: "acero", components_bicy: "marco,rines", price_bicy: 450000,
    usetype_bicy: "montana", description_bicy: "montana", store_id: 3)
 
-bici5 = Bicycle.create( id_bicy: 5, brand_bicy: "GW",
+bici5 = Bicycle.create( id_bicy: 5, brand_bicy: "gw",
    material_bicy: "aluminio", components_bicy: "grupo shimano", price_bicy: 700000,
    usetype_bicy: "ruta", description_bicy: "GW scorpion", store_id: 4)
 
 bici6 = Bicycle.create( id_bicy: 6, brand_bicy: "specialized",
-   material_bicy: "fibraCarbono", components_bicy: "todo sram", price_bicy: 1500000,
+   material_bicy: "fibracarbono", components_bicy: "todo sram", price_bicy: 1500000,
    usetype_bicy: "ruta", description_bicy: "ruta alto lvl", store_id: 4)
 
-bici7 = Bicycle.create( id_bicy: 7, brand_bicy: "Trek",
-   material_bicy: "fibraCarbono", components_bicy: "sram auto", price_bicy: 2100000,
+bici7 = Bicycle.create( id_bicy: 7, brand_bicy: "trek",
+   material_bicy: "fibracarbono", components_bicy: "sram auto", price_bicy: 2100000,
    usetype_bicy: "ruta", description_bicy: "ruta alto lvl", store_id: 5)
 
 bici8 = Bicycle.create( id_bicy: 8, brand_bicy: "specialized",
    material_bicy: "aluminio", components_bicy: "shimano", price_bicy: 750000,
    usetype_bicy: "montana", description_bicy: "mountain", store_id: 5)
 
-bici9 = Bicycle.create( id_bicy: 9, brand_bicy: "GW",
+bici9 = Bicycle.create( id_bicy: 9, brand_bicy: "gw",
    material_bicy: "acero", components_bicy: "shimano base", price_bicy: 450000,
    usetype_bicy: "montana", description_bicy: "mountain", store_id: 6)
 
-bici10 = Bicycle.create( id_bicy: 10, brand_bicy: "Bianchi",
+bici10 = Bicycle.create( id_bicy: 10, brand_bicy: "bianchi",
    material_bicy: "acero", components_bicy: "shimano base", price_bicy: 350000,
    usetype_bicy: "montana", description_bicy: "mountain", store_id: 6)
 
-bici11 = Bicycle.create( id_bicy: 11, brand_bicy: "Giant",
+bici11 = Bicycle.create( id_bicy: 11, brand_bicy: "giant",
    material_bicy: "acero", components_bicy: "shimano medio", price_bicy: 650000,
    usetype_bicy: "montana", description_bicy: "mountain", store_id: 7)
 
-bici12 = Bicycle.create( id_bicy: 12, brand_bicy: "GW",
+bici12 = Bicycle.create( id_bicy: 12, brand_bicy: "gw",
    material_bicy: "acero", components_bicy: "shimano base", price_bicy: 450000,
    usetype_bicy: "urbana", description_bicy: "ciudad", store_id: 7)
 
-bici13 = Bicycle.create( id_bicy: 13, brand_bicy: "Bianchi",
+bici13 = Bicycle.create( id_bicy: 13, brand_bicy: "bianchi",
    material_bicy: "acero", components_bicy: "shimano base", price_bicy: 350000,
    usetype_bicy: "urbana", description_bicy: "ciudad", store_id: 8)
 
-bici14 = Bicycle.create( id_bicy: 14, brand_bicy: "Benelli",
+bici14 = Bicycle.create( id_bicy: 14, brand_bicy: "benelli",
    material_bicy: "acero", components_bicy: "shimano base", price_bicy: 390000,
    usetype_bicy: "urbana", description_bicy: "ciudad", store_id: 8)        
 
-bici15 = Bicycle.create( id_bicy: 15, brand_bicy: "DeRosa", #nuevos
-   material_bicy: "fibraCarbono", components_bicy: "sram ultra", price_bicy: 20000000,
+bici15 = Bicycle.create( id_bicy: 15, brand_bicy: "derosa", #nuevos
+   material_bicy: "fibracarbono", components_bicy: "sram ultra", price_bicy: 20000000,
    usetype_bicy: "ruta", description_bicy: "ruta competencia", store_id: 9)
 
-bici16 = Bicycle.create( id_bicy: 16, brand_bicy: "Specialized",
-   material_bicy: "fibraCarbono", components_bicy: "shimano ultra", price_bicy: 9000000,
+bici16 = Bicycle.create( id_bicy: 16, brand_bicy: "specialized",
+   material_bicy: "fibracarbono", components_bicy: "shimano ultra", price_bicy: 9000000,
    usetype_bicy: "ruta", description_bicy: "ruta competencia", store_id: 9)
 
-bici17 = Bicycle.create( id_bicy: 17, brand_bicy: "GW",
+bici17 = Bicycle.create( id_bicy: 17, brand_bicy: "gw",
    material_bicy: "aluminio", components_bicy: "shimano medio", price_bicy: 650000,
    usetype_bicy: "montana", description_bicy: "ciudad y urbana", store_id: 10)
 
-bici18 = Bicycle.create( id_bicy: 18, brand_bicy: "Trek",
+bici18 = Bicycle.create( id_bicy: 18, brand_bicy: "trek",
    material_bicy: "aluminio", components_bicy: "shimano medio", price_bicy: 780000,
    usetype_bicy: "montana", description_bicy: "ciudad montana", store_id: 10)
 
-bici19 = Bicycle.create( id_bicy: 19, brand_bicy: "GW",
+bici19 = Bicycle.create( id_bicy: 19, brand_bicy: "gw",
    material_bicy: "aluminio", components_bicy: "shimano medio", price_bicy: 580000,
    usetype_bicy: "montana", description_bicy: "ciudad montana", store_id: 10)
 
-bici20 = Bicycle.create( id_bicy: 20, brand_bicy: "Specialized",
+bici20 = Bicycle.create( id_bicy: 20, brand_bicy: "specialized",
    material_bicy: "aluminio", components_bicy: "shimano alto", price_bicy: 850000,
    usetype_bicy: "montana", description_bicy: "ciudad montana", store_id: 10)
 

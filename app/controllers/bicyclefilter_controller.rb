@@ -6,10 +6,12 @@ class BicyclefilterController < ActionController::Base
     def prueba
         get_model
 
-        precio = nil
-        marca = nil
-        material = nil
-        tipouso = nil
+        precioHasta = 99999999
+        marca = "gw"
+        material = "aluminio"
+        tipouso = "montana"
+
+        paradado = false
 
         if params[:id]
             cadena = (params[:id]).to_s
@@ -18,23 +20,30 @@ class BicyclefilterController < ActionController::Base
             for i in arrayString
                 if i.include? "precio"
                     i = i.to_s.split('=')
-                    precio = i[1]
+                    precioHasta = i[1]
+                    paradado = true
                 elsif i.include? "marca"
                     i = i.to_s.split('=')
-                    marca = i[1]
+                    marca = i[1].to_s.downcase
+                    paradado = true
                 elsif i.include? "material"
                     i = i.to_s.split('=')
-                    material = i[1]
+                    material = i[1].to_s.downcase
+                    paradado = true
                 elsif i.include? "tipouso"
                     i = i.to_s.split('=')
-                    tipouso = i[1]
+                    tipouso = i[1].to_s.downcase
+                    paradado = true
                 end
             end
 
-            #render json: material
-            render json: @bicycles.urlfilter(marca, material, tipouso, precio)
+            if paradado
+                render json: @bicycles.urlfilter(marca, material, tipouso, precioHasta)
+            else
+                render json: @bicycles
+            end
         else
-            render json: "It didnt get any parameter"
+            render json: @bicycles
         end
     end
 
