@@ -49,6 +49,5 @@ class Bicycle < ApplicationRecord
     scope :buenventa, -> { Bicycle.joins(:stores).where(stores: {score_store: 5}) }
 
     #filtros por url
-    #scope :filtrourl, lambda { |price_bicy, brand_bicy, material_bicy, usetype_bicy| 
-        #where("price_bicy >= ? and brand_bicy = ", price_bicy) }
+    scope :urlfilter, lambda { |brand_bicy, material_bicy, usetype_bicy, price_bicy| where("brand_bicy = ? and material_bicy = ? and usetype_bicy = ? and price_bicy <= ?", brand_bicy, material_bicy, usetype_bicy, price_bicy) }
 end

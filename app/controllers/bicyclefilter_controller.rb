@@ -31,10 +31,10 @@ class BicyclefilterController < ActionController::Base
                 end
             end
 
-            render json: material
-            #render json: @bicycles.hasta(material)
+            #render json: material
+            render json: @bicycles.urlfilter(marca, material, tipouso, precio)
         else
-            render json: @bicycles.acero
+            render json: "It didnt get any parameter"
         end
     end
 
