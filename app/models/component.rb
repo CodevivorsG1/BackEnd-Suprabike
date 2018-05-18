@@ -37,7 +37,7 @@ class Component < ApplicationRecord
     validates :material_component, presence: true,length: { maximum: 20 }
 
     belongs_to :store, required: false
-    has_many :images, as: :imageable , dependent: :destroy
+    has_many :images, dependent: :delete_all
     has_many :assemble_parts
     has_many :bicycle_to_assembles , through: :assemble_parts
 
@@ -89,10 +89,10 @@ class Component < ApplicationRecord
     scope :get_frame_size_to_road_l, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 22.48 AND frame_size <= 24.02 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "de carrera"})}
     scope :get_frame_size_to_road_xl, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 24.41 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "de carrera"})}
 
-=begin scope :get_frame_size_to_bmx_xs, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 18.5 AND frame_size <= 19.29", { part_of_bike: "marco".downcase })}
-    scope :get_frame_size_to_bmx_s, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 19.4 AND frame_size <= 20.86", { part_of_bike: "marco".downcase })}
-    scope :get_frame_size_to_bmx_m, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 20.91 AND frame_size <= 22.44", { part_of_bike: "marco".downcase })}
-    scope :get_frame_size_to_bmx_l, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 22.48 AND frame_size <= 24.02", { part_of_bike: "marco".downcase })}
-    scope :get_frame_size_to_bmx_xl, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 24.41 ", { part_of_bike: "marco".downcase })}
-=end
+    scope :get_frame_size_to_bmx_xs, -> { where("part_of_bike = lower(:part_of_bike) and frame_size = 18.5 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "bmx"})}
+    scope :get_frame_size_to_bmx_s, -> { where("part_of_bike = lower(:part_of_bike) and frame_size = 19.68 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "bmx"})}
+    scope :get_frame_size_to_bmx_m, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 20.47 AND frame_size <= 21.65 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "bmx"})}
+    scope :get_frame_size_to_bmx_l, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 22.8 AND frame_size <= 24.01 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "bmx"})}
+    scope :get_frame_size_to_bmx_xl, -> { where("part_of_bike = lower(:part_of_bike) and frame_size = 24.8 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "bmx"})}
+
 end
