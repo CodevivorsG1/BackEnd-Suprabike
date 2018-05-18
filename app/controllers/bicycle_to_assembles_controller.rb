@@ -46,6 +46,6 @@ class BicycleToAssemblesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def bicycle_to_assemble_params
-      params.require(:bicycle_to_assemble).permit(:total_price, :user_id)
+      params.require(:bicycle_to_assemble).permit(:total_price, :user_id, :size , :type_of_use)
     end
 end

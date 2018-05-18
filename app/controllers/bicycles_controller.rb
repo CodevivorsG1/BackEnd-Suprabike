@@ -47,16 +47,10 @@ class BicyclesController < ApplicationController
     @bicycle.destroy
   end
 
-  def send_bikes_to_users
-    iduser = 1
-    @user = User.find(iduser)
-    Bicycles_mailer.catalogo(User.find(150)).deliver
-    
-=begin     User.find_each do |user| 
-        Biycles_mailer.catalogo(user).deliver_later(wait_until: 168.hours.from_now)
-    end  
-=end
-
+  def send_bikes_to_user
+    iduser = params[:user_id]
+    @user = User.find(iduser)   
+    SendEmailJob.set(wait: 20.seconds).perform_later(@user)
 
   end
   private

@@ -1,6 +1,89 @@
 require 'faker' 
 
 puts 'started loading  data'
+
+
+#20 registros component
+com1 = Component.create(type_component:"cross",price_component:50000, description_component:"alta calidad",brand_component:"GW", sizes_component:27,material_component:"aluminio", store_id:1, part_of_bike:"sillin",suspension:"de aceite" )
+path  = File.join(Rails.root,'public' ,'images','6.jpg')
+img = Image.create(name:"sillin", this_image: File.new(path, "r") , component_id: com1.id)
+=begin com2 = Component.create(type_component:"marco",price_component:350000,
+  description_component:"alta calidad",brand_component:"GW",
+  sizes_component:27,material_component:"aluminio", store_id:1)
+
+com3 = Component.create(type_component:"rines",price_component:80000,
+  description_component:"economicas",brand_component:"GW",
+  sizes_component:27.5,material_component:"acero", store_id:2)
+
+com4 = Component.create(type_component:"grupo",price_component:150000,
+  description_component:"economicas",brand_component:"shimano",
+  sizes_component:30,material_component:"acero", store_id:2)
+
+com5 = Component.create(type_component:"manubrio",price_component:250000,
+  description_component:"calidad media",brand_component:"Trek",
+  sizes_component:40,material_component:"aluminio", store_id:3)
+
+com6 = Component.create(type_component:"grupo",price_component:1200000,
+  description_component:"alto rendimiento",brand_component:"sram",
+  sizes_component:35,material_component:"aluminio", store_id:3)
+
+com7 = Component.create(type_component:"marco",price_component:650000,
+  description_component:"ruta media",brand_component:"Specialized",
+  sizes_component:27.5,material_component:"aluminio", store_id:4)
+
+com8 = Component.create(type_component:"manubrio",price_component:120000,
+  description_component:"economicas",brand_component:"GW",
+  sizes_component:45,material_component:"aluminio", store_id:4)
+
+com9 = Component.create(type_component:"marco",price_component:750000,
+  description_component:"montana media",brand_component:"Trek",
+  sizes_component:31,material_component:"aluminio", store_id:5)
+
+com10 = Component.create(type_component:"rines",price_component:1500000,
+  description_component:"ultra liviana",brand_component:"DeRosa",
+  sizes_component:30,material_component:"fibraCarbono", store_id:5)
+
+com11 = Component.create(type_component:"marco",price_component:80000,
+  description_component:"economicas",brand_component:"Benelli",
+  sizes_component:27.5,material_component:"acero", store_id:6)
+
+com12 = Component.create(type_component:"manubrio",price_component:40000,
+  description_component:"economicas",brand_component:"Benelli",
+  sizes_component:27.5,material_component:"acero", store_id:6)
+
+com13 = Component.create(type_component:"grupo",price_component:500000,
+  description_component:"tourney",brand_component:"shimano",
+  sizes_component:27.5,material_component:"aluminio", store_id:7)
+
+com14 = Component.create(type_component:"manubrio",price_component:200000,
+  description_component:"ruta media",brand_component:"Specialized",
+  sizes_component:27.5,material_component:"aluminio", store_id:7)
+
+com15 = Component.create(type_component:"marco",price_component:800000,
+  description_component:"ruta liviana",brand_component:"Specialized",
+  sizes_component:27.5,material_component:"aluminio", store_id:8)
+
+com16 = Component.create(type_component:"manubrio",price_component:180000,
+  description_component:"ruta liviana",brand_component:"Specialized",
+  sizes_component:27.5,material_component:"aluminio", store_id:8)
+
+com17 = Component.create(type_component:"grupo",price_component:350000,
+  description_component:"sram entrada",brand_component:"sram",
+  sizes_component:27.5,material_component:"acero", store_id:9)
+
+com18 = Component.create(type_component:"rines",price_component:200000,
+  description_component:"montana media",brand_component:"Trek",
+  sizes_component:27.5,material_component:"aluminio", store_id:9)
+
+com19 = Component.create(type_component:"marco",price_component:450000,
+  description_component:"scorpion",brand_component:"GW",
+  sizes_component:27.5,material_component:"aluminio", store_id:10)
+
+com20 = Component.create(type_component:"manubrio",price_component:180000,
+  description_component:"scorpion",brand_component:"GW",
+  sizes_component:27.5,material_component:"aluminio", store_id:10)
+=end
+=begin 
 #10 registros technician
 tech1 =  Technician.create( id_technical:1, NameTec:"Mariana", SurnameTec:"Suarez", 
     typeworktec:"mantenimiento", costhourtec:20000, phonenumtec:1111,
@@ -260,88 +343,6 @@ forum23 = Forum.create(topic:"marcos",user_id:23)
 forum24 = Forum.create(topic:"rines",user_id:24)
 forum25 = Forum.create(topic:"manubrios",user_id:25)
 
-#20 registros component
-com1 = Component.create(type_component:"manubrio",price_component:50000,
-  description_component:"alta calidad",brand_component:"GW",
-  sizes_component:27,material_component:"aluminio", store_id:1)
-
-com2 = Component.create(type_component:"marco",price_component:350000,
-  description_component:"alta calidad",brand_component:"GW",
-  sizes_component:27,material_component:"aluminio", store_id:1)
-
-com3 = Component.create(type_component:"rines",price_component:80000,
-  description_component:"economicas",brand_component:"GW",
-  sizes_component:27.5,material_component:"acero", store_id:2)
-
-com4 = Component.create(type_component:"grupo",price_component:150000,
-  description_component:"economicas",brand_component:"shimano",
-  sizes_component:30,material_component:"acero", store_id:2)
-
-com5 = Component.create(type_component:"manubrio",price_component:250000,
-  description_component:"calidad media",brand_component:"Trek",
-  sizes_component:40,material_component:"aluminio", store_id:3)
-
-com6 = Component.create(type_component:"grupo",price_component:1200000,
-  description_component:"alto rendimiento",brand_component:"sram",
-  sizes_component:35,material_component:"aluminio", store_id:3)
-
-com7 = Component.create(type_component:"marco",price_component:650000,
-  description_component:"ruta media",brand_component:"Specialized",
-  sizes_component:27.5,material_component:"aluminio", store_id:4)
-
-com8 = Component.create(type_component:"manubrio",price_component:120000,
-  description_component:"economicas",brand_component:"GW",
-  sizes_component:45,material_component:"aluminio", store_id:4)
-
-com9 = Component.create(type_component:"marco",price_component:750000,
-  description_component:"montana media",brand_component:"Trek",
-  sizes_component:31,material_component:"aluminio", store_id:5)
-
-com10 = Component.create(type_component:"rines",price_component:1500000,
-  description_component:"ultra liviana",brand_component:"DeRosa",
-  sizes_component:30,material_component:"fibraCarbono", store_id:5)
-
-com11 = Component.create(type_component:"marco",price_component:80000,
-  description_component:"economicas",brand_component:"Benelli",
-  sizes_component:27.5,material_component:"acero", store_id:6)
-
-com12 = Component.create(type_component:"manubrio",price_component:40000,
-  description_component:"economicas",brand_component:"Benelli",
-  sizes_component:27.5,material_component:"acero", store_id:6)
-
-com13 = Component.create(type_component:"grupo",price_component:500000,
-  description_component:"tourney",brand_component:"shimano",
-  sizes_component:27.5,material_component:"aluminio", store_id:7)
-
-com14 = Component.create(type_component:"manubrio",price_component:200000,
-  description_component:"ruta media",brand_component:"Specialized",
-  sizes_component:27.5,material_component:"aluminio", store_id:7)
-
-com15 = Component.create(type_component:"marco",price_component:800000,
-  description_component:"ruta liviana",brand_component:"Specialized",
-  sizes_component:27.5,material_component:"aluminio", store_id:8)
-
-com16 = Component.create(type_component:"manubrio",price_component:180000,
-  description_component:"ruta liviana",brand_component:"Specialized",
-  sizes_component:27.5,material_component:"aluminio", store_id:8)
-
-com17 = Component.create(type_component:"grupo",price_component:350000,
-  description_component:"sram entrada",brand_component:"sram",
-  sizes_component:27.5,material_component:"acero", store_id:9)
-
-com18 = Component.create(type_component:"rines",price_component:200000,
-  description_component:"montana media",brand_component:"Trek",
-  sizes_component:27.5,material_component:"aluminio", store_id:9)
-
-com19 = Component.create(type_component:"marco",price_component:450000,
-  description_component:"scorpion",brand_component:"GW",
-  sizes_component:27.5,material_component:"aluminio", store_id:10)
-
-com20 = Component.create(type_component:"manubrio",price_component:180000,
-  description_component:"scorpion",brand_component:"GW",
-  sizes_component:27.5,material_component:"aluminio", store_id:10)
-
-
 #20 registros bicycle
 bici1 = Bicycle.create( id_bicy: 1, brand_bicy: "GW",
    material_bicy: "aluminio", components_bicy: "todo gw", price_bicy: 680000,
@@ -508,6 +509,7 @@ count = 0
 
 
 
-end
+end 
+=end
 puts 'finished loading  data' 
 

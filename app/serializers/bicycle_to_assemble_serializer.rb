@@ -9,6 +9,6 @@
 #
 
 class BicycleToAssembleSerializer < ApplicationSerializer
-  attributes :id, :total_price
+  attributes :id, :total_price , :size , :type_of_use
   has_many :components , through: :assemble_parts
 end

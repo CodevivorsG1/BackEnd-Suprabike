@@ -178,6 +178,7 @@ Rails.application.routes.draw do
   get "components/get_frame_size_to_bmx_l" , to: "get_parts#get_frame_size_to_bmx_l"
   get "components/get_frame_size_to_bmx_xl" , to: "get_parts#get_frame_size_to_bmx_xl"
 
+  get "bicycle_to_assembles/showpdf/:id", to: "pdfs#show_cot"
   #devise_for :technicians
   #devise_for :stores
   #devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
