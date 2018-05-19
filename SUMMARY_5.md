@@ -1,4 +1,4 @@
-# SPRINT_REVISION_5 [IS2_SUPRABIKES_FE]
+# SPRINT_REVISION_5 [IS2_SUPRABIKES_BE]
 
 
 Versión 1.4 del Back-End de [Suprabikes].
