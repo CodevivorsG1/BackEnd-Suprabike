@@ -35,7 +35,7 @@ class Component < ApplicationRecord
     validates :brand_component, presence: true,length: { maximum: 20 }
     validates :sizes_component, presence: true, numericality: true,length: { maximum: 20 }
     validates :material_component, presence: true,length: { maximum: 20 }
-
+    validates :part_of_bike, presence: true
     belongs_to :store, required: false
     has_many :images, dependent: :delete_all
     has_many :assemble_parts
@@ -94,5 +94,10 @@ class Component < ApplicationRecord
     scope :get_frame_size_to_bmx_m, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 20.47 AND frame_size <= 21.65 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "bmx"})}
     scope :get_frame_size_to_bmx_l, -> { where("part_of_bike = lower(:part_of_bike) and frame_size >= 22.8 AND frame_size <= 24.01 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "bmx"})}
     scope :get_frame_size_to_bmx_xl, -> { where("part_of_bike = lower(:part_of_bike) and frame_size = 24.8 AND ( material_component LIKE '%aluminio%' OR material_component LIKE '%fibra de carbono%') and type_component = :type_component", { part_of_bike: "marco".downcase , type_component: "bmx"})}
+
+    scope :get_group_to_urban, -> { where("part_of_bike = lower(:part_of_bike) and number_of_changes = :number_of_changes", { part_of_bike: "grupo mecanico".downcase  , number_of_changes: 7})}
+    scope :get_group_to_mountain, -> { where("part_of_bike = lower(:part_of_bike) and number_of_changes = :number_of_changes", { part_of_bike: "grupo mecanico".downcase, number_of_changes: 9})}
+    scope :get_group_to_road,-> { where("part_of_bike = lower(:part_of_bike) and type_component = :type_component and number_of_changes = :number_of_changes", { part_of_bike: "grupo mecanico".downcase  ,  type_component: "electrico" ,number_of_changes: 11})}
+    scope :get_group_to_bmx, -> { where("part_of_bike = lower(:part_of_bike) and number_of_changes = :number_of_changes", { part_of_bike: "grupo mecanico".downcase , number_of_changes: 1})}
 
 end
