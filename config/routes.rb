@@ -191,6 +191,7 @@ Rails.application.routes.draw do
 
   resources :cities
   resources :users
+  devise_for :users, only: []
   resources :transactions
   resources :technicians
   resources :stores

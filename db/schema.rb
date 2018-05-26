@@ -23,8 +23,6 @@ ActiveRecord::Schema.define(version: 20180518075454) do
 
   create_table "bicycle_to_assembles", force: :cascade do |t|
     t.float "total_price"
-    t.string "size"
-    t.string "type_of_use"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
