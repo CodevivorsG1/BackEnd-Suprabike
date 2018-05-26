@@ -38,6 +38,8 @@ class Store < ApplicationRecord
     has_many :components , dependent: :destroy
     has_many :images, dependent: :destroy#, as: :imageable
 
+    #serialize :mean_score , Array
+
     #scope :buenVen, lambda { |score_store| where("score_store < ?", score_store) }
     has_many :bicycles , dependent: :destroy
     scope :buenVen, lambda { |score_store| where("score_store >= ?", score_store) }
