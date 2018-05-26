@@ -1,8 +1,8 @@
 class UsersSessionsController < ApplicationController
     def create
-        user = User.where(email: params[:email]).first
-        if user&.valid_password?(params[:password])
-            render json: user.as_json(only: [ :email, :authentication_token, :id]) , status: :created
+        @user = User.where(email: params[:email]).first
+        if @user&.valid_password?(params[:password])
+            render json: @user.as_json(only: [ :email, :authentication_token, :id]) , status: :created
     
         else
             head(:unauthorized)
@@ -11,7 +11,6 @@ class UsersSessionsController < ApplicationController
 
     def destroy
         sign_out @user
-        redirect_to(:users , message:"Logged out")
 
     end
 
