@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
-  
+  before_action :authenticate_user_from_token!
   # GET /users
   def index
     @users = User.paginate(:page => params[:page], :per_page => 100)
