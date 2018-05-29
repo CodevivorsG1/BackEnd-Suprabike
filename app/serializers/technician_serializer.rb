@@ -23,5 +23,6 @@
 class TechnicianSerializer < ApplicationSerializer
   attributes :id , :id_technical, :NameTec, :SurnameTec, :typeworktec, :costhourtec, :phonenumtec, :email
   has_many :transactions
+  has_many :notifications
   has_one :image, as: :imageable
 end

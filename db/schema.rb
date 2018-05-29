@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180529043758) do
+ActiveRecord::Schema.define(version: 20180529063151) do
 
   create_table "assemble_parts", force: :cascade do |t|
     t.integer "component_id"
@@ -230,6 +230,7 @@ ActiveRecord::Schema.define(version: 20180529043758) do
     t.integer "celphoneUser", limit: 8
     t.string "provider"
     t.string "uid"
+    t.integer "role"
     t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["email"], name: "index_users_on_email", unique: true
