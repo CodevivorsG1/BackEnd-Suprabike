@@ -1,6 +1,6 @@
 class TransactionsController < ApplicationController
   before_action :set_transaction, only: [:show, :update, :destroy]
-
+  skip_before_action :authenticate_user_from_token!
   # GET /transactions
   def index
     @transactions = Transaction.paginate(:page => params[:page], :per_page => 10)

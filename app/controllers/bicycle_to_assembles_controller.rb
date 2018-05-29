@@ -1,6 +1,6 @@
 class BicycleToAssemblesController < ApplicationController
   before_action :set_bicycle_to_assemble, only: [:show, :update, :destroy]
-
+  skip_before_action :authenticate_user_from_token!
   # GET /bicycle_to_assembles
   def index
     @bicycle_to_assembles = BicycleToAssemble.all

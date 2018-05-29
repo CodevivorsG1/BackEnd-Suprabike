@@ -1,5 +1,6 @@
 class PdfsController < ActionController::Base
     before_action :get_data, only: [:show_cot]
+    skip_before_action :authenticate_user_from_token!
     def get_model
       #@bicycle = Bicycle.find(params[:id])
       @bicycles = Bicycle.all

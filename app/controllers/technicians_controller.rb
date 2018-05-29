@@ -1,6 +1,6 @@
 class TechniciansController < ApplicationController
   before_action :set_technician, only: [:show, :update, :destroy]
-
+  skip_before_action :authenticate_user_from_token!
   # GET /technicians
   def index
     @technicians = Technician.paginate(:page => params[:page], :per_page => 10)
