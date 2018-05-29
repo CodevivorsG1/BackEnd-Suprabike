@@ -30,7 +30,10 @@
 class User < ApplicationRecord
     # Include default devise modules. Others available are:
     # :confirmable, :lockable, :timeoutable and :omniauthable
+    enum role: [:user, :admin]
+    after_initialize :set_default_role, :if => :new_record?
 
+    
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
@@ -44,7 +47,9 @@ class User < ApplicationRecord
     belongs_to :city 
     has_many :comments, dependent: :destroy
     has_many :forums , dependent: :destroy
+    has_many :notifications, dependent: :destroy
     has_one :image #, as: :imageable
+
 
     #scope :similarJuan, where(:nameUser => "Juan")
     scope :mujeres,-> { where(:genderUser => "mujer")}
@@ -52,6 +57,10 @@ class User < ApplicationRecord
 #clentes que han hecho transacciones de mantenimiento ordenado por id
     scope :pedidoMantenimiento, -> { User.joins(:transactions).where(transactions: {type_transaction: "mantenimiento"}) }
     
+    def set_default_role
+        self.role ||= :user
+    end
+
     def self.create_user_for_google(data,email)                  
         where(email: data["email"]).first_or_initialize.tap do |user|
             user.email=email

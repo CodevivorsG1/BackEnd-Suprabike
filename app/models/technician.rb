@@ -35,6 +35,7 @@ class Technician < ApplicationRecord
 
     belongs_to :city
     has_many :transactions, dependent: :destroy
+    has_many :notifications, dependent: :destroy
     has_one :image #, as: :imageable
 
     #Technician.where(:typeworktec => "mantenimiento")

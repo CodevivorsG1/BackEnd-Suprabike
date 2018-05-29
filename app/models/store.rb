@@ -36,6 +36,7 @@ class Store < ApplicationRecord
     has_many :transactions , dependent: :destroy
     belongs_to :city, required: false
     has_many :components , dependent: :destroy
+    has_many :notifications, dependent: :destroy
     has_many :images, dependent: :destroy#, as: :imageable
 
     #serialize :mean_score , Array
