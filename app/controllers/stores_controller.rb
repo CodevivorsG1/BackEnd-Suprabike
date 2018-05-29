@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
   before_action :set_store, only: [:show, :update, :destroy , :give_grate]
-  before_action :authenticate_user_from_token, :except => [:show, :index]
+  before_action :authenticate_user_from_token, :except => [:show]
   # GET /stores
   def index
     @stores = Store.paginate(:page => params[:page], :per_page => 10)

@@ -15,6 +15,6 @@ class UsersSessionsController < ApplicationController
 
     end
 
-    #?user_email=marlon@la.com&user_token=v1vZxCvvecpGZYXk_yZX
+    
 
 end

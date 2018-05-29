@@ -1,4 +1,5 @@
 class PricescomponentsController < ActionController::Base
+    skip_before_action :authenticate_user_from_token!
     def get_model
       @components = Component.all
     end

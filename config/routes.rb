@@ -104,6 +104,7 @@
 # 
 
 Rails.application.routes.draw do
+  resources :notifications
   resources :assemble_parts
   resources :bicycle_to_assembles
   get 'home/index'

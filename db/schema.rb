@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180518075454) do
+ActiveRecord::Schema.define(version: 20180529043758) do
 
   create_table "assemble_parts", force: :cascade do |t|
     t.integer "component_id"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20180518075454) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "size"
+    t.string "type_of_use"
     t.index ["user_id"], name: "index_bicycle_to_assembles_on_user_id"
   end
 
@@ -131,6 +133,19 @@ ActiveRecord::Schema.define(version: 20180518075454) do
     t.index ["store_id"], name: "index_images_on_store_id"
     t.index ["technician_id"], name: "index_images_on_technician_id"
     t.index ["user_id"], name: "index_images_on_user_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string "description"
+    t.boolean "has_been_read"
+    t.integer "technician_id"
+    t.integer "user_id"
+    t.integer "store_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["store_id"], name: "index_notifications_on_store_id"
+    t.index ["technician_id"], name: "index_notifications_on_technician_id"
+    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "stores", force: :cascade do |t|

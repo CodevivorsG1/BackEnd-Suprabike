@@ -2,7 +2,7 @@ require 'httparty'
 require 'json'  
 
 class AuthGoogleTokenController < ApplicationController
-    
+    skip_before_action :authenticate_user_from_token!
     def create
         validator = GoogleIDToken::Validator.new
         begin

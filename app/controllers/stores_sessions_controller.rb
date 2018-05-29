@@ -1,4 +1,5 @@
 class StoresSessionsController < ApplicationController
+    skip_before_action :authenticate_user_from_token!
     def create
         
         user = Store.where(email: params[:email]).first
