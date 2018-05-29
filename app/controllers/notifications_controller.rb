@@ -38,6 +38,12 @@ class NotificationsController < ApplicationController
     @notification.destroy
   end
 
+  def get_not
+    @notifications = Notification.noti_by_user(params[:user_id],false)
+    @count  = @notifications.count()
+    render json: @notifications 
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_notification

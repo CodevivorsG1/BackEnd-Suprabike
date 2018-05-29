@@ -190,6 +190,8 @@ Rails.application.routes.draw do
 
   put "stores/give_grate/:id" , to: "stores#give_grate"
 
+  get "notifications/get_not/:user_id" , to:"notifications#get_not"
+
   resources :cities
   resources :users
   devise_for :users, only: []
