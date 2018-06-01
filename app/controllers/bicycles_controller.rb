@@ -5,7 +5,7 @@ class BicyclesController < ApplicationController
   # GET /bicycles
   def index
     @bicycles = Bicycle.paginate(:page => params[:page], :per_page => 10)
-    render json: @bicycles, each_serializer: BicycleSerializer
+    render json: @bicycles.order('id DESC'), each_serializer: BicycleSerializer
     @bicycles = Bicycle.all
   end
   
