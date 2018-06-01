@@ -16,7 +16,10 @@ class AssemblePartsController < ApplicationController
   # POST /assemble_parts
   def create
     @assemble_part = AssemblePart.new(assemble_part_params)
+    @component = Component.find(params[:component_id])
+    @store = @component.store
 
+    Transaction.create(date_transaction: "25/05/2016",type_transaction: "Compra",total_transaction: @component.price_component,store_id: @store.id )
     if @assemble_part.save
       render json: @assemble_part, status: :created, location: @assemble_part
     else

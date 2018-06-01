@@ -21,6 +21,7 @@ class ApplicationController < ActionController::API
     private
     
     def authenticate_user_from_token!
+=begin
       # Set the authentication token params if not already present,
       # see http://stackoverflow.com/questions/11017348/rails-api-authentication-by-headers-token
       if user_token = params[:user_token].blank? && request.headers["X-User-Token"]
@@ -50,7 +51,8 @@ class ApplicationController < ActionController::API
       else     
         render json: "No autorizado".to_json, status: :unauthorized
       end
+=end
     end
     
-   
+
 end
