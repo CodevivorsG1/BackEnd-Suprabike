@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
   before_action :authenticate_user_from_token!, :except => [ :create]
+  before_action :verify_admin, only: [:index]
   # GET /users
   def index
     @users = User.paginate(:page => params[:page], :per_page => 100)
@@ -55,5 +56,23 @@ class UsersController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def user_params
       params.permit( :email, :password,:idUser, :nameUser, :surnameUser, :genderUser, :phonenumUser, :celphoneUser, :city_id , :role)
+    end
+
+    def verify_admin
+      if @user_email = params[:user_email].blank? && request.headers["X-User-Email"]
+        params[:user_email] = @user_email
+      end
+
+      @user_email = params[:user_email].presence
+      if User.respond_to? "find_by"
+        @t_user = @user_email && User.find_by(email: @user_email)
+      elsif User.respond_to? "find_by_email"
+        @t_user = @user_email && User.find_by_email(@user_email)
+      end
+
+      if @t_user.role != "admin"
+        render json: "No autorizado".to_json, status: :unauthorized
+      end
+
     end
 end
